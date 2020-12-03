@@ -12,21 +12,21 @@ Productos generalmente disponibles en todo supermercado. Nuestro mercado objetiv
 
 
 ## Integrantes:
-* Alejandro Ojeda:  
+* **Alejandro Ojeda:**  
 Años:28.  
 Ubicación: Medio pie en Chile, medio pie en Argentina.  
 Profesión: Ingeniero industrial.  
 Que te gusta? Disfruto de momentos de tranquilidad y naturaleza.  
 Una frase: *"¿y si sale bien? ¿nos arriesgamos?"*.  
 
-* Alexis Conrad:  
+* **Alexis Conrad:**  
 Años: 32  
 Ubicación: Patagónico viviendo en Rosario.  
 Profesión: Diseñador Gráfico.   
 Que te gusta? Amo viajar y el cicloturismo.  
-Una frase: *"Y si algún día te sale bien?"*.  
+Una frase: *"¿Y si algún día te sale bien?"*.  
 
-* Jassiel Tapia:  
+* **Jassiel Tapia:**  
 Edad: 27.  
 Ubicación: La Plata,Bs As, Argentina. Rep.Dominicana de nacimiento.  
 Profesión: Project Manager.  
@@ -35,15 +35,15 @@ Una frase: *"Todo aquello que vale la pena tener necesita tiempo"*.
 
 
 ## Sitios inspiradores:
-* [Supermercados Día Argentina](https://www.supermercadosdia.com.ar/ "Supermercados Día")
+* [Supermercados Día Argentina](https://www.supermercadosdia.com.ar/ "Supermercados Día"):
 Concepto minimalista.  
-* [Supermercado Lider Chile](https://www.lider.cl/supermercado/ "Supermercado Lider")
+* [Supermercado Lider Chile](https://www.lider.cl/supermercado/ "Supermercado Lider"):
 (aplicación mobile) Check Out + Email de confirmación.
-* [Mercado Libre Argentina](https://www.mercadolibre.com.ar/ "Mercado Libre")
+* [Mercado Libre Argentina](https://www.mercadolibre.com.ar/ "Mercado Libre"):
 Seguimiento de pedido.
-* [Supermercado Carrefour Argentina](https://www.carrefour.com.ar/supermercado-online "Supermercado Carrefour")
+* [Supermercado Carrefour Argentina](https://www.carrefour.com.ar/supermercado-online "Supermercado Carrefour"):
 Estética- Tipografía - Gama de colores.
-* [Supermercado Jumbo Argentina](https://www.jumbo.com.ar/ "Supermercado Jumbo")
+* [Supermercado Jumbo Argentina](https://www.jumbo.com.ar/ "Supermercado Jumbo"):
 Metodología usada para agregar items al carrito de compras.
-* [Supermercado Disco Argentina](https://www.disco.com.ar/ "Supermercado Disco")
+* [Supermercado Disco Argentina](https://www.disco.com.ar/ "Supermercado Disco"):
 Barra lateral para categorías.
