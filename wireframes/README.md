@@ -10,3 +10,6 @@
 6. **checkout** - presionar en "Finalizar" en el carrito de compras, se abrirá el checkout. Los usuarios no registrados, podrán seleccionar "crear una cuenta" con un simple check, que desplegará un campo oculto donde podrán colocar una contraseña deseada para su registro. Ver opción de identificarse antes del check out, para autocompletar los campos generales. 
 7. **formulario-log-in** -   formulario para log-in.
 8. **detalle-de-producto** - detalle de vista de cada producto individual. Se agregan los productos similares.
+
+> Prototipo Adobe XD no finalizado: https://xd.adobe.com/view/f90bb113-a9ef-408c-7cf1-f3846f839152-8f3a/screen/2e7bee59-5f5f-4f24-bfcb-0415b4c485fc?hints=off
+
