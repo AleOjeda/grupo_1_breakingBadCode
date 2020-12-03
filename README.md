@@ -1,4 +1,4 @@
-# grupo_1_sinNombre
+# grupo_1_BreakingBadCode
 
 ¿Qué productos o servicios brindará nuestro sitio? ¿Quién será nuestra audiencia
 objetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
