@@ -62,7 +62,7 @@ online como Marvel, Figma, Wireframe.cc o Diagrams.net.
 ★ Archivo README.md con
 * Temática del sitio y público objetivo
 * Listado de al menos 5 referentes  
-
+ 
 ★ Wireframe de las siguientes páginas  
 * Home
 * Detalle de producto
