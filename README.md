@@ -37,8 +37,8 @@ Una frase: *"Todo aquello que vale la pena tener necesita tiempo"*.
 ## Sitios inspiradores:
 * [Supermercados Día Argentina](https://www.supermercadosdia.com.ar/ "Supermercados Día"):
 Concepto minimalista.  
-* [Supermercado Lider Chile](https://www.lider.cl/supermercado/ "Supermercado Lider"):
-(aplicación mobile) Check Out + Email de confirmación.
+* [Supermercado Lider Chile (aplicación mobile)](https://www.lider.cl/supermercado/ "Supermercado Lider"):
+Check Out + Email de confirmación.
 * [Mercado Libre Argentina](https://www.mercadolibre.com.ar/ "Mercado Libre"):
 Seguimiento de pedido.
 * [Supermercado Carrefour Argentina](https://www.carrefour.com.ar/supermercado-online "Supermercado Carrefour"):
