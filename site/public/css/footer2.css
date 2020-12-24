@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #292929;
+    color: darkgrey;
+    
+} 
+
+.link {
+    color: darkgrey;
+}
+
+.copyright{
+    background-color:black;
+    color: darkgrey;
+    height: -100%;
+}
+
+
