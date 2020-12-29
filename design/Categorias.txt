@@ -1,0 +1,12 @@
+Almacen
+Bebidas
+Carnes
+Limpieza
+Golosinas
+Congelados
+Lacteos y Quesos
+Fiambres
+Mascotas
+Sin TACC
+Vinos
+Perfumeria
