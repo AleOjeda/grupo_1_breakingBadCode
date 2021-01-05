@@ -10,3 +10,5 @@ Mascotas
 Sin TACC
 Vinos
 Perfumeria
+Panificados
+Niños
