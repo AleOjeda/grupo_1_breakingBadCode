@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+header {
+    background-color: #08BC5A;
+    border-radius: 0 0 40px 40px;
+    padding:7%;
+}
+
+.inline-block{
+    display: inline-block;
+}
+#logo{
+    font-family: 'Devonshire', regular;
+    font-size: 2.5rem;
+    color:#FFF131;
+}
+
+.icono{
+    height: 5vh;
+}
+.icono-pequeno{
+    height:3vh;
+}
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+.centrar-hijos-vertical-horizontal{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo-rojo{
+    z-index: 2;
+    background-color: red;
+    border-radius: 50%;
+   -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height:5vh;
+    width: 5vh;
+    position:absolute;
+    top:3vh;
+    right:6.5vh;
+ }
+
+ .blanco-negrita{
+    color:white;
+    font-weight: bold;
+ }
+
+ .cuadrado {
+    height: 100px; 
+    background: white;
+}
+/* Armado de boton de busqueda Para busqueda */
+
+.container-buscador{
+    width: 100%;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    margin: 5px 0;
+    border-radius: 50px;
+}
+.container-buscador input#search{
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #ebecee;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Averiguar por qué es necesario usar placeholder para cada navegador... o si es viejo.. */
+
+.container-buscador input#search::-webkit-input-placeholder {
+    color: #65737e;
+ }
+  
+ .container-buscador input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;  
+ }
+  
+ .container-buscador input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;  
+ }
+  
+ .ccontainer-buscador input#search:-ms-input-placeholder {  
+    color: #65737e;  
+ }
+
+ .container-buscador .icon{
+    position: absolute;
+    top: 50%;
+    right:2%;
+    margin-right: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+  }
+/*
+<div class="box">
+<div class="container-3">
+    <span class="icon"><img class="icono-pequeno" src="./img/search-icon.svg"></span>
+    <input type="search" id="search" placeholder="Search..." />
+</div>
+</div>
+*/
