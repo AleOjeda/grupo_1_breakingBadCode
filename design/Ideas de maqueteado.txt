@@ -1,0 +1,9 @@
+Estructura... columnas ejemplo %.u
+Fuentes y letras: Rem. x defecto 16 px
+Paddings en rem también. puede ser. 
+Padding entre iconos con px también. 
+VH es decirle el body que ocupe el 100% 
+iconos rem.
+
+
+
