@@ -12,6 +12,7 @@
     --default-dark: #101010;
 
     --default-primary-color-light:#25EB7F;
+    --default-primary-color-dark:#178046;
     --call-to-action-primary-color:#B4EBCD;
 
 
@@ -34,6 +35,7 @@ body {
     font-family: sans-serif;
     min-width: 300px;
     padding: 0;
+    background-color: var(--default-background);
 }
 header {
     background-color: var(--default-primary-color);
@@ -185,9 +187,55 @@ header {
 
 
 /*Inicio Estilo para el home-showroom */
-.showroom-titulo{
+
+.catalogo-header{
+    display: flexbox;
+    margin:var(--defult-margin);
+}
+.catalogo-header-titulo{
+    font-size: var(--font-size-title);
+    display:inline-block;
+}
+.catalogo-header-vertodo{
+    font-size: var(--font-size-secondary);
+    float:right;
+    position:relative;
+    top:15px;
+}
+.catalogo-contenedor{
+    margin-left: calc(var(--defult-margin)/2);
+    display:flex;
+    flex-direction: row;
+    overflow: auto;
+}
+.producto-contenedor{
+    background-color: #fff;
+    margin: 2px;
+}
+.producto-header {
+    z-index: 2;
+    display:flex;
+    justify-content: space-between;
+}
+.producto-descuento{
+    background-color: var(--default-primary-color-dark);
+    color:white;
+    font-weight: bold;
+    font-size: var(--font-size-primary);
+    display: inline-block;
+    padding:calc(var(--default-padding)/2) var(--default-padding);
+}
+.producto-favorito{
+    color: red;
     font-size: var(--font-size-title);
 }
-.showroom-vertodo{
-    font-size: var(--font-size-secondary);
+.producto-imagen{
+    position:relative;
+    bottom: 10px;
 }
+.producto-imagen img{
+    max-width:150px;
+    height:130px;
+}
+
+/*Fin Estilo para el home-showroom */
