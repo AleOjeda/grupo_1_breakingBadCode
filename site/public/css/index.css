@@ -1,110 +1,181 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+:root {
+/* Estructura */    
+    --default-border-radious: 1rem;
+    --default-padding: .5rem;
+    --defult-margin: .5rem;
+
+/* Colores */
+    --default-background: #EFEFEF;
+    --default-primary-color: #08BC5A;
+    --red:#FF0000;
+    --blue: #0067B8;
+    --default-dark: #101010;
+
+    --default-primary-color-light:#25EB7F;
+    --call-to-action-primary-color:#B4EBCD;
+
+
+/* Fuentes */
+    --font-size-primary: 2rem;
+    --font-size-secondary: 1rem;
+    --font-size-title: 3rem;
 }
 
+*{box-sizing: border-box; }
+.cuadrado {
+        width: 100px; 
+        height: 100px; 
+        background: gold;
+   }
+
+body {
+    margin:0;
+    font-family: sans-serif;
+    min-width: 300px;
+    padding: 0;
+}
 header {
-    background-color: #08BC5A;
-    border-radius: 0 0 40px 40px;
-    padding:7%;
+    background-color: var(--default-primary-color);
+    padding:0rem .25rem 0.25rem .25rem;
+
 }
 
 .inline-block{
     display: inline-block;
+}
+#espacio-logo{
+    position:relative;
+    top:0.5rem;
+    left: 15px;
 }
 #logo{
     font-family: 'Devonshire', regular;
     font-size: 2.5rem;
     color:#FFF131;
 }
-
+/*  1 dedo = 45px */
 .icono{
-    height: 7vw;
-}
-.icono-pequeno{
-    height:5vw;
+    height: calc(45px*0.75);
 }
 
-.header-top{
+
+#header-top{
     display:flex;
     justify-content:space-between;
     align-items: center;
 }
 
+#menu{
+    position:relative;
+    top: 0.5rem;
+}
 
 .centrar-hijos-vertical-horizontal{
     display:flex;
     justify-content: center;
     align-items: center;
 }
-
+/* Inicio Carrito compras header */
+#carrito{
+    position:relative;
+    top: 15px;
+    left:5px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--default-primary-color-light);
+    border-radius: var(--default-border-radious);
+    padding-left: var(--default-padding);
+    padding-top: calc(var(--default-padding)/2);
+    padding-bottom: calc(var(--default-padding)/2);
+}
+.total-carrito{
+    font-size: 1.5rem;
+    padding-right: var(--default-padding);
+    color:white;
+    font-weight: bold;
+    align-self:center;
+}
 .circulo-rojo{
     z-index: 2;
     background-color: red;
     border-radius: 50%;
    -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    height:7vw;
-    width: 7vw;
+    height:1.5rem;
+    width: 1.5rem;
     position:relative;
-    top:3vw;
-    right:3vw;
+    bottom: 12px;
+    right: 5px;
  }
 
+#carrito div img {
+    height: calc(45px*0.5);
+    position:relative;
+    top:1px;
+}
  .blanco-negrita{
     color:white;
     font-weight: bold;
  }
 
- .cuadrado {
+/* Fin Carrito compras header */
+/* Inicio Header Categorias */
+.categorias{
+    display:flex;
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    margin-top:20px;
+    margin-bottom: 5px;
+}
+.categoria{
     height: 100px; 
-    background: white;
+    max-width:100px;
+    margin: 0 1px;
+    display: inline-block;
 }
-/* Armado de boton de busqueda Para busqueda */
-
-.container-buscador{
-    width: 100%;
-    position: relative;
-    margin: 5px 0;
+.categoria .imagen-categoria{
+    height: 75px;
+    width: 75px; 
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0.5rem;
+    border: solid white 3px;
+    margin: 0 auto;
 }
-
-.container-buscador input#search{
+.categoria .imagen-categoria img{
+    object-fit: contain;
     width: 100%;
-    height: 30px;
-    border: none;
-    font-size: 10px;
-    padding-left: 25px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 20px;
-    background-color: #FFFFFF;
-    color: #ebecee;
+}
+.categoria .nombre-categoria{
+    height:25%;
+    color: white;
+    text-align: center;
+    border:none
+}
+/* Fin Header Categorias */
+/*Inicio Estilo para el buscador */
+.buscador{
+    display: flex;
+    align-items:center ;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 2rem;
 }
 
-/* Averiguar por qué es necesario usar placeholder para cada navegador... o si es viejo.. */
+.buscador input{
+    border:0;
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem 1rem;
+}
 
-.container-buscador input#search::-webkit-input-placeholder {
-    color: #65737e;
- }
-  
- .container-buscador input#search:-moz-placeholder { /* Firefox 18- */
-    color: #65737e;  
- }
-  
- .container-buscador input#search::-moz-placeholder {  /* Firefox 19+ */
-    color: #65737e;  
- }
-  
- .container-buscador input#search:-ms-input-placeholder {  
-    color: #65737e;  
- }
-
- .container-buscador .icon{
-    position:absolute;
-    left:90%;
-    top:13%;
-    z-index: 1;
-    color: #4f5b66;
-  }
+.buscador .icono{
+    padding-right: 0.5rem;
+}
+/*Fin Estilo para el buscador */
