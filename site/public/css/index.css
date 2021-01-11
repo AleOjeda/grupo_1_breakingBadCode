@@ -16,9 +16,10 @@
 
 
 /* Fuentes */
-    --font-size-primary: 2rem;
-    --font-size-secondary: 1rem;
-    --font-size-title: 3rem;
+    --font-size-title: 1.5rem;
+    --font-size-primary: 1rem;
+    --font-size-secondary: 0.75rem;
+    --font-size-primary-subtitle: 1.25rem;
 }
 
 *{box-sizing: border-box; }
@@ -63,6 +64,8 @@ header {
     display:flex;
     justify-content:space-between;
     align-items: center;
+    padding-right: var(--default-padding);
+    padding-left: var(--default-padding);
 }
 
 #menu{
@@ -91,7 +94,7 @@ header {
     padding-bottom: calc(var(--default-padding)/2);
 }
 .total-carrito{
-    font-size: 1.5rem;
+    font-size: var(--font-size-primary-subtitle);
     padding-right: var(--default-padding);
     color:white;
     font-weight: bold;
@@ -179,3 +182,12 @@ header {
     padding-right: 0.5rem;
 }
 /*Fin Estilo para el buscador */
+
+
+/*Inicio Estilo para el home-showroom */
+.showroom-titulo{
+    font-size: var(--font-size-title);
+}
+.showroom-vertodo{
+    font-size: var(--font-size-secondary);
+}
