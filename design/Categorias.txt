@@ -1,14 +1,15 @@
-Almacen
+Almacén
 Bebidas
 Carnes
+Verduras
+Lácteos
 Limpieza
+Higiene
+Harinas
 Golosinas
 Congelados
-Lacteos y Quesos
 Fiambres
 Mascotas
 Sin TACC
 Vinos
-Perfumeria
-Panificados
 Niños

@@ -1,0 +1,81 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:26
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-alcoholic-drinks:before { content: "\f100"; }
+.flaticon-bacon:before { content: "\f101"; }
+.flaticon-baking-products:before { content: "\f102"; }
+.flaticon-bleach-and-soup:before { content: "\f103"; }
+.flaticon-bread:before { content: "\f104"; }
+.flaticon-butter:before { content: "\f105"; }
+.flaticon-canned-food:before { content: "\f106"; }
+.flaticon-canned-soup:before { content: "\f107"; }
+.flaticon-canned-vegetables:before { content: "\f108"; }
+.flaticon-cereal:before { content: "\f109"; }
+.flaticon-cheese:before { content: "\f10a"; }
+.flaticon-cheese-1:before { content: "\f10b"; }
+.flaticon-chicken:before { content: "\f10c"; }
+.flaticon-cofee-and-tea:before { content: "\f10d"; }
+.flaticon-croisant:before { content: "\f10e"; }
+.flaticon-cupcake:before { content: "\f10f"; }
+.flaticon-eggs:before { content: "\f110"; }
+.flaticon-fish:before { content: "\f111"; }
+.flaticon-frozen-food:before { content: "\f112"; }
+.flaticon-fruits:before { content: "\f113"; }
+.flaticon-honey:before { content: "\f114"; }
+.flaticon-hygienic-items:before { content: "\f115"; }
+.flaticon-ice-creams:before { content: "\f116"; }
+.flaticon-item-free-of-gluten:before { content: "\f117"; }
+.flaticon-meat:before { content: "\f118"; }
+.flaticon-meat-1:before { content: "\f119"; }
+.flaticon-milk:before { content: "\f11a"; }
+.flaticon-nutritional-bars:before { content: "\f11b"; }
+.flaticon-nuts:before { content: "\f11c"; }
+.flaticon-oatmeal:before { content: "\f11d"; }
+.flaticon-organic-food:before { content: "\f11e"; }
+.flaticon-pancake:before { content: "\f11f"; }
+.flaticon-pasta:before { content: "\f120"; }
+.flaticon-pizza:before { content: "\f121"; }
+.flaticon-prawn:before { content: "\f122"; }
+.flaticon-preserves:before { content: "\f123"; }
+.flaticon-preserves-1:before { content: "\f124"; }
+.flaticon-pudding:before { content: "\f125"; }
+.flaticon-ready-to-eat:before { content: "\f126"; }
+.flaticon-rice:before { content: "\f127"; }
+.flaticon-sandwiches:before { content: "\f128"; }
+.flaticon-sausage-and-ham:before { content: "\f129"; }
+.flaticon-snack:before { content: "\f12a"; }
+.flaticon-soft-drinks:before { content: "\f12b"; }
+.flaticon-spices:before { content: "\f12c"; }
+.flaticon-stew:before { content: "\f12d"; }
+.flaticon-sweets:before { content: "\f12e"; }
+.flaticon-syrups:before { content: "\f12f"; }
+.flaticon-vegetables:before { content: "\f130"; }
+.flaticon-yogurt:before { content: "\f131"; }
