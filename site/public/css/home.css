@@ -1,0 +1,294 @@
+:root {
+/* Estructura */    
+    --default-border-radious: 1rem;
+    --default-padding: .5rem;
+    --default-margin: .5rem;
+
+/* Colores */
+    --default-background: #EFEFEF;
+    --default-primary-color: #08BC5A;
+    --red:#FF0000;
+    --blue: #0067B8;
+    --default-dark: #101010;
+    --grey: #A8A8A8;
+
+    --default-primary-color-light:#25EB7F;
+    --default-primary-color-dark:#178046;
+    --call-to-action-primary-color:#B4EBCD;
+
+
+/* Fuentes */
+    --font-size-title: 1.5rem;
+    --font-size-primary: 1rem;
+    --font-size-secondary: 0.75rem;
+    --font-size-primary-subtitle: 1.25rem;
+}
+
+*{box-sizing: border-box; }
+.cuadrado {
+        width: 100px; 
+        height: 100px; 
+        background: gold;
+   }
+
+body {
+    margin:0;
+    font-family: sans-serif;
+    min-width: 300px;
+    padding: 0;
+    background-color: var(--default-background);
+}
+header {
+    background-color: var(--default-primary-color);
+    padding:0rem .25rem 0.25rem .25rem;
+
+}
+
+.inline-block{
+    display: inline-block;
+}
+#espacio-logo{
+    position:relative;
+    top:0.5rem;
+    left: 15px;
+}
+#logo{
+    font-family: 'Devonshire', regular;
+    font-size: 2.5rem;
+    color:#FFF131;
+}
+/*  1 dedo = 45px */
+.icono{
+    height: calc(45px*0.75);
+}
+
+
+#header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-right: var(--default-padding);
+    padding-left: var(--default-padding);
+}
+
+#menu{
+    position:relative;
+    top: 0.5rem;
+}
+
+.centrar-hijos-vertical-horizontal{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Inicio Carrito compras header */
+#carrito{
+    position:relative;
+    top: 15px;
+    left:5px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--default-primary-color-light);
+    border-radius: var(--default-border-radious);
+    padding-left: var(--default-padding);
+    padding-top: calc(var(--default-padding)/2);
+    padding-bottom: calc(var(--default-padding)/2);
+}
+.total-carrito{
+    font-size: var(--font-size-primary-subtitle);
+    padding-right: var(--default-padding);
+    color:white;
+    font-weight: bold;
+    align-self:center;
+}
+.circulo-rojo{
+    z-index: 2;
+    background-color: red;
+    border-radius: 50%;
+   -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height:1.5rem;
+    width: 1.5rem;
+    position:relative;
+    bottom: 12px;
+    right: 5px;
+ }
+
+#carrito div img {
+    height: calc(45px*0.5);
+    position:relative;
+    top:1px;
+}
+ .blanco-negrita{
+    color:white;
+    font-weight: bold;
+ }
+
+/* Fin Carrito compras header */
+/* Inicio Header Categorias */
+.categorias{
+    display:flex;
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    margin-top:20px;
+    margin-bottom: 5px;
+}
+.categoria{
+    height: 100px; 
+    max-width:100px;
+    margin: 0 1px;
+    display: inline-block;
+}
+.categoria .imagen-categoria{
+    height: 75px;
+    width: 75px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0.5rem;
+    border: solid white 3px;
+    margin: 0 auto;
+}
+.categoria .imagen-categoria img{
+    object-fit: contain;
+    width: 100%;
+}
+.categoria .nombre-categoria{
+    height:25%;
+    color: white;
+    text-align: center;
+    border:none
+}
+/* Fin Header Categorias */
+/*Inicio Estilo para el buscador */
+.buscador{
+    display: flex;
+    align-items:center ;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 2rem;
+}
+
+.buscador input{
+    border:0;
+    width: 100%;
+    min-width: 0;
+    padding: 0.5rem 1rem;
+}
+
+.buscador .icono{
+    padding-right: 0.5rem;
+}
+/*Fin Estilo para el buscador */
+
+
+/*Inicio Estilo para el home-showroom */
+
+.catalogo-header{
+    display: flexbox;
+    margin:var(--default-margin);
+}
+.catalogo-header-titulo{
+    font-size: var(--font-size-title);
+    display:inline-block;
+}
+.catalogo-header-vertodo{
+    font-size: var(--font-size-secondary);
+    float:right;
+    position:relative;
+    top:15px;
+}
+.catalogo-contenedor{
+    margin-left: calc(var(--default-margin)/2);
+    display:flex;
+    flex-direction: row;
+    overflow: auto;
+}
+.producto-contenedor{
+    background-color: #fff;
+    margin: 2px;
+    width: 170px;
+    margin-right: var(--default-margin);
+}
+.producto-header {
+    z-index: 2;
+    display:flex;
+    justify-content: space-between;
+}
+.producto-descuento{
+    background-color: var(--default-primary-color-dark);
+    color:white;
+    font-weight: bold;
+    font-size: var(--font-size-primary);
+    display: inline-block;
+    padding:calc(var(--default-padding)/2) var(--default-padding);
+    text-align: center;
+}
+.producto-favorito{
+    color: red;
+    font-size: var(--font-size-title);
+}
+.producto-imagen{
+    width:150px;
+    margin:0 auto;
+}
+.producto-imagen img{
+    max-width:150px;
+    max-height:130px;
+}
+.producto-footer{
+
+}
+.producto-detalle{
+    font-size: var(--font-size-primary);
+    height: calc(var(--font-size-primary)*2+2px);
+    font-weight: bold;
+    margin:0;
+}
+.producto-presentacion{
+    font-size: var(--font-size-secondary);
+    color:var(--grey);
+    float: right;
+    bottom: 40px;
+    margin:0;
+}
+.producto-precios{
+    height: 3rem;
+}
+.precio-nuestro{
+    font-size: var(--font-size-primary-subtitle);
+    color:var(--default-primary-color);
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    display:inline-block;
+}
+.precio-competencia{
+    font-size: var(--font-size-primary);
+    color:var(--red);
+    font-weight: bold;
+    text-decoration: line-through;
+    width: 2.5rem;
+    text-align: center;
+    display:inline-block;
+}
+
+.producto-agregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: var(--default-dark);
+    color:white;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+/*Fin Estilo para el home-showroom */

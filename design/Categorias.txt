@@ -1,0 +1,15 @@
+Almacén
+Bebidas
+Carnes
+Verduras
+Lácteos
+Limpieza
+Higiene
+Harinas
+Golosinas
+Congelados
+Fiambres
+Mascotas
+Sin TACC
+Vinos
+Niños
