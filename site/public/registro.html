@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./css/registro.css">
+		<title> Registrate en nuestra pagina </title>
+	</head>
+  <body>
+     <!----------------cabecera--------->
+    <header> 
+      <img class='icono' src="./img/menu-button-modificado.png">
+      <div id='texto-cabecera' class='pad-L-2 pad-R-2'>Comprar por categoría </div>
+      <div id='iconos-header' class='float-derecha'>
+          <img class='icono pad-L-2' src="./img/lupa-buscar.png">
+          <img class='icono pad-L-2' src='./img/carrito-modificado.png'> 
+      </div>
+      
+      
+  </header>
+  
+  <!------------------------->
+
+    <div class="contenedor">
+      
+      <!----------------bienvenida -------->
+        <div>
+          <form action="registro.html" method="POST">
+            <div>
+              <h4>Ingresa tus datos por favor</h4>
+            </div>
+            <!------------------------------------->
+            <div class="camposderegistro">
+              <input class="campo" type="text" name="nombres" id="nombres" placeholder="Ingresa tu Nombre">
+              <div> &nbsp; </div>
+              <input class="campo" type="email" name="correo" id="correo" placeholder="Ingresa tu Correo">
+              <div> &nbsp; </div>
+              <input class="campo" type="password" name="correo" id="contraseña" placeholder="Ingresa tu Contraseña">
+              <div> &nbsp; </div>
+            </div>
+            <!----------------datos del usuario ----------->
+            <div class="registrarme">
+            <!--- <label for="terminos"> Acepto los terminos y condiciones.</label>-->
+            <!--- <div class="checkbox"><input type="checkbox" name="terminos"></div>-->
+            </div>
+            <!-------------------aceptar terminos ------------------>
+            <div> &nbsp; </div>
+            <div>
+            <input class="botons" type="submit" value="Registrarme">
+            </div>
+            <!-------------------fin------------------>
+          </form>
+        </div>
+     </div>
+        <div> &nbsp; </div>
+        <div class="cuenta">
+                 
+          <p><a href="#">¿Ya tenes cuenta?</a></p>
+                
+        </div>
+  </body>
+</html>

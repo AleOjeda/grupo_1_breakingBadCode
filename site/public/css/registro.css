@@ -1,0 +1,104 @@
+.contenedor {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1%;
+    width:200px;
+    height: 300px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
+    background-color:rgba(235, 243, 243, 0.918);
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    background-image: url('');
+    opacity: 0.9;
+    text-decoration-color: blanchedalmond;
+    
+    
+        
+} 
+
+body{
+
+    background-image: url('');
+    background-color:rgb(251, 254, 255);
+    
+}
+
+
+.botons{
+
+    background-color:rgb(155, 203, 209);
+    border-radius:10%;
+    opacity: 0.4;
+    
+}
+
+.check {
+
+    width: 200px;
+}
+
+.cuenta{
+
+    padding: 1%;
+    width:190px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:rgb(82, 80, 80);
+    text-align: center;
+    border-radius: 15px;
+    opacity: 0.9;
+    transition: border-radius 450ms;
+    color: rgb(187, 176, 176);
+    
+}
+
+.cuenta:hover {
+    
+    background-color: black;
+    transition-property:  background-color;
+    transition-duration: 400ms;
+
+    
+}
+
+a{
+    color:blanchedalmond;
+}
+
+
+body {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    border: 0;
+}
+
+header {
+    height: 6.2vh;
+    background-color: #63d1d1;
+    padding: 2vw 5vw;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    /* Sombra https://www.cssmatic.com/es/box-shadow*/
+    -webkit-box-shadow: 0px 5px 6px 0.5px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 5px 6px 0.5px rgba(0,0,0,0.34);
+    box-shadow: 0px 5px 6px 0.5px rgba(0,0,0,0.34);
+}
+#texto-cabecera {
+    display: inline-block;
+}
+.icono{
+    height: 3vh;
+}
+.pad-L-2{
+    padding-left: 5vw;
+}
+.float-derecha{
+   margin-left:auto;
+}

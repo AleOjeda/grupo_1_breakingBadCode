@@ -4,7 +4,8 @@
     justify-content: space-between;
     background-color: #292929;
     color: darkgrey;
-    
+    margin-top: 50%;
+    height: 150px;
 } 
 
 .link {
@@ -15,6 +16,20 @@
     background-color:black;
     color: darkgrey;
     height: -100%;
+    padding-top: 0.1%;
 }
+
+
+
+.redes{
+
+    margin-right: 25px;
+}
+
+.contacto {
+
+    justify-content: space-between;
+}
+
 
 
