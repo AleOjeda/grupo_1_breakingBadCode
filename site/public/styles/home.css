@@ -131,16 +131,17 @@ header {
 .categorias{
     display:flex;
     width: 100%;
-    white-space: nowrap;
+   /*  white-space: nowrap; */
     overflow: auto;
     margin-top:20px;
     margin-bottom: 5px;
 }
 .categoria{
-    height: 100px; 
+    height: 120px; 
     max-width:100px;
-    margin: 0 1px;
-    display: inline-block;
+    margin: 0 2px;
+    display: flex;
+    flex-direction: column;
 }
 .categoria .imagen-categoria{
     height: 75px;
@@ -158,10 +159,11 @@ header {
     width: 100%;
 }
 .categoria .nombre-categoria{
-    height:25%;
-    color: white;
+/*     height:25%; */
+/*     height: calc(var(--font-size-primary) *2);
+ */    color: white;
     text-align: center;
-    border:none
+    border:none;
 }
 /* Fin Header Categorias */
 /*Inicio Estilo para el buscador */
@@ -204,7 +206,8 @@ header {
     top:15px;
 }
 .catalogo-contenedor{
-    margin-left: calc(var(--default-margin)/2);
+    margin-right: var(--default-margin);
+    margin-left: var(--default-margin);
     display:flex;
     flex-direction: row;
     overflow: auto;
@@ -212,6 +215,7 @@ header {
 .producto-contenedor{
     background-color: #fff;
     margin: 2px;
+    width: 170px;
     width: 170px;
     margin-right: var(--default-margin);
 }
@@ -236,17 +240,22 @@ header {
 .producto-imagen{
     width:150px;
     margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .producto-imagen img{
     max-width:150px;
     max-height:130px;
 }
 .producto-footer{
-
+    height: calc(var(--font-size-primary)*3 + 2px);
+    display: flex;
+    align-items: center;
 }
 .producto-detalle{
     font-size: var(--font-size-primary);
-    height: calc(var(--font-size-primary)*2+2px);
+    
     font-weight: bold;
     margin:0;
 }

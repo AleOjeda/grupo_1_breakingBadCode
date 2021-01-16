@@ -15,14 +15,16 @@
         </div>
         <div id="categorias">
             <div class="categorias">
+                 <% categories.forEach(categorie => { %>
                 <div class="categoria">
                     <div class="imagen-categoria">
-                        <img src="img/groceries.png">
+                        <img src= <%= categorie.iconoCategoria%> >
                     </div>
                     <div class="nombre-categoria">
-                        <span id="categoria1">Almacen</span>
+                        <span id="categoria1"><%= categorie.nombreCategoria%></span>
                     </div>
                 </div>
+                <% });%>
             </div>
         </div>
         <div id="header-bottom">

@@ -6,98 +6,40 @@
 <body>
     <%- include('./partials/header') %>
     <content>
-        <% categories.forEach(categorie => { %>
-            <p><%= categorie.nombreCategoria %> </p> 
-        <% });%>
         <div id="home-catalogo">
-            <div class="catalogo-header">
-                <div class="catalogo-header-titulo">Ofertas</div>
-                <div class="catalogo-header-vertodo">Ver todo ></div>
-            </div>
-            <div class="catalogo-contenedor">
-                <div class="producto-contenedor">
-                    <div class="producto-header">
-                        <div class="producto-descuento">-5%
-                        </div>
-                        <div class="producto-favorito">&#9829
-                        </div>
-                    </div>
-                    <div class="producto-imagen">
-                        <img src="img/salsa-tomate-la-campañola.png">
-                    </div>
-                    <div class="producto-footer">
-                        <p class="producto-detalle"> Atún la campañola entero </p>
-                        <p class="producto-presentacion"> x500gr </p>
-                    </div>
-                <div class="producto-precios">
-                    <p class="precio-nuestro">$6.800</p>
-                    <p class="precio-competencia">$9.500</p>
+            <% categories.forEach(categorie => { %>
+            <div id="catalogo-categoria">
+                <div class="catalogo-header">
+                    <div class="catalogo-header-titulo"><%= categorie.nombreCategoria%></div>
+                    <div class="catalogo-header-vertodo">Ver todo ></div>
                 </div>
-                    <div class="producto-agregar">Agregar</div>
-                </div>
-                <div class="producto-contenedor">
-                    <div class="producto-header">
-                        <div class="producto-descuento">-5%
+                <div class="catalogo-contenedor">
+                    <% productos.forEach(producto => { %>
+                    <div class="producto-contenedor">
+                        <div class="producto-header">
+                            <div class="producto-descuento"><%= producto.descuentoProducto%>
+                            </div>
+                            <div class="producto-favorito">&#9829
+                            </div>
                         </div>
-                        <div class="producto-favorito">&#9829
+                        <div class="producto-imagen">
+                            <img src= <%= producto.imagenProducto%> >
                         </div>
-                    </div>
-                    <div class="producto-imagen">
-                        <img src="img/salsa-tomate-la-campañola.png">
-                    </div>
-                    <div class="producto-footer">
-                        <p class="producto-detalle"> Atún la campañola entero </p>
-                        <p class="producto-presentacion"> x500gr </p>
-                    </div>
-                <div class="producto-precios">
-                    <p class="precio-nuestro">$6.800</p>
-                    <p class="precio-competencia">$95,00</p>
-                </div>
-                    <div class="producto-agregar">Agregar</div>
-                </div>
-                <div class="producto-contenedor">
-                    <div class="producto-header">
-                        <div class="producto-descuento">-5%
+                        <div class="producto-footer">
+                            <p class="producto-detalle"> <%= producto.descripcionProducto%> </p>
                         </div>
-                        <div class="producto-favorito">&#9829
-                        </div>
+                        <p class="producto-presentacion"> x <%= producto.presentacionProducto%></p>
+                    <div class="producto-precios">
+                        <p class="precio-nuestro"> <%= producto.precioProducto%> </p>
+                        <p class="precio-competencia"> <%= producto.precioCompetencia%> </p>
                     </div>
-                    <div class="producto-imagen">
-                        <img src="img/salsa-tomate-la-campañola.png">
+                        <div class="producto-agregar">Agregar</div>
                     </div>
-                    <div class="producto-footer">
-                        <p class="producto-detalle"> Atún la campañola entero </p>
-                        <p class="producto-presentacion"> x500gr </p>
-                    </div>
-                <div class="producto-precios">
-                    <p class="precio-nuestro">$6.800</p>
-                    <p class="precio-competencia">$95,00</p>
-                </div>
-                    <div class="producto-agregar">Agregar</div>
-                </div>
-                <div class="producto-contenedor">
-                    <div class="producto-header">
-                        <div class="producto-descuento">-5%
-                        </div>
-                        <div class="producto-favorito">&#9829
-                        </div>
-                    </div>
-                    <div class="producto-imagen">
-                        <img src="img/salsa-tomate-la-campañola.png">
-                    </div>
-                    <div class="producto-footer">
-                        <p class="producto-detalle"> Atún la campañola entero </p>
-                        <p class="producto-presentacion"> x500gr </p>
-                    </div>
-                <div class="producto-precios">
-                    <p class="precio-nuestro">$6.800</p>
-                    <p class="precio-competencia">$95,00</p>
-                </div>
-                    <div class="producto-agregar">Agregar</div>
+                    <% });%>
                 </div>
             </div>
-
         </div>
+        <% });%>
     </content>
 </body>
 </html>

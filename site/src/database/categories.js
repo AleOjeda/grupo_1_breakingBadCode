@@ -1,42 +1,42 @@
 module.exports = [
     {
         "idCategoria": 1,
-        "nombreCategoria": 'Almacen',
-        "iconoCategoria": "",
+        "nombreCategoria": 'Almacén',
+        "iconoCategoria": "img/groceries.png",
     },
     {
         "idCategoria": 2,
         "nombreCategoria": 'Bebidas',
-        "iconoCategoria": "",
+        "iconoCategoria": "img/groceries.png",
     },
     {
         "idCategoria": 3,
         "nombreCategoria": 'Carnes',
-        "iconoCategoria": "",
+        "iconoCategoria": "img/groceries.png",
     },
     {
         "idCategoria": 4,
         "nombreCategoria": 'Limpieza',
-        "iconoCategoria": "",
+        "iconoCategoria": "img/groceries.png",
     },
     {
         "idCategoria": 5,
         "nombreCategoria": 'Golosinas',
-        "iconoCategoria": "",
+        "iconoCategoria": "img/groceries.png",
     },
     {
         "idCategoria": 6,
         "nombreCategoria": 'Congelados',
-        "iconoCategoria": "",
+        "iconoCategoria": "img/groceries.png",
     },
     {
         "idCategoria": 7,
         "nombreCategoria": 'Lácteos y quesos',
-        "iconoCategoria": "",
+        "iconoCategoria": "img/groceries.png",
     },
     {
         "idCategoria": 8,
         "nombreCategoria": 'Fiambres',
-        "iconoCategoria": "",
+        "iconoCategoria": "img/groceries.png",
     }
 ];
