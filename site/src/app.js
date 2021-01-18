@@ -14,15 +14,15 @@ app.use('/', mainRouter);
 
 
 //Inicio de Herokuapp
-/*  app.listen(process.env.PORT || 3000, function() {
+/*   app.listen(process.env.PORT || 3000, function() {
     console.log(`Servidor corriendo en el puerto 3000`);
    });
- */ 
-
+ 
+ */
  //Iniciando EJS.
  app.set('view engine', 'ejs');
 //Iniciando en puerto 3000.
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Corriendo en puerto 3000');
     console.log();
     console.log('visitar http://localhost:3000');
