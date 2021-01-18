@@ -8,6 +8,7 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
       {
         "idProducto": 2,
@@ -18,6 +19,7 @@ module.exports = [
         "precioProducto": "$1.000",
         "descuentoProducto": "7%",
         "precioCompetencia": "$1.070",
+        "categoria":"almacen",
     },
      {
         "idProducto": 3,
@@ -28,6 +30,7 @@ module.exports = [
         "precioProducto": "$7000",
         "descuentoProducto": "3%",
         "precioCompetencia": "$721",
+        "categoria":"almacen",
     },
     {
         "idProducto": 1,
@@ -38,6 +41,7 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
     {
         "idProducto": 1,
@@ -48,6 +52,7 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
     {
         "idProducto": 1,
@@ -58,6 +63,7 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
     {
         "idProducto": 1,
@@ -68,6 +74,7 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
     {
         "idProducto": 1,
@@ -78,6 +85,7 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
     {
         "idProducto": 1,
@@ -88,6 +96,7 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
     {
         "idProducto": 1,
@@ -98,5 +107,6 @@ module.exports = [
         "precioProducto": "$1.099",
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
+        "categoria":"almacen",
     },
 ]

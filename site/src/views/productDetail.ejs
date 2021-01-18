@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body>
+    <div id="contenedorDetalleProducto" class="contenedorDetalleProducto">
+        <div id="header-DetalleProducto">
+            <div class="producto-favorito">&#9829</div>
+            <div class="producto-imagen">
+                <img src= <%= productos[1].imagenProducto%> >
+            </div>
+            <div class="producto-footer">
+                <p class="producto-detalle"> <%= productos[1].descripcionProducto%> </p>
+            </div>
+            <p class="producto-presentacion"> x <%= productos[1].presentacionProducto%></p>
+            <div class="producto-precios">
+                <p class="precio-nuestro"> <%= productos[1].precioProducto%> </p>
+                <p class="precio-competencia"> <%= productos[1].precioCompetencia%> </p>
+            </div>
+        </div>
+        <div class="producto-agregar">Agregar</div>
+    </div>
+</body>
+</html>

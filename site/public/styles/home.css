@@ -301,3 +301,16 @@ header {
     margin: 0 auto;
 }
 /*Fin Estilo para el home-showroom */
+/*Inicio Estilo para el detalle de producto */
+.contenedorDetalleProducto{
+    margin: var(--default-margin);
+    padding: var(--default-padding);
+    /* margin-right: calc( var(--default-margin) * 
+    3); */
+    box-shadow: 0px 5px 6px 0.5px rgba(0,0,0,0.34);
+}
+
+/*Fin Estilo para el detalle de producto */
+/*Inicio Estilo para el carrito de compras */
+
+/*Fin Estilo para el carrito de compras */

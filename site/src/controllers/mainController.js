@@ -11,4 +11,10 @@ module.exports = {
     register:(req,res) => {
         res.render('registro',{categories});
     },
+    productDetail:(req,res) => {
+        res.render('productDetail',{categories, productos});
+    },
+    miCart:(req,res) => {
+        res.render('productCart',{categories, productos});
+    },
 }
