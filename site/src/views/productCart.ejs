@@ -3,6 +3,92 @@
     <%- include('./partials/head') %>
 <body>
     <%- include('./partials/header') %>
-    
+    <div id="carritoYcheckbox">
+        <div id="carritoListaYtotal" class="carritoListaYtotal" >
+            <div class="productosEnCarrito">
+                <div class="contenedorProducto">
+                    <div class="carrito-item-descripcion">
+                        <div class="imagenProductoCarrito">
+                            <img src= <%= productos[1].imagenProducto%>>
+                        </div>
+                        <div class="carrito-detallesProducto">
+                            <p class="producto-detalle"> <%= productos[1].descripcionProducto%> </p>
+                            <p class="producto-presentacion"> x <%= productos[1].presentacionProducto%></p>
+                            <p class="precio-nuestro"> <%= productos[1].precioProducto%> </p>
+                            <p class="precio-competencia"> <%= productos[1].precioCompetencia%> </p>
+                            <div class="producto-agregar">Agregar</div>                        
+                        </div>
+                    </div>
+                    <div class="carrito-subtotalProducto">
+                        <p>Subtotal:</p>
+                        <p class="precio-nuestro"> <%= productos[1].precioProducto%> </p>
+                    </div>
+                </div>
+                <div class="contenedorProducto">
+                    <div class="carrito-item-descripcion">
+                        <div class="imagenProductoCarrito">
+                            <img src= <%= productos[1].imagenProducto%>>
+                        </div>
+                        <div class="carrito-detallesProducto">
+                            <p class="producto-detalle"> <%= productos[1].descripcionProducto%> </p>
+                            <p class="producto-presentacion"> x <%= productos[1].presentacionProducto%></p>
+                            <p class="precio-nuestro"> <%= productos[1].precioProducto%> </p>
+                            <p class="precio-competencia"> <%= productos[1].precioCompetencia%> </p>
+                            <div class="producto-agregar">Agregar</div>                        
+                        </div>
+                    </div>
+                    <div class="carrito-subtotalProducto">
+                        <p>Subtotal:</p>
+                        <p class="precio-nuestro"> <%= productos[1].precioProducto%> </p>
+                    </div>
+                </div>
+                <div class="contenedorProducto">
+                    <div class="carrito-item-descripcion">
+                        <div class="imagenProductoCarrito">
+                            <img src= <%= productos[1].imagenProducto%>>
+                        </div>
+                        <div class="carrito-detallesProducto">
+                            <p class="producto-detalle"> <%= productos[1].descripcionProducto%> </p>
+                            <p class="producto-presentacion"> x <%= productos[1].presentacionProducto%></p>
+                            <p class="precio-nuestro"> <%= productos[1].precioProducto%> </p>
+                            <p class="precio-competencia"> <%= productos[1].precioCompetencia%> </p>
+                            <div class="producto-agregar">Agregar</div>                        
+                        </div>
+                    </div>
+                    <div class="carrito-subtotalProducto">
+                        <p>Subtotal:</p>
+                        <p class="precio-nuestro"> <%= productos[1].precioProducto%> </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detalleTotal-contenedor">
+                <div class="detalleTotalTitulo">
+                    <p class="detalle-del-precio-total">Detalle del precio</p>
+                </div>
+                <div class="subtotales">
+                    <div class="subtotal">
+                        <p>Subtotal</p>
+                        <p>$272,00</p>
+                    </div>
+                    <div class="gastosEnvio">
+                        <p>Cargos de envío</p>
+                        <p class="precio-nuestro">Gratis</p>
+                    </div>    
+                </div>
+                <div class="total-a-abonar">
+                    <p>Total a abonar</p>
+                    <p>$272,00</p>
+                </div>
+                <div class="ahorro-total">
+                    <p>En esta compra ahorraste: $60</p>
+                </div>
+            </div>
+        </div>
+    <div class="checkout">
+        <p>$272,00</p>
+        <div class="producto-agregar">Continuar</div> 
+    </div></div>
+    </div>
 </body>
 </html>
