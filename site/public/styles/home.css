@@ -202,7 +202,7 @@ header {
 /*Inicio Estilo para el home-showroom */
 
 .catalogo-header{
-    display: flexbox;
+    display: flexer;
     margin:var(--default-margin);
 }
 .catalogo-header-titulo{
@@ -226,7 +226,7 @@ header {
     background-color: #fff;
     margin: 2px;
     width: 170px;
-    width: 170px;
+    min-width: 170px;
     margin-right: var(--default-margin);
 }
 .producto-header {

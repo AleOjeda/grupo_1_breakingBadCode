@@ -21,7 +21,7 @@ module.exports = [
         "precioCompetencia": "$1.070",
         "categoria":"almacen",
     },
-     {
+      {
         "idProducto": 3,
         "nombreProducto": 'Fideo Tallarin Lucchetti Paquete 500gr',
         "descripcionProducto": 'Fideo Tallarin Lucchetti Paquete x500grs',
@@ -32,7 +32,7 @@ module.exports = [
         "precioCompetencia": "$721",
         "categoria":"almacen",
     },
-    {
+/*    {
         "idProducto": 1,
         "nombreProducto": 'Atún la campañola entero',
         "descripcionProducto": "Atún la campañola entero x120grs",
@@ -108,5 +108,5 @@ module.exports = [
         "descuentoProducto": "5%",
         "precioCompetencia": "$1.153,55",
         "categoria":"almacen",
-    },
+    }, */
 ]

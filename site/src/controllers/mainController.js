@@ -1,6 +1,8 @@
 const express = require('express');
 const categories = require('../database/categories');
-const productos = require('../database/productos')
+const productos = require('../database/productos');
+
+
 module.exports = {
     index : (req,res) => {
         res.render('index', {categories, productos});
