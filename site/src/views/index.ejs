@@ -14,24 +14,24 @@
                     <div class="catalogo-header-vertodo">Ver todo ></div>
                 </div>
                 <div class="catalogo-contenedor">
-                    <% productos.forEach(producto => { %>
+                    <% products.forEach(product => { %>
                     <div class="producto-contenedor">
                         <div class="producto-header">
-                            <div class="producto-descuento"><%= producto.descuento%>
+                            <div class="producto-descuento"><%= product.descuento%>
                             </div>
                             <div class="producto-favorito">&#9829
                             </div>
                         </div>
                         <div class="producto-imagen">
-                            <img src= <%= producto.imagen%> >
+                            <img src= <%= product.imagen%> >
                         </div>
                         <div class="producto-footer">
-                            <p class="producto-detalle"> <%= producto.descripcion%> </p>
+                            <p class="producto-detalle"> <%= product.descripcion%> </p>
                         </div>
-                        <p class="producto-presentacion"> x <%= producto.presentacion%></p>
+                        <p class="producto-presentacion"> x <%= product.presentacion%></p>
                     <div class="producto-precios">
-                        <p class="precio-nuestro"> <%= producto.precio%> </p>
-                        <p class="precio-competencia"> <%= producto.precioCompetencia%> </p>
+                        <p class="precio-nuestro"> <%= product.precio%> </p>
+                        <p class="precio-competencia"> <%= product.precioCompetencia%> </p>
                     </div>
                         <div class="producto-agregar">Agregar</div>
                     </div>

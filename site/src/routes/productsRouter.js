@@ -6,6 +6,11 @@ router.get('/', (req,res) => {
 //    res.send('Hola estoy en productos');
 res.redirect('/')
 });
-router.get('/:id', controller.productDetail)
+
+
+router.get('/crear', controller.create); //Muestra formulario de creación
+router.get('/:id', controller.productDetail);
+
+router.post('/crear', controller.store); //Procesa el formulario de creación (agregar multer para los archivos)
 
 module.exports = router;
