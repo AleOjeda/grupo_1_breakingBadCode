@@ -1,0 +1,7 @@
+-Definir /quienes-somos (solicitado en mainRouter)
+-Definir /contacto (solicitado en mainRouter)
+-Definir el index en /cuenta . Qué pondremos? ponemos algo? o no..
+
+
+-arreglar bug cuando haces ruteo para atras. --> solucionado con el ./ cambiar por el ../ preguntar lando porque
+

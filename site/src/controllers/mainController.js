@@ -7,15 +7,7 @@ module.exports = {
     index : (req,res) => {
         res.render('index', {categories, productos});
     },
-    login: (req,res) => {
-        res.render('login', {categories});
-    },
-    register:(req,res) => {
-        res.render('registro',{categories});
-    },
-    productDetail:(req,res) => {
-        res.render('productDetail',{categories, productos});
-    },
+
     miCart:(req,res) => {
         res.render('productCart',{categories, productos});
     },
