@@ -1,7 +1,8 @@
 -Definir /quienes-somos (solicitado en mainRouter)
 -Definir /contacto (solicitado en mainRouter)
 -Definir el index en /cuenta . Qué pondremos? ponemos algo? o no..
-
+-Pedidos.json
 
 -arreglar bug cuando haces ruteo para atras. --> solucionado con el ./ cambiar por el ../ preguntar lando porque
 
+-Flecha al final del scroll del cada categoria indicando que es el final

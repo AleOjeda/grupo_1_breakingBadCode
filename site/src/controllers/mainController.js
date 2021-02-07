@@ -1,6 +1,6 @@
 const express = require('express');
 const categories = require('../database/categories');
-const productos = require('../database/productos');
+const productos = require('../database/products');
 
 
 module.exports = {
@@ -9,6 +9,6 @@ module.exports = {
     },
 
     miCart:(req,res) => {
-        res.render('productCart',{categories, productos});
+        res.render('products/productCart',{categories, productos});
     },
 }

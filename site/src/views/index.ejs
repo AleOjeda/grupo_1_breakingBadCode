@@ -17,20 +17,20 @@
                     <% productos.forEach(producto => { %>
                     <div class="producto-contenedor">
                         <div class="producto-header">
-                            <div class="producto-descuento"><%= producto.descuentoProducto%>
+                            <div class="producto-descuento"><%= producto.descuento%>
                             </div>
                             <div class="producto-favorito">&#9829
                             </div>
                         </div>
                         <div class="producto-imagen">
-                            <img src= <%= producto.imagenProducto%> >
+                            <img src= <%= producto.imagen%> >
                         </div>
                         <div class="producto-footer">
-                            <p class="producto-detalle"> <%= producto.descripcionProducto%> </p>
+                            <p class="producto-detalle"> <%= producto.descripcion%> </p>
                         </div>
-                        <p class="producto-presentacion"> x <%= producto.presentacionProducto%></p>
+                        <p class="producto-presentacion"> x <%= producto.presentacion%></p>
                     <div class="producto-precios">
-                        <p class="precio-nuestro"> <%= producto.precioProducto%> </p>
+                        <p class="precio-nuestro"> <%= producto.precio%> </p>
                         <p class="precio-competencia"> <%= producto.precioCompetencia%> </p>
                     </div>
                         <div class="producto-agregar">Agregar</div>
