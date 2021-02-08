@@ -9,6 +9,7 @@ const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 
 //Configuración Ruta de archivos estaticos para que sean públicos.
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 //Modifico donde esta la ubicación de views, por default estaría en site>views

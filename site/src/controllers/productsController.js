@@ -23,9 +23,9 @@ module.exports = {
     },
     store: (req,res) =>{
         //Generar el nuevo producto
-let producto = req.body;
-console.log(producto);
-res.send ('aca esta la magia');
+        let producto = req.body;
+        console.log(producto);
+        res.send ('aca esta la magia');
 //        let productoId = productsTable.create(producto);
 
 //        res.redirect ('/producto/' + productoId);
