@@ -1,7 +1,7 @@
 module.exports = [
     {
         "id": 1,
-        "nombre": 'Atún la campañola entero',
+        "nombre": "Atún la campañola entero",
         "descripcion": "Atún la campañola entero x120grs",
         "presentacion": "120gr",
         "imagen": "../img/productos/atun-lacampanola.webp",

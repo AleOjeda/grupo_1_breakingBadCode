@@ -6,11 +6,11 @@ Agregar productos al carrito
 */
 
 const categories = require('../database/categories');
-const products = require('../database/products');
+const products = require('../database/products.json');
+
 
 const jsonTable = require('../database/jsonTable');
 const productsTable = jsonTable('products');
-
 
 module.exports = {
     productDetail:(req,res) => {
@@ -23,9 +23,10 @@ module.exports = {
     },
     store: (req,res) =>{
         //Generar el nuevo producto
-        let producto = req.body;
-        console.log(producto);
-        res.send ('aca esta la magia');
+        let product = req.body;
+        console.log(product);
+        productsTable.create(product);
+        res.send('llegamos a la magia');
 //        let productoId = productsTable.create(producto);
 
 //        res.redirect ('/producto/' + productoId);

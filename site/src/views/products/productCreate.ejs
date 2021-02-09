@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <body>
-<form action="/productos/crear" method="POST"  nctype="multipart/form-data"> 
-    <label for="nombre"> Nombre</label>
-    <input type="text" name="nombre" id="nombre" value="b">
-
-    <label for="first_name">Nombre</label>
+<form style="max-width: 500px;" action="/productos/crear" method="POST"  nctype="multipart/form-data"> 
+    <div>
+        <label for="name"> Nombre</label>
+        <input type="text" name="name" id="name" value="">
+    </div>
+    <div>
+        <label for="description">Descripción</label>
+        <input type="text" name="description" id="description" value="">
+    </div>
+    <div>
+        <label for="display">Presentación</label>
+        <input type="text" name="display" id="display" value="">
+    </div>
+    <div>
+        <label for="image">Imagen</label>
+        <input type="text" name="image" id="image" value="">
+    </div>
+    <div>
+        <label for="price">Precio</label>
+        <input type="text" name="price" id="price" value="">
+    </div>
+    <div>
+        <label for="discount">Descuento</label>
+        <input type="text" name="discount" id="discount" value="">
+    </div>
+    <div>
+        <label for="competitorPrice">Precio Competencia</label>
+        <input type="text" name="competitorPrice" id="competitorPrice" value="">
+    </div>
+    <div>
+        <label for="category">Categoría</label>
+        <input type="text" name="category" id="category" value="">
+    </div>
     
-        <input type="text" name="first_name" id="first_name" value="a">
-
     <button type="submit">Crear producto</button>
 
 
