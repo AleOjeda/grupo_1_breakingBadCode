@@ -79,6 +79,7 @@ header {
     align-items: center;
     padding-right: var(--default-padding);
     padding-left: var(--default-padding);
+    margin-bottom: 15px;
 }
 
 #menu{

@@ -1,0 +1,14 @@
+<div id="categorias">
+    <div class="categorias">
+         <% categories.forEach(category => { %>
+        <div class="categoria">
+            <div class="imagen-categoria">
+                <img src= <%= category.iconoCategoria%> >
+            </div>
+            <div class="nombre-categoria">
+                <span id="categoria1"><%= category.nombreCategoria%></span>
+            </div>
+        </div>
+        <% });%>
+    </div>
+</div>

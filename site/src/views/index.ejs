@@ -4,7 +4,11 @@
 <%- include('./partials/head') %>
 
 <body>
+    <header>
     <%- include('./partials/header') %>
+    <%- include('./partials/categoriesCarousel') %>
+    <%- include('./partials/searcher') %>
+    </header>
     <content>
         <div id="home-catalogo">
             <% categories.forEach(categorie => { %>

@@ -1,8 +1,13 @@
+const express = require('express');
+const categories = require('../database/categories');
+const products = require('../database/products');
+
+
 module.exports = {
     index : (req, res) =>{
-        res.send ('Hola estoy en home categorias. Definir vista de index categoria');
+        res.render ('categories/allCategories',{categories, products});
     },
     subCategory: (req, res) =>{
-        res.send ('Hola estoy en la subcategoria');
+        res.render ('categories/singleCategory',{categories, products});
     }
 };
