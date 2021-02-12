@@ -11,14 +11,44 @@
   "id": 1
  },
  {
-  "name": "Prueba1",
-  "description": "Prueba1",
-  "display": "Prueba1",
-  "image": "Prueba1",
-  "price": "Prueba1",
-  "discount": "Prueba1",
-  "competitorPrice": "Prueba1",
-  "category": "Prueba1",
+  "name": "Alejandro Ojeda",
+  "description": "a",
+  "display": "a",
+  "price": "a",
+  "discount": "a",
+  "competitorPrice": "a",
+  "category": "a",
   "id": 2
+ },
+ {
+  "name": "Alejandro Ojeda",
+  "description": "a",
+  "display": "a",
+  "price": "a",
+  "discount": "a",
+  "competitorPrice": "a",
+  "category": "a",
+  "id": 3
+ },
+ {
+  "name": "Alejandro Ojeda",
+  "description": "a",
+  "display": "a",
+  "price": "a",
+  "discount": "a",
+  "competitorPrice": "a",
+  "category": "a",
+  "imagen": "product-1613163854380.jpg",
+  "id": 4
+ },
+ {
+  "name": "Alejandro Ojeda",
+  "description": "a",
+  "display": "a",
+  "price": "a",
+  "discount": "a",
+  "competitorPrice": "a",
+  "category": "a",
+  "id": 5
  }
 ]

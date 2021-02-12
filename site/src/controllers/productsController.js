@@ -14,40 +14,23 @@ const productsTable = jsonTable('products');
 
 module.exports = {
     productDetail:(req,res) => {
-        console.log(req.params);
+        //console.log(req.params);
         //let product= console.log(req.params)
         res.render('products/productDetail',{categories, products});
     },
-    create: (req,res) => {
+    create: (req,res) => { //create para mostrar el formulario
         res.render('products/productCreate.ejs');
     },
-    store: (req,res) =>{
+    store: (req,res) =>{ //store para procesar el formulario.
         //Generar el nuevo producto
         let product = req.body;
-        console.log(product);
-        productsTable.create(product);
-        res.send('llegamos a la magia');
-//        let productoId = productsTable.create(producto);
+        if(req.file){
+            product.imagen = req.file.filename;
+        } else {
+            res.send('Falta la imagen');
+        }
 
-//        res.redirect ('/producto/' + productoId);
-
-
-
+        productId= productsTable.create(product); //devuelve el numero de ID, pero solamente para poder redirigir en la sig linea, lo que hizo con el create fue crearlo y almacenarlo
+        res.redirect('/productos/'+ productId);
     }
 }
-//create para mostrar el formulario
-//store para procesar el formulario.
-
-
-
-
-/*
-show: (req, res) => {
-    let user = usersTable.find(req.params.id);
-
-    if ( user ) {
-        res.render('users/detail', { user });
-    } else {
-        res.send('No encontré el usuario');
-    }
-},*/

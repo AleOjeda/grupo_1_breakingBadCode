@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <body>
-<form style="max-width: 500px;" action="/productos/crear" method="POST"  nctype="multipart/form-data"> 
+<form style="max-width: 500px;" action="/productos/crear" method="POST"  enctype="multipart/form-data"> 
     <div>
         <label for="name"> Nombre</label>
-        <input type="text" name="name" id="name" value="">
+        <input type="text" name="name" value="">
     </div>
     <div>
         <label for="description">Descripción</label>
-        <input type="text" name="description" id="description" value="">
+        <input type="text" name="description" value="">
     </div>
     <div>
         <label for="display">Presentación</label>
-        <input type="text" name="display" id="display" value="">
+        <input type="text" name="display" value="">
     </div>
     <div>
-        <label for="image">Imagen</label>
-        <input type="text" name="image" id="image" value="">
+        <label for="imageProduct">Imagen</label>
+        <input type="file" name="imageProduct" value="">
     </div>
     <div>
         <label for="price">Precio</label>
-        <input type="text" name="price" id="price" value="">
+        <input type="text" name="price" value="">
     </div>
     <div>
         <label for="discount">Descuento</label>
-        <input type="text" name="discount" id="discount" value="">
+        <input type="text" name="discount" value="">
     </div>
     <div>
         <label for="competitorPrice">Precio Competencia</label>
-        <input type="text" name="competitorPrice" id="competitorPrice" value="">
+        <input type="text" name="competitorPrice" value="">
     </div>
     <div>
         <label for="category">Categoría</label>
-        <input type="text" name="category" id="category" value="">
+        <input type="text" name="category" value="">
     </div>
     
     <button type="submit">Crear producto</button>
