@@ -27,21 +27,21 @@ let model = function(tableName) {
         nextId () {
             let rows = this.readFile();
             let lastRow = rows.pop();
-
             if(lastRow) {
                 return ++lastRow.id;
             }
-
             return 1;
         },
         create (row) {
             let rows = this.readFile();
             row.id = this.nextId();
             rows.push(row);
-
             this.writeFile(rows);
-
             return row.id;
+        },
+        find(id){
+            let rows = this.readFile();
+            return rows.find( row => row.id == id);
         }
 
 

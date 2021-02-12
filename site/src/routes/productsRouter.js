@@ -11,7 +11,6 @@ const storage = multer.diskStorage({
     destination: (req, file, cb) =>{
         cb(null, path.join(__dirname,'../../public/img/productos'));
         //cb(null, 'public/img/productos');
-        
     },
     filename: (req, file, cb) => {
         console.log(file);
@@ -19,7 +18,6 @@ const storage = multer.diskStorage({
         cb(null, newFilename);
     }
 });
-
 const upload = multer({ storage });
 
 
