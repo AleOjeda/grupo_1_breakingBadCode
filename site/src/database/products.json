@@ -20,5 +20,13 @@
   "category": "Almacen",
   "image": "product-1613174189185.jpg",
   "id": 21
+ },
+ {
+  "idEdit": "1",
+  "newName": "Atun",
+  "competitorPrice": "$ NaN",
+  "discount": "NaN%",
+  "price": "$ NaN",
+  "id": 22
  }
 ]

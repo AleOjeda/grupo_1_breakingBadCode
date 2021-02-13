@@ -28,8 +28,8 @@ res.redirect('/')
 
 
 router.get('/crear', controller.create); //Muestra formulario de creación
+router.get('/editar',controller.edit); // Muestra formulario para editar
 router.get('/:id', controller.productDetail);
 
 router.post('/crear', upload.single('imageProduct'), controller.store); //Procesa el formulario de creación (agregar multer para los archivos)
-
 module.exports = router;

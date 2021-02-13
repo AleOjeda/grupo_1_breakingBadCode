@@ -22,7 +22,7 @@ module.exports = {
         res.render('products/productDetail',{categories, requestedProduct});
     },
     create: (req,res) => { //create para mostrar el formulario
-        res.render('products/productCreate.ejs');
+        res.render('products/productCreate');
     },
     store: (req,res) =>{ //store para procesar el formulario.
         //Generar el nuevo producto
@@ -42,5 +42,13 @@ module.exports = {
         console.log(product)
         productId= productsTable.create(product); //devuelve el numero de ID, pero solamente para poder redirigir en la sig linea, lo que hizo con el create fue crearlo y almacenarlo
         res.redirect('/productos/'+ productId);
+    },
+    edit: (req,res) => {
+        let product = req.body;
+        product.idEdit = 'Nuevo ID';
+        product.newName = 'Nuevo Nombre';
+        console.log(product.idEdit);
+        console.log(product.newName);
+        res.render('products/productEdit');
     }
 }
