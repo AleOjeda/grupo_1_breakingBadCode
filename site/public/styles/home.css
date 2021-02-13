@@ -471,3 +471,11 @@ header {
     height: calc(var(--font-size-title)*2);
 }
 /*Fin Estilo para el carrito de compras */
+
+
+/* Inicio todas las categorias */
+.wrap-all-categories {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

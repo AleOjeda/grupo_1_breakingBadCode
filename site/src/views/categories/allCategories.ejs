@@ -2,7 +2,22 @@
 <html lang="es">
     <%- include('./../partials/head') %>
 <body>
-    <%- include('./../partials/header') %>
-    Estoy en todas las categorias
+    <header>
+        <%- include('../partials/header') %>
+        <%- include('../partials/searcher') %>
+    </header>
+    Estoy en todas las categorias. usar grid.
+    <div class="wrap-all-categories">
+             <% categories.forEach(category => { %>
+                <div class="categoria">
+                    <div class="imagen-categoria">
+                        <img src= <%= category.iconoCategoria%> >
+                    </div>
+                    <div class="nombre-categoria">
+                        <span id="categoria1"><%= category.nombreCategoria%></span>
+                    </div>
+                </div>
+            <% });%>
+    </div>
 </body>
 </html>

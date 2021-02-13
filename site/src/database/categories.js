@@ -2,7 +2,7 @@ module.exports = [
     {
         "idCategoria": 1,
         "nombreCategoria": 'Almacén',
-        "iconoCategoria": "../img/groceries.png",
+        "iconoCategoria": "../../img/groceries.png",
     },
     {
         "idCategoria": 2,

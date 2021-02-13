@@ -1,6 +1,5 @@
-const express = require('express');
-const categories = require('../database/categories');
-const products = require('../database/products');
+const categories = require('./../database/categories');
+const products = require('./../database/products');
 
 
 module.exports = {
@@ -9,5 +8,9 @@ module.exports = {
     },
     subCategory: (req, res) =>{
         res.render ('categories/singleCategory',{categories, products});
+    },
+    subCategoryProducts: (req,res) => {
+        let parametros = req.params;
+        res.render('categories/singleCategory',{categories, products, parametros});
     }
 };

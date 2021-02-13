@@ -9,5 +9,16 @@
   "category": "bebidas",
   "image": "product-1613170107653.jpg",
   "id": 20
+ },
+ {
+  "name": "Papas Lays",
+  "description": "Papas Lays Grandes",
+  "display": "430Gr",
+  "price": "$ 2,500",
+  "discount": "1,000%",
+  "competitorPrice": "$ 2,778",
+  "category": "Almacen",
+  "image": "product-1613174189185.jpg",
+  "id": 21
  }
 ]
