@@ -42,6 +42,22 @@ let model = function(tableName) {
         find(id){
             let rows = this.readFile();
             return rows.find( row => row.id == id);
+        },
+        update(row){
+            //Recorre todos los IDs, no busca solo 1.
+            let rows = this.readFile();
+            let updatedRows = rows.map(oneRow => {
+                if (oneRow.id == row.id) {
+                    console.log('llegue a la luna');
+                    return row;
+                }
+                console.log('llegue a la luna', row);
+                return oneRow;
+            });
+
+            this.writeFile(updatedRows);
+
+            return row.id;
         }
 
 

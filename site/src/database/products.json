@@ -1,14 +1,13 @@
 [
  {
-  "name": "Coca Cola 2 Litros",
-  "description": "Coca Cola 2 Litros",
-  "display": "2lts",
-  "price": "$ 2,000",
-  "discount": "1,000%",
-  "competitorPrice": "$ 2,222",
-  "category": "bebidas",
-  "image": "product-1613170107653.jpg",
-  "id": 20
+  "id": "20",
+  "name": "Alejandro Ojeda",
+  "description": "a",
+  "display": "a",
+  "price": "1",
+  "discount": "1",
+  "competitorPrice": "1",
+  "category": "1"
  },
  {
   "name": "Papas Lays",
@@ -28,5 +27,30 @@
   "discount": "NaN%",
   "price": "$ NaN",
   "id": 22
+ },
+ {
+  "id": 23,
+  "newName": "PruebaEditar",
+  "competitorPrice": "$ NaN",
+  "discount": "NaN%",
+  "price": "$ NaN"
+ },
+ {
+  "id": 24,
+  "newName": "PruebaEditar",
+  "competitorPrice": "$ NaN",
+  "discount": "NaN%",
+  "price": "$ NaN"
+ },
+ {
+  "name": "Alejandro Ojeda",
+  "description": "a",
+  "display": "a",
+  "price": "$ 1",
+  "discount": "100%",
+  "competitorPrice": "$ 1",
+  "category": "1",
+  "image": "product-1613598386780.jpeg",
+  "id": 25
  }
 ]

@@ -50,5 +50,13 @@ module.exports = {
         console.log(product.idEdit);
         console.log(product.newName);
         res.render('products/productEdit');
+    },
+    update: (req,res) => {
+        console.log(req.body);
+        let product = req.body;
+        //crear la parte de editar imagen.. con un show, agarras el nombre de la imagen vieja y edit (pensar)
+
+        let productId = productsTable.update(product);
+        res.send('Estamos en Saturno?');
     }
 }
