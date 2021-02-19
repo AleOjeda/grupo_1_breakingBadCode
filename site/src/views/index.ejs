@@ -20,23 +20,25 @@
                 <div class="catalogo-contenedor">
                     <% products.forEach(product => { %>
                     <div class="producto-contenedor">
-                        <div class="producto-header">
-                            <div class="producto-descuento"><%= product.descuento%>
+                        <div class="producto-contenedor-secundario">
+                            <div class="producto-header">
+                                <div class="producto-descuento"><%= product.descuento%>
+                                </div>
+                                <div class="producto-favorito">&#9829
+                                </div>
                             </div>
-                            <div class="producto-favorito">&#9829
+                            <div class="producto-imagen">
+                                <img src= <%= product.imagen%> >
+                            </div>
+                            <div class="producto-footer">
+                                <p class="producto-detalle"> <%= product.nombre%> </p>
+                            </div>
+                            <p class="producto-presentacion"> x <%= product.presentacion%></p>
+                            <div class="producto-precios">
+                                <p class="precio-competencia"> <%= product.precioCompetencia%> </p>
+                                <p class="precio-nuestro"> <%= product.precio%> </p>
                             </div>
                         </div>
-                        <div class="producto-imagen">
-                            <img src= <%= product.imagen%> >
-                        </div>
-                        <div class="producto-footer">
-                            <p class="producto-detalle"> <%= product.descripcion%> </p>
-                        </div>
-                        <p class="producto-presentacion"> x <%= product.presentacion%></p>
-                    <div class="producto-precios">
-                        <p class="precio-nuestro"> <%= product.precio%> </p>
-                        <p class="precio-competencia"> <%= product.precioCompetencia%> </p>
-                    </div>
                         <div class="producto-agregar">Agregar</div>
                     </div>
                     <% });%>

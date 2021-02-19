@@ -6,7 +6,7 @@ Agregar productos al carrito
 */
 
 const categories = require('../database/categories');
-const products = require('../database/products.js');
+const products = require('../database/products.json');
 
 
 const jsonTable = require('../database/jsonTable');
@@ -55,7 +55,6 @@ module.exports = {
         console.log(req.body);
         let product = req.body;
         //crear la parte de editar imagen.. con un show, agarras el nombre de la imagen vieja y edit (pensar)
-
         let productId = productsTable.update(product);
         res.send('Estamos en Saturno?');
     }

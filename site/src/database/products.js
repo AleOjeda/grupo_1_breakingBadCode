@@ -7,7 +7,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
       {
@@ -23,7 +23,7 @@ module.exports = [
     },
       {
         "id": 3,
-        "nombre": 'Fideo Tallarin Lucchetti Paquete 500gr',
+        "nombre": 'Fideo Tallarin Lucchetti',
         "descripcion": 'Fideo Tallarin Lucchetti Paquete x500grs',
         "presentacion": "500gr",    
         "imagen": "../img/productos/arvejas-marolio.png",
@@ -40,7 +40,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
     {
@@ -51,7 +51,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
     {
@@ -62,7 +62,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
     {
@@ -73,7 +73,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
     {
@@ -84,7 +84,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
     {
@@ -95,7 +95,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
     {
@@ -106,7 +106,7 @@ module.exports = [
         "imagen": "../img/productos/atun-lacampanola.webp",
         "precio": "$1.099",
         "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
+        "precioCompetencia": "$1.153",
         "categoria":"almacen",
     },
 ]

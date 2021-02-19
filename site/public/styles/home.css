@@ -23,7 +23,7 @@
     --font-size-title: 1.5rem;
     --font-size-primary: 1rem;
     --font-size-secondary: 0.75rem;
-    --font-size-primary-subtitle: 1.25rem;
+    --font-size-primary-subtitle: 1.1rem;
 
 /* Sombras*/
     --default-box-shadow: 0px 5px 6px 0.5px rgba(0,0,0,0.34);   
@@ -217,18 +217,24 @@ header {
     top:15px;
 }
 .catalogo-contenedor{
-    margin-right: var(--default-margin);
+/*     margin-right: var(--default-margin); */
+    padding-right: calc(2 * var(--default-margin));
     margin-left: var(--default-margin);
     display:flex;
     flex-direction: row;
     overflow: auto;
 }
 .producto-contenedor{
-    background-color: #fff;
     margin: 2px;
     width: 170px;
     min-width: 170px;
     margin-right: var(--default-margin);
+}
+.producto-contenedor-secundario{
+    background-color: #fff;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
 }
 .producto-header {
     z-index: 2;
@@ -263,6 +269,7 @@ header {
     height: calc(var(--font-size-primary)*3 + 2px);
     display: flex;
     align-items: center;
+    margin: 0 0.5rem;
 }
 .producto-detalle{
     font-size: var(--font-size-primary);
@@ -274,26 +281,33 @@ header {
     font-size: var(--font-size-secondary);
     color:var(--grey);
     float: right;
-    bottom: 40px;
-    margin:0;
+    position:relative;
+    bottom: 20px;
+    right:10px;
 }
 .producto-precios{
     height: 3rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    right: -10px;
 }
 
 .precio-competencia{
-    font-size: var(--font-size-title);
+    font-size: var(--font-size-primary-subtitle);
+    
     color:var(--red);
     font-weight: bold;
     text-decoration: line-through;
-    width: 2.5rem;
+/*     width: 2.5rem; */
     text-align: center;
+    display: flex;
     flex-grow: 1;
     height: 2rem;
-    display: flex;
     align-items: center;
+    
 /*     display:inline-block; */
 }
 
@@ -301,7 +315,7 @@ header {
     font-size: var(--font-size-title);
     color:var(--default-primary-color);
     font-weight: bold;
-    width: 4rem;
+/*     width: 4rem; */
     text-align: right;
     flex-grow: 2;
     height: 2rem;
