@@ -1,3 +1,4 @@
+const { param } = require('../routes/mainRouter');
 const categories = require('./../database/categories');
 const products = require('./../database/products');
 
@@ -11,6 +12,8 @@ module.exports = {
     },
     subCategoryProducts: (req,res) => {
         let parametros = req.params;
+        console.log(parametros);
         res.render('categories/productsSubcategory',{categories, products, parametros});
     }
+
 };
