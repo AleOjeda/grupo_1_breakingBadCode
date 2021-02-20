@@ -8,5 +8,33 @@
         <%- include('../partials/searcher') %>
     </header>
     Estoy en los productos de la categoria <%- parametros.id %> subcategoria <%- parametros.sub_id %>
+    <div class="titulo-subcategoria">Aceites</div>
+    <div class="subcategoria-container">
+        <% products.forEach(product => { %>
+            <div class="producto-contenedor">
+                <div class="producto-contenedor-secundario">
+                    <div class="producto-header">
+                        <div class="producto-descuento"><%= product.descuento%>
+                        </div>
+                        <div class="producto-favorito">&#9829
+                        </div>
+                    </div>
+                    <div class="producto-imagen">
+                        <img src= <%= product.imagen%> >
+                    </div>
+                    <div class="producto-footer">
+                        <p class="producto-detalle"> <%= product.nombre%> </p>
+                    </div>
+                    <p class="producto-presentacion"> x <%= product.presentacion%></p>
+                    <div class="producto-precios">
+                        <p class="precio-competencia"> <%= product.precioCompetencia%> </p>
+                        <p class="precio-nuestro"> <%= product.precio%> </p>
+                    </div>
+                </div>
+                <div class="producto-agregar">Agregar</div>
+            </div>
+            <% });%>
+    </div>
+
 </body>
 </html>

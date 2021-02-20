@@ -11,11 +11,11 @@
     </header>
     <content>
         <div id="home-catalogo">
-            <% categories.forEach(categorie => { %>
+            <% categories.forEach(category => { %>
             <div id="catalogo-categoria">
                 <div class="catalogo-header">
-                    <div class="catalogo-header-titulo"><%= categorie.nombreCategoria%></div>
-                    <div class="catalogo-header-vertodo">Ver todo ></div>
+                    <div class="catalogo-header-titulo"><%= category.nombreCategoria%></div>
+                    <a class="catalogo-header-vertodo" href="/categorias/<%=category.ruta%>"><div class="">Ver todo ></div></a>
                 </div>
                 <div class="catalogo-contenedor">
                     <% products.forEach(product => { %>

@@ -1,0 +1,120 @@
+[
+    {
+        "idCategoria": 1,
+        "nombreCategoria": "Almacén",
+        "ruta":"almacen",
+        "iconoCategoria": "../../../img/groceries.png",
+        "subcategories": {
+            "Aceites y vinagres":"aceites-vinagres",
+            "Aderezos":"aderezos",
+            "Arroz y legumbres":"arroz-legumbres",
+            "Caldos, sopas, puré y bolsas para horno":"caldos-sopas-pure",
+            "Conservas":"conservas",
+            "Desayunos y meriendas":"desayunos-meriendas",
+            "Harinas, premezclas":"harinas-premezclas",
+            "Huevos":"huevos",
+            "Pastas":"pastas",
+            "Polvos y preparaciones":"polvos",
+            "Puré y salsas de tomate":"salsas-tomate",
+            "Sal, pimienta y especias":"especias",
+            "Snacks":"snacks"}
+    },
+    {
+        "idCategoria": 2,
+        "nombreCategoria": "Bebidas",
+        "ruta":"bebidas",
+        "iconoCategoria": "../../img/groceries.png",
+        "subcategories": {
+            "Aguas":"aguas",
+            "Aguas saborizadas":"aguas-saborizadas",
+            "Aperitivos":"aperitivos",
+            "Energizantes/Isotónicas":"energizantes-isotonicas",
+            "Gaseosas":"gaseosas",
+            "Jugos":"jugos"
+        }
+    },
+    {
+        "idCategoria": 3,
+        "nombreCategoria": "Carnes",
+        "ruta":"carnes",
+        "iconoCategoria": "../../img/groceries.png",
+        "subcategories": {
+            "Carne Vacuna":"carne-vacuna",
+            "Carne de cerdo":"carne-cerdo",
+            "Chorizos y Morcillas":"chorizos-morcillas"
+        }
+            
+    },
+    {
+        "idCategoria": 4,
+        "nombreCategoria": "Limpieza",
+        "ruta":"limpieza",
+        "iconoCategoria": "../../img/groceries.png",
+        "subcategories": {
+            "Accesorios de limpieza":"accesorios",
+            "Cuidado de la ropa y calzado":"ropa-calzado",
+            "Desodorantes de ambiente":"ambiente",
+            "Insecticidas":"insecticidas",
+            "Lavandinas/Cloro":"lavandina-cloro",
+            "Limpieza de baño":"baño",
+            "Limpieza de cocina":"cocina",
+            "Limpieza de pisos y muebles":"pisos-muebles",
+            "Limpieza de hogar":"hogar",
+            "Papeles":"papeles"
+        }
+    },
+    {
+        "idCategoria": 5,
+        "nombreCategoria": "Golosinas",
+        "ruta":"golosinas",
+        "iconoCategoria": "../../img/groceries.png",
+        "subcategories": {
+            "Alfajores":"alfajores",
+            "Barras de cereal":"barras-cereal",
+            "Caramelos, gomitas y chupetines":"caramelos-chupetines",
+            "Chocolates":"chocolates",
+            "Turrones":"turrones"
+        }
+    },
+    {
+        "idCategoria": 6,
+        "nombreCategoria": "Congelados",
+        "ruta":"congelados",
+        "iconoCategoria": "../../img/groceries.png",
+        "subcategories": {
+            "Congelados de Pescado y Mariscos":"pescado-mariscos",
+            "Congelados de pollo":"pollo",
+            "Hamburguesas":"hamburguesas",
+            "Helados y postres":"helados-postres",
+            "Medallones":"medallones",
+            "Papas Fritas Congeladas":"papas-fritas",
+            "Vegetales Congelados":"vegetales"
+        }
+    },
+    {
+        "idCategoria": 7,
+        "nombreCategoria": "Lácteos y quesos",
+        "ruta":"lacteos-quesos",
+        "iconoCategoria": "../../img/groceries.png",
+        "subcategories": {
+            "Cremas":"cremas",
+            "Dulce de leche":"dulce-de-leche",
+            "Leches":"leches",
+            "Levaduras":"levaduras",
+            "Mantecas y margarinas":"mantecas-margarinas",
+            "Postres, gelatinas, flanes":"postres",
+            "Quesos":"quesos",
+            "Yogures":"yogures"
+        }
+    },
+    {
+        "idCategoria": 8,
+        "nombreCategoria": "Fiambres",
+        "ruta":"fiambres",
+        "iconoCategoria": "../../img/groceries.png",
+        "subcategories": {
+            "Fiambres":"fiambres",
+            "Salchichas":"salchichas"
+        }
+    }
+]

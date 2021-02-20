@@ -43,6 +43,11 @@ let model = function(tableName) {
             let rows = this.readFile();
             return rows.find( row => row.id == id);
         },
+        //Find con key parametro
+        findKeyValue(key,value){
+            let rows = this.readFile();
+            return rows.find( row => row[key] == value);
+        },
         update(row){
             //Recorre todos los IDs, no busca solo 1.
             let rows = this.readFile();
