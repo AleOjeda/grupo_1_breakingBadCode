@@ -30,6 +30,7 @@
 
 /* Bordes */
     --default-border: 1.5px solid var(--darkGrey);
+    --default-border-lighter: 1.5px solid var(--grey);
 }
 
 
@@ -493,3 +494,17 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
 }
+/*  Fin todas las categorias */
+/* Inicio Vista Sub-categorias */
+.container-subcategorias{
+    margin:var(--default-margin);
+    border-radius: var(--default-border-radious);
+    border: var(--default-border-lighter);
+    padding:var(--default-padding);
+}
+.subcategorias-container{
+    padding: var(--default-padding) 0;
+    padding-left: var(--default-padding);
+    border-bottom: var(--default-border-lighter);
+}
+/* Fin Vista Sub-categorias */

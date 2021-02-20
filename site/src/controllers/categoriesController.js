@@ -11,6 +11,6 @@ module.exports = {
     },
     subCategoryProducts: (req,res) => {
         let parametros = req.params;
-        res.render('categories/singleCategory',{categories, products, parametros});
+        res.render('categories/productsSubcategory',{categories, products, parametros});
     }
 };
