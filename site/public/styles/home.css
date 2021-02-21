@@ -82,6 +82,9 @@ header {
     padding-left: var(--default-padding);
     margin-bottom: 15px;
 }
+#header-top > a {
+    text-decoration: none;
+}
 
 #menu{
     position:relative;
