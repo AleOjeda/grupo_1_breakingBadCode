@@ -1,16 +1,36 @@
 <div id="categorias">
     <div class="categorias">
-         <% categories.forEach(category => { %>
         <div class="categoria">
-            <a href="/categorias/<%=category.ruta%>">
+            <a href="">
                 <div class="imagen-categoria">
-                    <img src= <%= category.iconoCategoria%> >
+                    <img src= "../../img/groceries.png"> 
                 </div>
                 <div class="nombre-categoria">
-                    <span id="categoria1"><%= category.nombreCategoria%></span>
+                    <span id="categoria1">Repetir pedido</span>
                 </div>
             </a>    
         </div>
+        <div class="categoria">
+            <a href="">
+                <div class="imagen-categoria">
+                    <img src= "../../img/groceries.png"> 
+                </div>
+                <div class="nombre-categoria">
+                    <span id="categoria1">Todas las categorias</span>
+                </div>
+            </a>    
+        </div>
+        <% categories.forEach(category => { %>
+            <div class="categoria">
+                <a href="/categorias/<%=category.ruta%>">
+                    <div class="imagen-categoria">
+                        <img src= <%= category.iconoCategoria%> >
+                    </div>
+                    <div class="nombre-categoria">
+                        <span id="categoria1"><%= category.nombreCategoria%></span>
+                    </div>
+                </a>    
+            </div>
         <% });%>
     </div>
 </div>

@@ -8,6 +8,9 @@ const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 
+//Requiero Session
+const session = require('express-session');
+
 //Configuración Ruta de archivos estaticos para que sean públicos.
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
@@ -21,16 +24,13 @@ app.use('/categorias', categoriesRouter);
 app.use('/productos', productsRouter);
 app.use('/usuario',usersRouter);
 
+//Uso sessión como middleware
+app.use(session ( {secret: "Rápido Confiable y a la puerta de tu hogar"}))
 
-//Inicio de Herokuapp
-/*   app.listen(process.env.PORT || 3000, function() {
-    console.log(`Servidor corriendo en el puerto 3000`);
-   });
- */
 
  //Iniciando EJS.
  app.set('view engine', 'ejs');
-//Iniciando en puerto 3000.
+//Iniciando en puerto 3000 y heroku.
 app.listen(process.env.PORT || 3000, () => {
     console.log('Corriendo en puerto 3000');
     console.log();

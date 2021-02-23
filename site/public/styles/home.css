@@ -147,10 +147,11 @@ header {
     display:flex;
     width: 100%;
    /*  white-space: nowrap; */
-    overflow: auto;
+/*     overflow: auto; */
     margin-top:20px;
     margin-bottom: 5px;
-}
+    overflow-x: scroll;
+    overflow-y: hidden;}
 .categoria{
     height: 120px; 
     max-width:100px;
