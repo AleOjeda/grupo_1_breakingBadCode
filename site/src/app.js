@@ -9,7 +9,7 @@ const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 
 //Requiero Session
-const session = require('express-session');
+//const session = require('express-session');
 
 //Configuración Ruta de archivos estaticos para que sean públicos.
 app.use(express.urlencoded({ extended: false }));
@@ -25,7 +25,7 @@ app.use('/productos', productsRouter);
 app.use('/usuario',usersRouter);
 
 //Uso sessión como middleware
-app.use(session ( {secret: "Rápido Confiable y a la puerta de tu hogar"}))
+//app.use(session ( {secret: "Rápido Confiable y a la puerta de tu hogar"}))
 
 
  //Iniciando EJS.

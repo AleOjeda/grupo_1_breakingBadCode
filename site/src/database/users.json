@@ -1,13 +1,7 @@
 [
     {
         "id": 1,
-        "nombre": "Atún la campañola entero",
-        "descripcion": "Atún la campañola entero x120grs",
-        "presentacion": "120gr",
-        "imagen": "../img/productos/atun-lacampanola.webp",
-        "precio": "$1.099",
-        "descuento": "5%",
-        "precioCompetencia": "$1.153,55",
-        "categoria":"almacen"
+        "email": "ale@hotmail.com",
+        "password": "1234"
     }
 ]
