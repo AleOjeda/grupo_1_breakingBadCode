@@ -1,12 +1,11 @@
 /*Faltantes de crear:
- Listar productos por cátegoria
- Listar productos por subCategoría
- Buscar productos
-Agregar productos al carrito
+    Listar productos por cátegoria
+    Listar productos por subCategoría
+    Buscar productos
+    Agregar productos al carrito
 */
 
 const categories = require('../database/categories');
-const products = require('../database/products.json');
 
 
 const jsonTable = require('../database/jsonTable');

@@ -21,8 +21,6 @@ module.exports = {
         res.send('Hola estoy en cuenta. Definir vista de mis pedidos.')
     },
     processLogin: (req,res) =>{
-//        res.send('hola');
-//13.41
         let usersJSON = productsTable.readFile()
         let users;
         if(usersJSON == "") {

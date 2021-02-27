@@ -1,3 +1,7 @@
+/* Anotaciones: 
+-1 dedo = 45px 
+*/
+
 :root {
 /* Estructura */    
     --default-border-radious: 1rem;
@@ -68,7 +72,7 @@ header {
     font-size: 2.5rem;
     color:#FFF131;
 }
-/*  1 dedo = 45px */
+
 .icono{
     height: calc(45px*0.75);
 }
@@ -146,8 +150,6 @@ header {
 .categorias{
     display:flex;
     width: 100%;
-   /*  white-space: nowrap; */
-/*     overflow: auto; */
     margin-top:20px;
     margin-bottom: 5px;
     overflow-x: scroll;
@@ -178,9 +180,7 @@ header {
     width: 100%;
 }
 .categoria .nombre-categoria{
-/*     height:25%; */
-/*     height: calc(var(--font-size-primary) *2);
- */    color: white;
+    color: white;
     text-align: center;
     border:none;
 }
@@ -227,7 +227,6 @@ header {
     color: var(--default-dark);
 }
 .catalogo-contenedor{
-/*     margin-right: var(--default-margin); */
     padding-right: calc(2 * var(--default-margin));
     margin-left: var(--default-margin);
     display:flex;
@@ -311,21 +310,17 @@ header {
     color:var(--red);
     font-weight: bold;
     text-decoration: line-through;
-/*     width: 2.5rem; */
     text-align: center;
     display: flex;
     flex-grow: 1;
     height: 2rem;
     align-items: center;
-    
-/*     display:inline-block; */
 }
 
 .precio-nuestro{
     font-size: var(--font-size-title);
     color:var(--default-primary-color);
     font-weight: bold;
-/*     width: 4rem; */
     text-align: right;
     flex-grow: 2;
     height: 2rem;
@@ -333,8 +328,6 @@ header {
     align-items: center;
     justify-content: flex-end;
     padding-right: 0.5rem;
-
-/*     display:inline-block; */
 }
 
 
@@ -356,8 +349,6 @@ header {
 .contenedorDetalleProducto{
     margin: var(--default-margin);
     padding: var(--default-padding);
-    /* margin-right: calc( var(--default-margin) * 
-    3); */
     box-shadow: var(--default-box-shadow);
 }
 

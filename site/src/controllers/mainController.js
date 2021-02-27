@@ -1,7 +1,5 @@
 const categories = require('../database/categories');
 const products = require('../database/products');
-const path = require('path');
-const { dirname } = require('path');
 
 module.exports = {
     index : (req,res) => {

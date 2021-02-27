@@ -64,12 +64,6 @@ let model = function(tableName) {
 
             return row.id;
         }
-
-
-
-
-
-
     }
 };
 

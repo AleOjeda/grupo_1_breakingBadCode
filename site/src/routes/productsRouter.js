@@ -10,7 +10,6 @@ const controller = require('../controllers/productsController');
 const storage = multer.diskStorage({
     destination: (req, file, cb) =>{
         cb(null, path.join(__dirname,'../../public/img/productos'));
-        //cb(null, 'public/img/productos');
     },
     filename: (req, file, cb) => {
         console.log(file);
@@ -22,8 +21,7 @@ const upload = multer({ storage });
 
 
 router.get('/', (req,res) => {
-//    res.send('Hola estoy en productos');
-res.redirect('/')
+    res.redirect('/')
 });
 
 
