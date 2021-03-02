@@ -1,8 +1,14 @@
 [
  {
   "email": "ojeda.alejandro@hotmail.com",
-  "fullName": "1234",
+  "fullName": "Ale 1234",
   "password": "$2a$10$zPJSb8UDkRGmQWvnaIpJ4./p44pjCpUfOM3v5My2xh9hc1gN6LtDe",
   "id": 1
+ },
+ {
+  "email": "ale@hotmail",
+  "fullName": "Alejandro Ojeda",
+  "password": "$2a$10$sFGdz.ehGro4gxvfmgVw9u44xWrgyrLnzcMoOOoxgDudD71AuZC06",
+  "id": 2
  }
 ]

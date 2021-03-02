@@ -6,6 +6,9 @@
         <div>
             <img class="icono" src="../../../img/shoppingcart-icon.svg">
         </div>
+        <% if (locals.userLogged) { %>
+            Hola <%= locals.userLogged.fullName %> 
+        <% } %>
         <div class="circulo-rojo centrar-hijos-vertical-horizontal">
             <div class="inline-block blanco-negrita">22</div>
         </div>
