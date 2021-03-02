@@ -1,18 +1,29 @@
 const express = require('express');
 const router = express.Router();
+
+//Controller
 const controller = require('../controllers/usersController')
 
+//Home para el usuario. A definir: Mis compras, mis datos.. etc...
 router.get('/', controller.index);
 
-router.get('/login', controller.login); //Muestra vista Login
-
+//Formulario de registro
 router.get('/registro', controller.register);
 
+//Procesar registro
+router.post('/registro', controller.processRegister);
+
+//Formulario de login
+router.get('/login', controller.login);
+
+//Procesar Login
+router.post('/login', controller.processLogin);
+
+//Mis pedidos
 router.get('/mis-pedidos', controller.myOrders);
 
-router.post('/login' /*, [
-    check('email').isEmail().withMessage('Email invalido'),
-    check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres)
- ]*/, controller.processLogin); //Procesa Login
+//LogOut (hacer)
+//router.get('/logout', controller.logout);
+
 
 module.exports = router;

@@ -1,6 +1,28 @@
 //Modulos
 const express = require('express');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
+//Inicio express
 const app = express();
+
+//Configuración Ruta de archivos estaticos para que sean públicos.
+app.use(express.static('public'));
+
+//Uso sessión como middleware
+app.use(session ( {
+    secret: "Shh, it's a secret",
+    resave: false,
+    saveUninitialized: false,
+}))
+
+//Para que los métodos POST funcionen (extended:true me permitiría mandar objetos anidados)
+app.use(express.urlencoded({ extended: false }));
+
+//Iniciando EJS.
+app.set('view engine', 'ejs');
+//Modifico donde esta la ubicación de views, por default estaría en site>views
+app.set('views','src/views');
 
 //Rutas
 const categoriesRouter = require('./routes/categoriesRouter');
@@ -8,36 +30,14 @@ const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 
-//Requiero Session
-//const session = require('express-session');
-
-//Configuración Ruta de archivos estaticos para que sean públicos.
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static('public'));
-app.set('view engine', 'ejs');
-//Modifico donde esta la ubicación de views, por default estaría en site>views
-app.set('views','src/views');
-
-//Acá llamo el ruteador donde se colocan todas las rutas.
 app.use('/', mainRouter);
 app.use('/categorias', categoriesRouter);
 app.use('/productos', productsRouter);
 app.use('/usuario',usersRouter);
 
-//Uso sessión como middleware
-//app.use(session ( {secret: "Rápido Confiable y a la puerta de tu hogar"}))
-
-
- //Iniciando EJS.
- app.set('view engine', 'ejs');
 //Iniciando en puerto 3000 y heroku.
 app.listen(process.env.PORT || 3000, () => {
     console.log('Corriendo en puerto 3000');
     console.log();
-    console.log('visitar http://localhost:3000');
+    console.log('http://localhost:3000');
 });
-
-
-
-
-

@@ -10,7 +10,7 @@ module.exports = {
     },
     subCategory: (req, res) =>{
         let params = req.params;
-        let requestedCategory = productsTable.findKeyValue("ruta",req.params.id);
+        let requestedCategory = productsTable.findByField("ruta",req.params.id);
         res.render ('categories/singleCategory',{categories, products, requestedCategory, params});
     },
     subCategoryProducts: (req,res) => {

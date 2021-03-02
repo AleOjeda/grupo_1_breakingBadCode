@@ -43,8 +43,7 @@ let model = function(tableName) {
             let rows = this.readFile();
             return rows.find( row => row.id == id);
         },
-        //Find con key parametro
-        findKeyValue(key,value){
+        findByField(key,value){
             let rows = this.readFile();
             return rows.find( row => row[key] == value);
         },
@@ -59,9 +58,7 @@ let model = function(tableName) {
                 console.log('llegue a la luna', row);
                 return oneRow;
             });
-
             this.writeFile(updatedRows);
-
             return row.id;
         }
     }
