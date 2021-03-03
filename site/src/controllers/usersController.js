@@ -1,5 +1,6 @@
 const categories = require('../database/categories');
 const bcryptjs = require('bcryptjs');
+const db = require('../models');
 
 const jsonTable = require('../database/jsonTable');
 const usersTable = jsonTable('users');
@@ -73,6 +74,11 @@ module.exports = {
         }; */
     },
     myOrders:(req,res)=> {
-        res.send('Hola estoy en cuenta. Definir vista de mis pedidos.')
+        db.Users.findAll()
+        .then ((resultados) =>{
+            console.log(resultados);
+            res.send('Hola estoy en cuenta. Definir vista de mis pedidos.');
+        })
+
     }
 }
