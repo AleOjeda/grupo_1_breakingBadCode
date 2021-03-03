@@ -1,6 +1,6 @@
 const categories = require('../database/categories');
 const bcryptjs = require('bcryptjs');
-const db = require('../models');
+const db = require('../database/models');
 
 const jsonTable = require('../database/jsonTable');
 const usersTable = jsonTable('users');
