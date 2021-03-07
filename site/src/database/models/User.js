@@ -30,5 +30,25 @@ module.exports = (sequelize, dataTypes) => {
         timestamps : false //columnas created at & updated at
     }   
     const User = sequelize.define(alias,columns,config);
+
+    User.associate = (models) =>{
+        User.hasMany(models.Payments,{
+              as: "payments",
+              foreignKey: "user_id"
+        });
+        User.hasMany(models.Orders,{
+            as: "orders",
+            foreignKey: "user_id"
+        });
+        User.hasMany(models.Frequent_products,{
+            as: "frequent_products",
+            foreignKey: "user_id"
+        });
+        User.hasMany(models.Shopping_cart_items,{
+            as: "Shopping_cart_items",
+            foreignKey: "user_id"
+        });
+    }
+
     return User;
 }
