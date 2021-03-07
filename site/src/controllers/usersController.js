@@ -1,3 +1,4 @@
+const products = require('../database/products');
 const categories = require('../database/categories');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
@@ -12,23 +13,56 @@ module.exports = {
     register:(req,res) => {
         res.render('users/registro',{categories});
     },
+    //integrando base de datos
     processRegister:(req,res) => {
-        let userInDB = usersTable.findByField('email',req.body.email);
-        if(userInDB) {
-            return res.send ('Este email ya esta registrado')
-        } 
-        let userToCreate ={
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10),
-        }
-        let userCreated= usersTable.create(userToCreate);
-        res.redirect('./login')
+        db.Users.findAll({
+            where: {
+                email: req.body.email
+            }
+        })
+        .then (userInDB =>{
+            if(userInDB.length!=0) {
+                return res.send ('Este email ya esta registrado')
+            } else { 
+                db.Users.create({
+                    name: req.body.fullName,
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password,10)
+                }),
+                res.redirect('./login')
+             } 
+        })
     },
     login: (req,res) => {
         res.render('users/login', {categories});
     },
     processLogin: (req,res) =>{
+        db.Users.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+        .then (userInDB =>{
+           // console.log(userInDB);
+            if(userInDB.length!=0) {
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userInDB.password);
+                if(isOkThePassword){
+                    delete userInDB.password;
+                    req.session.userLogged = userInDB;
+                    if(req.body.remember_user){
+                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*60})
+                    };
+                    return res.redirect('/');    
+                }
+                return res.render('users/login', {categories});
+             
+            }
+        })
+    },
         
+
+/* //antes de conectar bbdd
+
         let userToLogin = usersTable.findByField('email',req.body.email);
         if(userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -41,38 +75,9 @@ module.exports = {
             }
             return res.render('users/login', {categories});
         }
-        
-        
-        
-        
-        
-        
-        
-        /* let usersJSON = usersTable.readFile();
-        let users;
-        if(usersJSON == "") {
-            users= [];
-        } else {
-            users = usersJSON;
-        };
-   
-        let usuarioALoguearse = undefined;
-        for ( let i = 0; i< users.length; i++){
-            if (users[i].email == req.body.email){
-                if(req.body.password == users[i].password){
-                    let usuarioALoguearse = users[i];
-                    console.log('Usuario logueado :',usuarioALoguearse);
-                    return res.render('users/login', {categories});
-                    break;
-                }
-            }
-        };
-
-        if(usuarioALoguearse == undefined) {
-            console.log('Usuario no logueado',req.body);
-            return res.render('users/login', {categories});
-        }; */
     },
+*/
+    
     myOrders:(req,res)=> {
         db.Users.findAll()
         .then ((resultados) =>{

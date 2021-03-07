@@ -1,4 +1,8 @@
 <div id="header-top">
+    <div><% if (locals.userLogged) { %>
+        Hola <%= locals.userLogged.name %> 
+    <% } %>
+    </div>
     <div id="menu" class="centrar-hijos-vertical-horizontal"><img class="icono" src="../../../img/menu-icon.svg"></div>
     <a href="/"><div id="espacio-logo"><span id="logo">Marketfy</span></div></a>
     <div id="carrito">
@@ -6,9 +10,6 @@
         <div>
             <img class="icono" src="../../../img/shoppingcart-icon.svg">
         </div>
-        <% if (locals.userLogged) { %>
-            Hola <%= locals.userLogged.fullName %> 
-        <% } %>
         <div class="circulo-rojo centrar-hijos-vertical-horizontal">
             <div class="inline-block blanco-negrita">22</div>
         </div>
