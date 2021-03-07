@@ -43,20 +43,22 @@ module.exports = {
             }
         })
         .then (userInDB =>{
-           // console.log(userInDB);
-            if(userInDB.length!=0) {
+            // pregunto si es distinto de null (tabla vacia) o si lo que devuelve es un array vacio (no encontró el usuario)
+            if(userInDB !== null) {
+                console.log('pase por acá tambien')
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userInDB.password);
                 if(isOkThePassword){
                     delete userInDB.password;
                     req.session.userLogged = userInDB;
                     if(req.body.remember_user){
-                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*60})
+                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*0.5}) //(60*1000)*60*24 son 24 horas //(60*1000)=1 minuto
                     };
                     return res.redirect('/');    
                 }
                 return res.render('users/login', {categories});
-             
             }
+            //Si es nulo, base de datos vacia. Envia un error (hacer pantalla 404.)
+            return res.render('users/login', {categories});
         })
     },
         
