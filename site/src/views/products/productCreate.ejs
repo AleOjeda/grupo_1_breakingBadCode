@@ -2,8 +2,8 @@
 <body>
 <form style="max-width: 500px;" action="/productos/crear" method="POST"  enctype="multipart/form-data"> 
     <div>
-        <label for="name"> Nombre</label>
-        <input type="text" name="name" value="">
+        <label for="brand"> Marca</label>
+        <input type="text" name="brand" value="">
     </div>
     <div>
         <label for="description">Descripción</label>
@@ -14,8 +14,8 @@
         <input type="text" name="display" value="">
     </div>
     <div>
-        <label for="imageProduct">Imagen</label>
-        <input type="file" name="imageProduct" value="">
+        <label for="image">Imagen</label>
+        <input type="file" name="image" value="">
     </div>
     <div>
         <label for="price">Precio</label>
@@ -26,28 +26,24 @@
         <input type="number" name="discount">
     </div>
     <div>
-        <label for="competitorPrice">Precio Competencia</label>
-        <input type="number" name="competitorPrice">
+        <label for="other_details">Otros detalles</label>
+        <input type="text" name="other_details">
     </div>
     <div>
-        <label for="category">Categoría</label>
-        <input type="text" name="category" value="">
+        <label for="category_id">Categoría</label>
+        <input type="text" name="category_id" value="">
     </div>
+    <div>
+        <label for="sub_category_id">Subcategoría</label>
+        <input type="text" name="sub_category_id" value="">
+    </div>
+    
+    
     
     <button type="submit">Crear producto</button>
 
 
 </form>
-<!-- 
-    "id": 1,
-"nombre": 'Atún la campañola entero',
-"descripcion": "Atún la campañola entero x120grs",
-"presentacion": "120gr",
-"imagen": "../img/productos/atun-lacampanola.webp",
-"precio": "$1.099",
-"descuento": "5%",
-"precioCompetencia": "$1.153,55",
-"categoria":"almacen",
-}, -->
+
 </body>
 </html>

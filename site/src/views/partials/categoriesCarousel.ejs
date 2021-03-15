@@ -3,7 +3,7 @@
         <div class="categoria">
             <a href="">
                 <div class="imagen-categoria">
-                    <img src= "../../img/groceries.png"> 
+                    <img src= "/img/groceries.png"> 
                 </div>
                 <div class="nombre-categoria">
                     <span id="categoria1">Repetir pedido</span>
@@ -13,14 +13,14 @@
         <div class="categoria">
             <a href="">
                 <div class="imagen-categoria">
-                    <img src= "../../img/groceries.png"> 
+                    <img src= "/img/groceries.png"> 
                 </div>
                 <div class="nombre-categoria">
                     <span id="categoria1">Todas las categorias</span>
                 </div>
             </a>    
         </div>
-        <% categories.forEach(category => { %>
+        <% locals.categories.forEach(category => { %>
             <div class="categoria">
                 <a href="/categorias/<%=category.ruta%>">
                     <div class="imagen-categoria">

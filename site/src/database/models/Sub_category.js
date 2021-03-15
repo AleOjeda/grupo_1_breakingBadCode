@@ -12,6 +12,9 @@ module.exports = (sequelize, dataTypes) => {
         sub_category:{
             type: dataTypes.TEXT
         },
+        path:{
+            type: dataTypes.TEXT
+        },
                
     };
     let config = {

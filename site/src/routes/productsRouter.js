@@ -29,7 +29,7 @@ router.get('/crear', controller.create); //Muestra formulario de creación
 router.get('/editar',controller.edit); // Muestra formulario para editar
 router.get('/:id', controller.productDetail);
 
-router.post('/crear', upload.single('imageProduct'), controller.store);
+router.post('/crear', upload.single('image'), controller.store);
 
-router.post('/editar',upload.single('imageProduct'),controller.update); //Procesa el formulario de creación (agregar multer para los archivos)
+router.post('/editar',upload.single('image'),controller.update); //Procesa el formulario de creación (agregar multer para los archivos)
 module.exports = router;

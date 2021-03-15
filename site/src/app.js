@@ -8,6 +8,7 @@ const app = express();
 
 //Middlewares de aplicación
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
+const varsMiddleware = require ('./middlewares/varsMiddleware');
 
 //Configuración Ruta de archivos estaticos para que sean públicos.
 app.use(express.static('public'));
@@ -18,11 +19,10 @@ app.use(session ( {
     resave: false,
     saveUninitialized: false,
 }))
-
 app.use(cookies());
 //Middleware para pasar la variable locals user logged a toda la aplicación. Uso de "locals.xxxx"
 app.use(userLoggedMiddleware);
-
+app.use(varsMiddleware);
 //Para que los métodos POST funcionen (extended:true me permitiría mandar objetos anidados)
 app.use(express.urlencoded({ extended: false }));
 

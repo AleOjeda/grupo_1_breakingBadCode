@@ -9,6 +9,12 @@ module.exports = (sequelize, dataTypes) => {
         category:{
             type: dataTypes.TEXT
         },
+        path:{
+            type: dataTypes.TEXT
+        },
+        icon:{
+            type: dataTypes.TEXT
+        },
                
     };
     let config = {

@@ -3,7 +3,7 @@
         "idCategoria": 1,
         "nombreCategoria": "Almacén",
         "ruta":"almacen",
-        "iconoCategoria": "../../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Aceites y vinagres":"aceites-vinagres",
             "Aderezos":"aderezos",
@@ -23,7 +23,7 @@
         "idCategoria": 2,
         "nombreCategoria": "Bebidas",
         "ruta":"bebidas",
-        "iconoCategoria": "../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Aguas":"aguas",
             "Aguas saborizadas":"aguas-saborizadas",
@@ -37,7 +37,7 @@
         "idCategoria": 3,
         "nombreCategoria": "Carnes",
         "ruta":"carnes",
-        "iconoCategoria": "../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Carne Vacuna":"carne-vacuna",
             "Carne de cerdo":"carne-cerdo",
@@ -49,7 +49,7 @@
         "idCategoria": 4,
         "nombreCategoria": "Limpieza",
         "ruta":"limpieza",
-        "iconoCategoria": "../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Accesorios de limpieza":"accesorios",
             "Cuidado de la ropa y calzado":"ropa-calzado",
@@ -67,7 +67,7 @@
         "idCategoria": 5,
         "nombreCategoria": "Golosinas",
         "ruta":"golosinas",
-        "iconoCategoria": "../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Alfajores":"alfajores",
             "Barras de cereal":"barras-cereal",
@@ -80,7 +80,7 @@
         "idCategoria": 6,
         "nombreCategoria": "Congelados",
         "ruta":"congelados",
-        "iconoCategoria": "../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Congelados de Pescado y Mariscos":"pescado-mariscos",
             "Congelados de pollo":"pollo",
@@ -95,7 +95,7 @@
         "idCategoria": 7,
         "nombreCategoria": "Lácteos y quesos",
         "ruta":"lacteos-quesos",
-        "iconoCategoria": "../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Cremas":"cremas",
             "Dulce de leche":"dulce-de-leche",
@@ -111,7 +111,7 @@
         "idCategoria": 8,
         "nombreCategoria": "Fiambres",
         "ruta":"fiambres",
-        "iconoCategoria": "../../img/groceries.png",
+        "iconoCategoria": "/img/groceries.png",
         "subcategories": {
             "Fiambres":"fiambres",
             "Salchichas":"salchichas"

@@ -6,42 +6,71 @@
 */
 
 const categories = require('../database/categories');
-
+const db = require('../database/models');
 
 const jsonTable = require('../database/jsonTable');
 const productsTable = jsonTable('products');
 
 module.exports = {
     productDetail:(req,res) => {
-        //console.log(req.params);
-        //let product= console.log(req.params)
         console.log(req.params.id);
         let requestedProduct = productsTable.find(req.params.id);
         console.log(requestedProduct);
         res.render('products/productDetail',{categories, requestedProduct});
     },
     create: (req,res) => { //create para mostrar el formulario
-        res.render('products/productCreate');
+        db.Products.findAll({
+            include: [{association: "category"}],
+            where: {
+                category_id: 2
+            }
+        })
+            .then(productsCategory =>{
+                console.log(productsCategory);
+            })
+            .then(()=>{
+            res.render('products/productCreate')})
+            .catch((error) =>{console.log(error)})
+        
     },
-    store: (req,res) =>{ //store para procesar el formulario.
-        //Generar el nuevo producto
-        let product = req.body;
+    store: (req,res) =>{ 
+        //store para procesar el formulario.
+       let product = req.body;
         if(req.file){
             product.image = req.file.filename;
         } else {
             res.send('Falta la imagen');
         }
         //Agrego $ a los precios
-        product.competitorPrice = product.price / (1-(product.discount/100)); 
+        product.discount= product.discount/100;
         product.discount = Intl.NumberFormat("de-DE", {style: "percent"}).format(product.discount);
         product.price = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(product.price);
-        product.competitorPrice = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(product.competitorPrice);
-        product.competitorPrice = product.competitorPrice.replace("CLP","$");
+//        product.competitorPrice = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(product.competitorPrice);
+//        product.competitorPrice = product.competitorPrice.replace("CLP","$");
         product.price = product.price.replace("CLP","$");
-        console.log(product)
-        productId= productsTable.create(product); //devuelve el numero de ID, pero solamente para poder redirigir en la sig linea, lo que hizo con el create fue crearlo y almacenarlo
-        res.redirect('/productos/'+ productId);
+        
+        const { brand, description, display, image, price, discount, other_details, category_id, sub_category_id } = product;
+        
+        db.Products.create({
+            brand: brand,
+            description: description,
+            display: display,
+            image: image,
+            price: price,
+            discount: discount,
+            other_details: other_details,
+            category_id: category_id ,
+            sub_category_id: sub_category_id
+        }).then((created) =>{
+            console.log(created);
+            res.redirect('/usuario/login');
+        })
+        .catch(error =>{
+            console.log(error);
+        });
+        
     },
+
     edit: (req,res) => {
         let product = req.body;
         product.idEdit = 'Nuevo ID';

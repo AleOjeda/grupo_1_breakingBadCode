@@ -8,12 +8,13 @@
         <%- include('../partials/searcher') %>
     </header>
     <div class="container-subcategorias">
-        <div class="titulo-categoria"><%=requestedCategory.nombreCategoria%></div>
+
+        <div class="titulo-categoria"><%=categoryName%></div>
         
-        <% Object.keys(requestedCategory.subcategories).forEach(subcategory => { %>
-            <a href="/categorias/<%=requestedCategory.ruta%>/<%= requestedCategory.subcategories[subcategory]%>">
+        <% subcategories.forEach(subcategory => { %>
+            <a href="/categorias/<%=categoryPath%>/<%= subcategory[1]%>">
                 <div class="subcategorias-container">
-                    <%= subcategory%>
+                    <%= subcategory[0]%>
                 </div>
             </a>
         <% });%>

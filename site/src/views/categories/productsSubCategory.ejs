@@ -7,8 +7,8 @@
         <%- include('../partials/categoriesCarousel') %>
         <%- include('../partials/searcher') %>
     </header>
-    Estoy en los productos de la categoria <%- parametros.id %> subcategoria <%- parametros.sub_id %>
-    <div class="titulo-subcategoria">Aceites</div>
+
+    <div class="titulo-subcategoria"><%- categoryName %> / <%- subCategoryName %></div>
     <div class="subcategoria-container">
         <% products.forEach(product => { %>
             <div class="producto-contenedor">

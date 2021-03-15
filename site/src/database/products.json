@@ -19,18 +19,18 @@
   "category": "Almacen",
   "image": "product-1613174189185.jpg",
   "id": 21
- }, 
+ },
  {
-    "name": "Papas Lays",
-    "description": "Papas Lays Grandes",
-    "display": "430Gr",
-    "price": "$ 2,500",
-    "discount": "1,000%",
-    "competitorPrice": "$ 2,778",
-    "category": "Almacen",
-    "image": "product-1613174189185.jpg",
-    "id": 1
-   },
+  "name": "Papas Lays",
+  "description": "Papas Lays Grandes",
+  "display": "430Gr",
+  "price": "$ 2,500",
+  "discount": "1,000%",
+  "competitorPrice": "$ 2,778",
+  "category": "Almacen",
+  "image": "product-1613174189185.jpg",
+  "id": 1
+ },
  {
   "idEdit": "1",
   "newName": "Atun",
@@ -63,5 +63,97 @@
   "category": "1",
   "image": "product-1613598386780.jpeg",
   "id": 25
+ },
+ {
+  "name": "Lays",
+  "description": "asd",
+  "display": "asd",
+  "price": "$ 1",
+  "discount": "100%",
+  "competitorPrice": "$ 1",
+  "category": "1",
+  "image": "product-1615220698503.png",
+  "id": 26
+ },
+ {
+  "brand": "asd",
+  "description": "asd",
+  "display": "asd",
+  "price": "$ 12",
+  "discount": "1,200%",
+  "other_details": "asd",
+  "category": "12",
+  "sub_category": "12",
+  "competitorPrice": "$ 14",
+  "id": 27
+ },
+ {
+  "name": "asd",
+  "description": "asd",
+  "display": "asd",
+  "price": "$ 1",
+  "discount": "100%",
+  "competitorPrice": "$ 1",
+  "category": "1",
+  "image": "product-1615226711749.jpg",
+  "id": 28
+ },
+ {
+  "brand": "123",
+  "description": "123",
+  "display": "123",
+  "price": "$ 123",
+  "discount": "12,300%",
+  "competitorPrice": "-$ 535",
+  "category": "123",
+  "image": "product-1615226843119.png",
+  "id": 29
+ },
+ {
+  "brand": "123",
+  "description": "123",
+  "display": "123",
+  "price": "$ 123",
+  "discount": "12,300%",
+  "competitorPrice": "-$ 535",
+  "category": "123",
+  "image": "product-1615226895664.jpg",
+  "id": 30
+ },
+ {
+  "brand": "123",
+  "description": "123",
+  "display": "123",
+  "price": "$ 123",
+  "discount": "12,300%",
+  "competitorPrice": "-$ 535",
+  "category": "123",
+  "image": "product-1615226971384.png",
+  "id": 31
+ },
+ {
+  "brand": "123",
+  "description": "123",
+  "display": "123",
+  "price": "$ 123",
+  "discount": "12,300%",
+  "other_details": "123",
+  "category": "123",
+  "sub_category": "123",
+  "image": "product-1615227071737.png",
+  "competitorPrice": "-$ 535",
+  "id": 32
+ },
+ {
+  "brand": "123",
+  "description": "123",
+  "display": "123",
+  "price": "$ 123",
+  "discount": "12,300%",
+  "other_details": "123",
+  "category": "123",
+  "sub_category": "123",
+  "image": "product-1615227167477.png",
+  "id": 33
  }
 ]
