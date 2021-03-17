@@ -27,7 +27,7 @@ router.post('/login', controller.processLogin);
 router.get('/mis-pedidos', authMiddleware, controller.myOrders);
 
 //LogOut (hacer)
-//router.get('/logout', controller.logout);
+router.get('/logout', controller.logout);
 
 
 module.exports = router;
