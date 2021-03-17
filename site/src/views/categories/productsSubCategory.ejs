@@ -14,21 +14,24 @@
             <div class="producto-contenedor">
                 <div class="producto-contenedor-secundario">
                     <div class="producto-header">
-                        <div class="producto-descuento"><%= product.descuento%>
+                        <div class="producto-descuento"><%= product.discount%>%
                         </div>
                         <div class="producto-favorito">&#9829
                         </div>
                     </div>
                     <div class="producto-imagen">
-                        <img src= <%= product.imagen%> >
+                        <img src= "<%= product.image%>.png" loading="lazy" >
                     </div>
                     <div class="producto-footer">
-                        <p class="producto-detalle"> <%= product.nombre%> </p>
+                        <p class="producto-detalle"> <%= product.brand%> </p>
                     </div>
-                    <p class="producto-presentacion"> x <%= product.presentacion%></p>
+                    <div class="producto-footer">
+                        <p class="producto-detalle"> <%= product.description%> </p>
+                    </div>
+                    <p class="producto-presentacion"> x <%= product.display%></p>
                     <div class="producto-precios">
                         <p class="precio-competencia"> <%= product.precioCompetencia%> </p>
-                        <p class="precio-nuestro"> <%= product.precio%> </p>
+                        <p class="precio-nuestro"> <%= product.price%> </p>
                     </div>
                 </div>
                 <div class="producto-agregar">Agregar</div>

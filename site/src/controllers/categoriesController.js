@@ -48,7 +48,7 @@ module.exports = {
                 let products = productsCategory;
                 let categoryName = productsCategory[0].category.category;
                 let subCategoryName = productsCategory[0].sub_category.sub_category;
-
+                console.log(products);
                 res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
             })
             .then(()=>{

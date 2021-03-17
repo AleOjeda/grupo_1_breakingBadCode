@@ -62,6 +62,11 @@ module.exports = {
         })
     },
 
+    logout: (req,res) => {
+            res.clearCookie('userEmail');
+            req.session.destroy();
+            return res.redirect('/');
+        },
     
     myOrders:(req,res)=> {
         db.Users.findAll()
