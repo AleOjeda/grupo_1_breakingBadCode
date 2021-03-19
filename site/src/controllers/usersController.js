@@ -51,7 +51,7 @@ module.exports = {
                     delete userInDB.password;
                     req.session.userLogged = userInDB;
                     if(req.body.remember_user){
-                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*0.5}) //(60*1000)*60*24 son 24 horas //(60*1000)=1 minuto
+                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*30}) //(60*1000)*60*24 son 24 horas //(60*1000)=1 minuto
                     };
                     return res.redirect('/');    
                 }
@@ -69,9 +69,26 @@ module.exports = {
         },
     
     myOrders:(req,res)=> {
-        db.Users.findAll()
+        let userId = {};
+        if(res.locals.userLogged){
+            userId = res.locals.userLogged.id
+        } 
+        db.Orders_products.findAll(
+            {
+                include: [
+                    {
+                        association: "order",
+                        where: {
+                            id : userId,
+                        }
+                    },
+                    {association:"product"}
+                ],
+            }
+        )
         .then ((resultados) =>{
-            console.log(resultados);
+            //console.log(resultados);
+            console.log(resultados[1].product.brand)
             res.send('Hola estoy en cuenta. Definir vista de mis pedidos.');
         })
 

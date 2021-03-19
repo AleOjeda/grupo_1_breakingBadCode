@@ -11,58 +11,26 @@
         <div id="carritoListaYtotal" class="carritoListaYtotal" >
             <div class="productosEnCarrito">
                 <div class="contenedorProducto">
-                    <div class="carrito-item-descripcion">
-                        <div class="imagenProductoCarrito">
-                            <img src= <%= products[1].imagen%>>
+                    <% products.forEach(product => { %>
+                        <div class="carrito-item-descripcion">
+                            <div class="imagenProductoCarrito">
+                                <img src= "<%= product.product.image%>.png">
+                            </div>
+                            <div class="carrito-detallesProducto">
+                                <p class="producto-detalle"> <%= product.product.brand%> </p>
+                                <p class="producto-detalle"> <%= product.product.description%> </p>
+                                <p class="producto-presentacion">  <%= product.product.display%></p>
+                                <p class="precio-nuestro">  <%= product.product.price%> </p>
+                                <!-- <p class="precio-competencia">  -->
+                                <!-- <p class="producto-presentacion">  </p> -->
+                                <div class="producto-agregar"> - <%= product.quantity%> +</div>                        
+                            </div>
                         </div>
-                        <div class="carrito-detallesProducto">
-                            <p class="producto-detalle"> <%= products[1].descripcionProducto%> </p>
-                            <p class="producto-presentacion"> x <%= products[1].presentacionProducto%></p>
-                            <p class="precio-nuestro"> <%= products[1].precioProducto%> </p>
-                            <p class="precio-competencia"> <%= products[1].precioCompetencia%> </p>
-                            <div class="producto-agregar">Agregar</div>                        
+                        <div class="carrito-subtotalProducto">
+                            <p>Subtotal:</p>
+                            <p class="precio-nuestro"> <%= product.product.price * product.quantity%> </p>
                         </div>
-                    </div>
-                    <div class="carrito-subtotalProducto">
-                        <p>Subtotal:</p>
-                        <p class="precio-nuestro"> <%= products[1].precioProducto%> </p>
-                    </div>
-                </div>
-                <div class="contenedorProducto">
-                    <div class="carrito-item-descripcion">
-                        <div class="imagenProductoCarrito">
-                            <img src= <%= products[1].imagen%>>
-                        </div>
-                        <div class="carrito-detallesProducto">
-                            <p class="producto-detalle"> <%= products[1].descripcionProducto%> </p>
-                            <p class="producto-presentacion"> x <%= products[1].presentacionProducto%></p>
-                            <p class="precio-nuestro"> <%= products[1].precioProducto%> </p>
-                            <p class="precio-competencia"> <%= products[1].precioCompetencia%> </p>
-                            <div class="producto-agregar">Agregar</div>                        
-                        </div>
-                    </div>
-                    <div class="carrito-subtotalProducto">
-                        <p>Subtotal:</p>
-                        <p class="precio-nuestro"> <%= products[1].precioProducto%> </p>
-                    </div>
-                </div>
-                <div class="contenedorProducto">
-                    <div class="carrito-item-descripcion">
-                        <div class="imagenProductoCarrito">
-                            <img src= <%= products[1].imagen%>>
-                        </div>
-                        <div class="carrito-detallesProducto">
-                            <p class="producto-detalle"> <%= products[1].descripcionProducto%> </p>
-                            <p class="producto-presentacion"> x <%= products[1].presentacionProducto%></p>
-                            <p class="precio-nuestro"> <%= products[1].precioProducto%> </p>
-                            <p class="precio-competencia"> <%= products[1].precioCompetencia%> </p>
-                            <div class="producto-agregar">Agregar</div>                        
-                        </div>
-                    </div>
-                    <div class="carrito-subtotalProducto">
-                        <p>Subtotal:</p>
-                        <p class="precio-nuestro"> <%= products[1].precioProducto%> </p>
-                    </div>
+                    <% }) %>
                 </div>
             </div>
             
