@@ -51,13 +51,7 @@ module.exports = {
                 console.log(products);
                 res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
             })
-            .then(()=>{
-          //  res.render('products/productCreate')
-            })
-            //.catch((error) =>{console.log(error)})
-        // acá lo anterior.
-        let parametros = req.params;
-        //res.render('categories/productsSubcategory',{categories, products, parametros});
+            .catch((error) =>{console.log(error)})
     }
 
 };

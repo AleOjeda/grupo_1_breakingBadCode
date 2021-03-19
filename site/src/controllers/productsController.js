@@ -19,20 +19,9 @@ module.exports = {
         res.render('products/productDetail',{categories, requestedProduct});
     },
     create: (req,res) => { //create para mostrar el formulario
-        db.Products.findAll({
-            include: [{association: "category"}],
-            where: {
-                category_id: 2
-            }
-        })
-            .then(productsCategory =>{
-                console.log(productsCategory);
-            })
-            .then(()=>{
-            res.render('products/productCreate')})
-            .catch((error) =>{console.log(error)})
-        
+            res.render('products/productCreate')     
     },
+    
     store: (req,res) =>{ 
         //store para procesar el formulario.
        let product = req.body;
