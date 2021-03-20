@@ -1,0 +1,41 @@
+
+/* Version Mobil Portrait */
+@media (max-width: 500px) and (orientation: portrait) {
+    body {
+        background-color:yellow;
+    }
+};
+
+/* Version Mobil Landscapet */
+@media (min-width: 577px) {
+    body {
+        background-color: blue;
+    }
+}
+
+/* Version Tablet Landscapet */
+@media (min-width: 769px) {
+    body {
+        background-color: green;
+    }
+}
+
+/* Version Desktop Landscapet */
+@media (min-width: 1200px) {
+    body {
+        margin:auto;
+    }
+    .producto-contenedor{
+        width: 230px;
+        min-width: 230px;
+        margin-right:10px;
+    }
+    header{
+        width: 100%;
+    }
+    .container {
+        margin:auto;
+        width: 1440px;
+        background-color: blue;
+    }
+};

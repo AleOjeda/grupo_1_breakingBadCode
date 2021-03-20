@@ -9,7 +9,7 @@
     <%- include('partials/categoriesCarousel') %>
     <%- include('partials/searcher') %>
     </header>
-    <content>
+    <div class="container">
         <div id="home-catalogo">
             <% categories.forEach(category => { %>
             <div id="catalogo-categoria">
@@ -44,8 +44,8 @@
                     <% });%>
                 </div>
             </div>
+            <% });%>
         </div>
-        <% });%>
-    </content>
+    </div>
 </body>
 </html>

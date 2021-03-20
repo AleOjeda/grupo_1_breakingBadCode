@@ -227,16 +227,15 @@ header {
     color: var(--default-dark);
 }
 .catalogo-contenedor{
-    padding-right: calc(2 * var(--default-margin));
-    margin-left: var(--default-margin);
+    /*padding-right: calc(2 * var(--default-margin));
+    margin-left: var(--default-margin);*/
     display:flex;
     flex-direction: row;
     overflow: auto;
 }
 .producto-contenedor{
     margin: 2px;
-    width: 170px;
-    min-width: 170px;
+    width: 230px;
     margin-right: var(--default-margin);
 }
 .producto-contenedor-secundario{
