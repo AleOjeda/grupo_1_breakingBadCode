@@ -9,8 +9,6 @@ module.exports = {
         res.render ('categories/allCategories',{categories, products});
     },
     subCategory: (req, res) =>{
-        let params = req.params;
-        let requestedCategory = productsTable.findByField("ruta",req.params.id);
         let subcategories = [];
         db.Categories.findOne({
                 include: [{association: "sub_categories"}],
@@ -37,21 +35,36 @@ module.exports = {
     subCategoryProducts: (req,res) => {
         let pathCategoryRequested= req.params.id;
         let pathSubCategoryRequested = req.params.sub_id;
-
-        db.Products
+        console.log(pathSubCategoryRequested);
+         if (req.params.sub_id == "ver-todo"){
+            db.Products
             .findAll({
                 include: [
                     {association: "category", where:{path: pathCategoryRequested }},
-                    {association: "sub_category", where:{path: pathSubCategoryRequested }}],
+                    {association: "sub_category"}],
             })
             .then(productsCategory =>{
+                //console.log(productsCategory);
                 let products = productsCategory;
                 let categoryName = productsCategory[0].category.category;
-                let subCategoryName = productsCategory[0].sub_category.sub_category;
-                console.log(products);
+                let subCategoryName = "Ver Todo";
                 res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
             })
             .catch((error) =>{console.log(error)})
+        } else{
+            db.Products
+                .findAll({
+                    include: [
+                        {association: "category", where:{path: pathCategoryRequested }},
+                        {association: "sub_category", where:{path: pathSubCategoryRequested }}],
+                })
+                .then(productsCategory =>{
+                    let products = productsCategory;
+                    let categoryName = productsCategory[0].category.category;
+                    let subCategoryName = productsCategory[0].sub_category.sub_category;
+                    res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
+                })
+                .catch((error) =>{console.log(error)})
+        }
     }
-
 };
