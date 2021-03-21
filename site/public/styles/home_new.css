@@ -3,7 +3,8 @@
 /* NavBar */
 
 .categoria_desktop {
-    width: 1440px!important;
+    width: var(--default-width);
+    margin: auto;
 }
 
 .menu-main{
@@ -34,6 +35,15 @@
     background-color: #29487d;
 }
 
+.menu-inicio-2 {
+    background-color: grey;
+    color: blanchedalmond;
+}
+.fa-user {
+    font-size: 1rem;
+    margin-left: 0.3rem;
+}
+
 /*@media (max-width: 768px) {
     
     .menu-main{
@@ -48,11 +58,21 @@
     }
 
 }*/
+
 /* Fin NavBar */
 
 #header-top{
-    margin: auto;
     background: linear-gradient(-70deg, #0DAA54, #08BC5A);
+}
+.header-top-contenedor {
+    width: var(--default-width);
+    height: 7rem;
+    margin: auto;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-right: var(--default-padding);
+    padding-left: var(--default-padding);
 }
 
 /* Inicio Header Categorias */

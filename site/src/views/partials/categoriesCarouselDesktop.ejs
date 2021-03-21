@@ -1,8 +1,8 @@
-<div class="categoria_desktop"></div>
+<div class="categoria_desktop">
     <nav class="menu-main">
         <% locals.categories.forEach(category => { %>
             <a href="/categorias/<%=category.ruta%>"><%= category.nombreCategoria%></a>
         <% });%>
-            <a href="#">Iniciar sesión</a>
+            <a class="menu-inicio-2" href="#">Iniciar sesión<i class="fas fa-user"></i></a>
     </nav>
 </div>

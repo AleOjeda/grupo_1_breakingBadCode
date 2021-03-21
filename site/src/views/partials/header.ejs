@@ -1,26 +1,27 @@
 <div id="header-top">
-    <!--<div><% if (locals.userLogged) { %>
-        Hola <%= locals.userLogged.name %> 
-    <% } %> 
-    </div> -->
-    <!--<div id="menu" class="centrar-hijos-vertical-horizontal">
-        <img class="icono" src="/img/menu-icon.svg">
-    </div>-->
-        <a href="/">
-            <div id="espacio-logo">
-                <span id="logo">Marketfy</span>
+    <div class="header-top-contenedor">
+        <!--<div><% if (locals.userLogged) { %>
+            Hola <%= locals.userLogged.name %> 
+        <% } %> 
+        </div> -->
+        <!--<div id="menu" class="centrar-hijos-vertical-horizontal">
+            <img class="icono" src="/img/menu-icon.svg">
+        </div>-->
+                <div id="espacio-logo">
+                    <a id="logo" href="/">Marketfy</a>
+                </div>
+            
+            <div><%- include('searcher') %></div>
+        <div id="carrito">
+            <div class="total-carrito">
+                $120.322
             </div>
-        </a>
-        <div><%- include('searcher') %></div>
-    <div id="carrito">
-        <div class="total-carrito">
-            $120.322
-        </div>
-        <div>
-            <img class="icono" src="/img/shoppingcart-icon.svg">
-        </div>
-        <div class="circulo-rojo centrar-hijos-vertical-horizontal">
-            <div class="inline-block blanco-negrita">22</div>
+            <div>
+                <img class="icono" src="/img/shoppingcart-icon.svg">
+            </div>
+            <div class="circulo-rojo centrar-hijos-vertical-horizontal">
+                <div class="inline-block blanco-negrita">22</div>
+            </div>
         </div>
     </div>
 </div>
