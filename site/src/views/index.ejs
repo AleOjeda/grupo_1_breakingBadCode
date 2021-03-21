@@ -6,8 +6,7 @@
 <body>
     <header>
     <%- include('partials/header') %>
-    <%- include('partials/categoriesCarousel') %>
-    <%- include('partials/searcher') %>
+    <%- include('partials/categoriesCarouselDesktop') %>
     </header>
     <div class="container">
         <div id="home-catalogo">
@@ -24,22 +23,26 @@
                             <div class="producto-header">
                                 <div class="producto-descuento"><%= product.descuento%>
                                 </div>
-                                <div class="producto-favorito">&#9829
+                                <div class="producto-favorito"><!--<i class="fas fa-heart">--><i class="far fa-heart"></i>
                                 </div>
                             </div>
                             <div class="producto-imagen">
                                 <img src= <%= product.imagen%> >
                             </div>
                             <div class="producto-footer">
-                                <p class="producto-detalle"> <%= product.nombre%> </p>
-                            </div>
-                            <p class="producto-presentacion"> x <%= product.presentacion%></p>
-                            <div class="producto-precios">
-                                <p class="precio-competencia"> <%= product.precioCompetencia%> </p>
-                                <p class="precio-nuestro"> <%= product.precio%> </p>
+                                <div class="producto-titulo">
+                                    <p class="producto-detalle"> <%= product.nombre%>
+                                    <span class="producto-presentacion"> x <%= product.presentacion%></span>
+                                    </p>
+                                </div>
+                                <div class="producto-precios">
+                                    <span class="precio-nuestro"> <%= product.precio%>
+                                    <span class="precio-competencia"> <%= product.precioCompetencia%> </span>
+                                    </span>
+                                </div>
+                                <div class="boton-agregar">Agregar</div>
                             </div>
                         </div>
-                        <div class="producto-agregar">Agregar</div>
                     </div>
                     <% });%>
                 </div>

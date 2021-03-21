@@ -1,0 +1,30 @@
+<div class="categoria">
+<nav>
+    <ul class="menu">
+        <% locals.categories.forEach(category => { %>
+        <li class="item">
+            <a href="/categorias/<%=category.ruta%>"><%= category.nombreCategoria%></a>
+        </li>
+        <% });%>
+    </ul> 
+</nav>
+            <!--<a href="">
+                <div class="imagen-categoria">
+                    <img src= "/img/groceries.png"> 
+                </div>
+                <div class="nombre-categoria">
+                    <span id="categoria1">Todas las categorias</span>
+                </div>
+            </a>    
+        </div>
+        <% locals.categories.forEach(category => { %>
+            <div class="categoria">
+                <a href="/categorias/<%=category.ruta%>">
+                    <div class="nombre-categoria">
+                        <span id="categoria1"><%= category.nombreCategoria%></span>
+                    </div>
+                </a>    
+            </div>
+        <% });%>
+    </div>-->
+</div>
