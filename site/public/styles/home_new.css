@@ -1,38 +1,58 @@
 
 
 /* NavBar */
-nav { 
-    background: #222; 
-    padding: 5px 20px; 
-} 
-ul { 
-    list-style-type: none; 
-} 
-a { 
-    color: white; 
-    text-decoration: none; 
-} 
-a:hover { 
-    text-decoration: underline; 
-} 
-.logo a:hover { 
-    text-decoration: none; 
-} 
-.menu li { 
-    font-size: 16px; 
-    padding: 15px 5px; 
-    white-space: nowrap; 
-} 
-.logo a, .toggle a { 
-    font-size: 20px; 
-} 
-.button.secondary { 
-    border-bottom: 1px #444 solid; 
+
+.categoria_desktop {
+    width: 1440px!important;
 }
+
+.menu-main{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(221, 221, 221) ;
+    border-bottom: ;
+    height: 45px;
+    margin: auto;
+}
+
+.menu-main a{
+    flex: 1;
+    display: flex;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;    
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-main a:hover{
+    background: rgba(0,0,0, .1);
+}
+
+.menu-main a.active{
+    background-color: #29487d;
+}
+
+/*@media (max-width: 768px) {
+    
+    .menu-main{
+        height: auto;
+        border-bottom: 0px;
+        display: block;
+    }
+    
+    .menu-main a{
+        height: 45px;
+        border-bottom: 1px solid #29487d;
+    }
+
+}*/
 /* Fin NavBar */
 
 #header-top{
     margin: auto;
+    background: linear-gradient(-70deg, #0DAA54, #08BC5A);
 }
 
 /* Inicio Header Categorias */
@@ -43,6 +63,7 @@ a:hover {
 .categorias{
     justify-content:space-between;
 }
+
 /* Fin Header Categorias */
 
 /*Inicio Estilo para el buscador */

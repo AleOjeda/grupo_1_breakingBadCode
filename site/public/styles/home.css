@@ -3,7 +3,8 @@
 */
 
 :root {
-/* Estructura */    
+/* Estructura */
+    --default-width: 1440px;
     --default-border-radious: 1rem;
     --default-padding: .5rem;
     --default-margin: .5rem;
@@ -54,7 +55,6 @@ body {
     background-color: var(--default-background);
 }
 header {
-    background: linear-gradient(-70deg, #0DAA54, #08BC5A);
     width: 100%;
     padding:0rem .25rem 0.25rem .25rem;
 
@@ -80,7 +80,8 @@ header {
 
 
 #header-top{
-    width: 1440px;
+    /*width: var(--default-width);*/
+    height: 7rem;
     display:flex;
     justify-content:space-between;
     align-items: center;
@@ -331,7 +332,7 @@ header {
 .precio-competencia{
     font-size: var(--font-size-primary-subtitle);
     color:var(--darkGrey);
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: line-through;
     font-size: 1rem;
     /*display: flex;
