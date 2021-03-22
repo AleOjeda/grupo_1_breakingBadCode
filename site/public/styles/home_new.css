@@ -3,7 +3,7 @@
 /* NavBar */
 
 .categoria_desktop {
-    width: var(--default-width);
+    max-width: var(--default-width);
     margin: auto;
 }
 
