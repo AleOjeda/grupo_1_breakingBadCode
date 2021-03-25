@@ -65,7 +65,7 @@
     background: linear-gradient(-70deg, #0DAA54, #08BC5A);
 }
 .header-top-contenedor {
-    width: var(--default-width);
+    /* width: var(--default-width); */
     height: 7rem;
     margin: auto;
     display:flex;

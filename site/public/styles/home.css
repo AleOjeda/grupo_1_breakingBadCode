@@ -41,10 +41,9 @@
 
 
 *{box-sizing: border-box; }
-.cuadrado {
-        width: 100px; 
-        height: 100px; 
-        background: gold;
+/* BORRAR ANTES DE FINALIZAR, ES EL MARGEN QUE LE DA A LA CAJA EN INDEX */
+.margen-derecho {
+        margin-right: var(--default-margin); 
    }
 
 body {
@@ -231,10 +230,11 @@ header {
     flex-direction: row;
     overflow:auto;
 }
+
 .producto-contenedor{
-    margin: 2px;
+/*     margin: 2px; */
     width: 230px;
-    margin-right: var(--default-margin);
+/*     margin-right: var(--default-margin); */
 }
 .producto-contenedor-secundario{
     background-color: #fff;

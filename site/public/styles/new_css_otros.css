@@ -1,0 +1,19 @@
+/* Agrego a css de otras clases */
+
+.producto-imagen{
+    max-width: 100%;
+}
+
+.subcategoria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    column-gap: 2%;
+    row-gap: 20px;
+    margin: 1%;
+    justify-items: center;
+}
+
+
+.producto-contenedor{
+    min-width: 100%;
+}
