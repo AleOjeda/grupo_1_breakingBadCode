@@ -17,3 +17,14 @@
 .producto-contenedor{
     min-width: 100%;
 }
+
+#categorias{
+    margin: auto;
+    width: 100%;
+    background-color: var(--default-primary-color);
+}
+
+.categorias{
+    overflow: auto;
+    margin-top:0;
+}

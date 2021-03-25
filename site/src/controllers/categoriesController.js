@@ -46,6 +46,20 @@ module.exports = {
             .then(productsCategory =>{
                 //console.log(productsCategory);
                 let products = productsCategory;
+                    //Formateo a peso chileno
+                    products.forEach(product=>{
+                        product.competitorPrice = Math.trunc(product.price * 100 / (100-product.discount)); 
+                        var formatter = new Intl.NumberFormat('en-US', {
+                            style: 'decimal',
+                            currency: 'CLP',
+                            useGrouping: false,
+                            // These options are needed to round to whole numbers if that's what you want.
+                            minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+                            //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+                          });
+                    product.competitorPrice= "$".concat(formatter.format(product.competitorPrice));
+                    product.price= "$".concat(formatter.format(product.price));
+                    })
                 let categoryName = productsCategory[0].category.category;
                 let subCategoryName = "Ver Todo";
                 res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
@@ -60,6 +74,20 @@ module.exports = {
                 })
                 .then(productsCategory =>{
                     let products = productsCategory;
+                    //Formateo a peso chileno
+                    products.forEach(product=>{
+                        product.competitorPrice = Math.trunc(product.price * 100 / (100-product.discount)); 
+                        var formatter = new Intl.NumberFormat('en-US', {
+                            style: 'decimal',
+                            currency: 'CLP',
+                            useGrouping: false,
+                            // These options are needed to round to whole numbers if that's what you want.
+                            minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+                            //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+                          });
+                    product.competitorPrice= "$".concat(formatter.format(product.competitorPrice));
+                    product.price= "$".concat(formatter.format(product.price));
+                    })
                     let categoryName = productsCategory[0].category.category;
                     let subCategoryName = productsCategory[0].sub_category.sub_category;
                     res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
