@@ -27,6 +27,12 @@ module.exports = (sequelize, dataTypes) => {
         shipping_address:{
             type: dataTypes.TEXT
         },
+        total:{
+            type: dataTypes.INTEGER
+        },
+        userOrder:{
+            type: dataTypes.INTEGER
+        },
     };
     let config = {
         tableName : "orders",

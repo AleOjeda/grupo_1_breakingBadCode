@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./../partials/head') %>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+        <%- include('../partials/categoriesCarousel') %>
+        <%- include('../partials/searcher') %>
+    </header>
+<div> <!-- Contenedor principal -->
+    <div> <!-- Contenedor con detalle de orden -->
+        <div> <%= order.userOrder%> <!-- # Pedido --></div>
+        <div><!-- Detalles -->
+            Fecha de pedido: <%= order.required_date%>
+            Fecha de entrega: <%= order.shipped_date%>
+            Estado: <%= order.status%>
+            Total: <%= order.total%>
+            Tracking number: <%= order.tracking_number%>
+        </div>
+    </div>
+    </div>
+    <div><!-- Contenedor Productos comprados -->
+        <% order.order_products.forEach(product => { %>
+            <div><!-- Contenedor por producto -->
+                <div> <!-- Conteneodr Imagen -->
+
+                </div>
+                <div> <!-- Contenedor Datos Producto -->
+                    <%= product.product.brand%>
+                    <%= product.product.description%>
+                    <%= product.quantity%> x
+                    $<%= product.product_unit_price%> = $<%=product.quantity * product.product_unit_price%> 
+                </div>
+            
+            </div>
+
+        <% }) %>
+    </div>
+    <div> <!-- Botonera-->
+        <div> Repetir Compra<!-- Repetir Compra --></div>
+        <div>Agregar todo al carrito<!-- Agregar items al carrito --></div>
+    </div>
+</div>
+
+</body>
+</html>
