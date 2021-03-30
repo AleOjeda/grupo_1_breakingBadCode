@@ -36,11 +36,13 @@ const categoriesRouter = require('./routes/categoriesRouter');
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
+const orderRouter = require('./routes/orderRouter');
 
 app.use('/', mainRouter);
 app.use('/categorias', categoriesRouter);
 app.use('/productos', productsRouter);
 app.use('/usuario',usersRouter);
+app.use('/pedidos',orderRouter);
 
 //Iniciando en puerto 3000 y heroku.
 app.listen(process.env.PORT || 3000, () => {

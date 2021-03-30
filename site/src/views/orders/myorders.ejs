@@ -7,13 +7,27 @@
         <%- include('../partials/categoriesCarousel') %>
         <%- include('../partials/searcher') %>
     </header>
-<div> contenedor
-    <div> primer pedido
-        <div> n° de pedido</div>
+<div> <!-- Contenedor principal -->
+    <% orders.forEach(order => { %>
+        <div> <!-- Contenedor por orden -->
+            <div> <%= order.userOrder%> <!-- # Pedido --></div>
+            <div><!-- Detalles -->
+                Fecha de pedido: <%= order.required_date%>
+                Fecha de entrega: <%= order.shipped_date%>
+                Estado: <%= order.status%>
+                Total: <%= order.total%>
+                Tracking number: <%= order.tracking_number%>
+            </div>
+            <div><!-- Repetir pedido / Ver productos -->
+                <div> Repetir Pedido<!-- Repetir Pedido -->
 
+                </div>
+                <div> <a href="/pedidos/<%= order.tracking_number%>">Ver Productos > </a><!-- Ver productos -->
 
-    </div>
-
+                </div>
+            </div>
+        </div>
+    <% }) %>
 
 </div>
 

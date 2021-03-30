@@ -69,27 +69,28 @@ module.exports = {
         },
     
     myOrders:(req,res)=> {
-        let userId = {};
+        let userID = {};
         if(res.locals.userLogged){
-            userId = res.locals.userLogged.id
+            userID = res.locals.userLogged.id
         } 
-        db.Orders_products.findAll(
-            {
-                include: [
-                    {
+        db.Orders.findAll({
+                /* include: [{
                         association: "order",
                         where: {
-                            id : userId,
-                        }
-                    },
+                            id : userId,}},
                     {association:"product"}
-                ],
-            }
-        )
-        .then ((resultados) =>{
+                ], */
+                where: {
+                    user_id : userID
+                }
+            })
+/*         .then((ordenes)=>{
+                console.log(ordenes[0].brand);
+        }) */
+        .then ((orders) =>{
             //console.log(resultados);
-            console.log(resultados[1].product.brand)
-            res.send('Hola estoy en cuenta. Definir vista de mis pedidos.');
+            console.log(orders);
+            return res.render('orders/myOrders', {orders, categories});;
         })
 
     }
