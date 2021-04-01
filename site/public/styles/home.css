@@ -256,9 +256,15 @@ header {
     text-align: center;
 }
 .producto-favorito{
+    
+    transition-property: color;
     color:#818181;
     font-size: var(--font-size-title);
     margin-right: 0.2rem;
+}
+.producto-favorito :hover {
+    transition-duration: 250ms;
+    color: #FF0000;
 }
 .producto-imagen{
     width:150px;
