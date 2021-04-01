@@ -45,7 +45,6 @@ module.exports = {
         .then (userInDB =>{
             // pregunto si es distinto de null (tabla vacia) o si lo que devuelve es un array vacio (no encontró el usuario)
             if(userInDB !== null) {
-                console.log('pase por acá tambien')
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userInDB.password);
                 if(isOkThePassword){
                     delete userInDB.password;

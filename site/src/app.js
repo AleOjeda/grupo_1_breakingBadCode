@@ -44,6 +44,12 @@ app.use('/productos', productsRouter);
 app.use('/usuario',usersRouter);
 app.use('/pedidos',orderRouter);
 
+//Rutas APIs
+const apiMyCartRoute = require('./routes/API/myCartRouter');
+//const apiCategories = require('');
+app.use('/api/carrito', apiMyCartRoute);
+//app.use('/api/categorias', apiCategories);
+
 //Iniciando en puerto 3000 y heroku.
 app.listen(process.env.PORT || 3000, () => {
     console.log('Corriendo en puerto 3000');
