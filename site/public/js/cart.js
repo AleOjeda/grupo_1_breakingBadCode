@@ -1,7 +1,6 @@
 window.onload = function() {
 /*     init();
     doSomethingElse(); */
-    console.log('hola');
 
     const db = fetch("http://localhost:3000/api/carrito/1234")
     .then( (response) =>{ 
@@ -22,7 +21,9 @@ window.onload = function() {
         cartElements = document.getElementById("cart-elements");
         cartElements.innerHTML = ElementsInCart.length;
     })
-  };
+
+/*     console.log(user); */
+};
 /* 
 const db = fetch('http://localhost:3000/src/database/config/config.js').then(function(response){console.log(response)})
  */
