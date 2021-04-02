@@ -2,24 +2,25 @@ window.onload = function() {
 /*     init();
     doSomethingElse(); */
 
-    const db = fetch("http://localhost:3000/api/carrito/1234")
-    .then( (response) =>{ 
-    return response.json()
-    })
-    .then ( carrito => {
-/*         carrito.data.forEach(element =>{
-            console.log(element);
-        }) */
-        // agregar un locals con los elementos de carrito si no esta logueado el usuario
-/*         if(locals){
-            userID = "<%- userLogged.id%>  res.locals.userLogged.id "
+    const db = fetch('http://localhost:3000/api/carrito/1234'/* ,{
+        method: 'POST',
+        //No hace falta que envie ningun dato para que lea la cookie. Solamente tiene que viajar por post
+        //body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
         } 
-        console.log("estamos" + userID);
- */        return carrito.data;
+    }*/)
+    .then( (response) =>{ 
+        return response.json()
     })
+/*     .then ( carrito => {
+        return carrito.data;
+    }) */
     .then( (ElementsInCart) =>{
         cartElements = document.getElementById("cart-elements");
-        cartElements.innerHTML = ElementsInCart.length;
+        cartElements.innerHTML = ElementsInCart.totalSku;
+        cartAmount = document.getElementById("cart-amount");
+        cartAmount.innerHTML = ElementsInCart.totalAmountCart;
     })
 
 /*     console.log(user); */

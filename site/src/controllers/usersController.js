@@ -49,8 +49,11 @@ module.exports = {
                 if(isOkThePassword){
                     delete userInDB.password;
                     req.session.userLogged = userInDB;
+                    //ver que pasaria con session si no pondriamos esa cookie. Ahora la cookie estaria. Middleware de si no tiene session, eliminar la cookie.
+                    res.cookie('userId',userInDB.id,{maxAge:(1000*60)*30});
+                    
                     if(req.body.remember_user){
-                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*30}) //(60*1000)*60*24 son 24 horas //(60*1000)=1 minuto
+                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*30}) //(60*1000)*60*24 son 24 horas //(60*1000)=1 minuto;
                     };
                     return res.redirect('/');    
                 }
