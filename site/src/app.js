@@ -45,9 +45,13 @@ app.use('/usuario',usersRouter);
 app.use('/pedidos',orderRouter);
 
 //Rutas APIs
-const apiMyCartRoute = require('./routes/API/myCartRouter');
+const apiMyCartRouter = require('./routes/API/myCartRouter');
+const apiProductsRouter = require('./routes/API/productsRouter');
+const apiCategoriesRouter = require('./routes/API/categoriesRouter');
 //const apiCategories = require('');
-app.use('/api/carrito', apiMyCartRoute);
+app.use('/api/cart', apiMyCartRouter);
+app.use('/api/product', apiProductsRouter);
+app.use('/api/category', apiCategoriesRouter);
 //app.use('/api/categorias', apiCategories);
 
 //Iniciando en puerto 3000 y heroku.

@@ -2,7 +2,7 @@ window.onload = function() {
 /*     init();
     doSomethingElse(); */
 
-    const db = fetch('http://localhost:3000/api/carrito/1234'/* ,{
+    const db = fetch('http://localhost:3000/api/cart/'/* ,{
         method: 'POST',
         //No hace falta que envie ningun dato para que lea la cookie. Solamente tiene que viajar por post
         //body: JSON.stringify(data),
@@ -28,3 +28,7 @@ window.onload = function() {
 /* 
 const db = fetch('http://localhost:3000/src/database/config/config.js').then(function(response){console.log(response)})
  */
+
+function addItem(sku){
+    console.log('hola',sku);
+}
