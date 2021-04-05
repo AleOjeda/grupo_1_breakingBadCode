@@ -6,7 +6,6 @@ const db = require('../database/models');
 module.exports = {
     orderDetails: (req,res) => {
         let orderNumber = req.params.id;
-        console.log(orderNumber);
         db.Orders.findOne({
             where: {
                 tracking_number : orderNumber
@@ -16,9 +15,6 @@ module.exports = {
                 ],
         })
     .then ((order) =>{
-        //console.log(resultados);
-//        console.log(order);
-//        console.log(order.order_products[2]);
         return res.render('orders/orderDetails', {order, categories}); 
      })
 

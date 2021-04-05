@@ -1,34 +1,85 @@
-window.onload = function() {
-/*     init();
-    doSomethingElse(); */
+let host =  "http://192.168.0.5:3000";
 
-    const db = fetch('http://localhost:3000/api/cart/'/* ,{
-        method: 'POST',
-        //No hace falta que envie ningun dato para que lea la cookie. Solamente tiene que viajar por post
-        //body: JSON.stringify(data),
+function quantityProductsRefresher() {
+    //Actualiza las cantidades
+    //fetch('https://restcountries.eu/rest/v2/all')
+    fetch(`${host}/api/cart`,{
+        method: 'GET',
         headers: {
-            'Content-Type': 'application/json'
-        } 
-    }*/)
+          'Content-Type': 'application/json'
+        }})
+    .then(response => response.json())
+    .then(cart=>{
+        let cartItems = cart.data;
+        cartItems.forEach(item =>{
+            fieldQuantity = 'quantitySku=' + item.product_id;
+            fieldQuantityItem = document.getElementById(fieldQuantity);
+            fieldQuantityItem.innerHTML = item.quantity;
+        })
+    })
+    .catch( (err) =>{
+        console.log(err)
+    })
+};
+
+
+function amountElementsCartRefresher () {
+    const db = fetch(`${host}/api/cart`)
     .then( (response) =>{ 
         return response.json()
     })
-/*     .then ( carrito => {
-        return carrito.data;
-    }) */
     .then( (ElementsInCart) =>{
         cartElements = document.getElementById("cart-elements");
         cartElements.innerHTML = ElementsInCart.totalSku;
         cartAmount = document.getElementById("cart-amount");
         cartAmount.innerHTML = ElementsInCart.totalAmountCart;
     })
-
-/*     console.log(user); */
+    .catch( (err)=> {
+        console.log(err);
+        cartElements = document.getElementById("cart-elements");
+        cartElements.innerHTML = err;
+        cartAmount = document.getElementById("cart-amount");
+        cartAmount.innerHTML = err;
+    })
 };
-/* 
-const db = fetch('http://localhost:3000/src/database/config/config.js').then(function(response){console.log(response)})
- */
 
-function addItem(sku){
-    console.log('hola',sku);
+window.addEventListener('load', (event) => {
+/*     init();
+doSomethingElse(); */
+    amountElementsCartRefresher();
+    quantityProductsRefresher();
+})
+
+
+function addSubtractRemoveQuantity(sku, operation){
+    fetch(`${host}/api/cart/${sku}/${operation}` ,{
+        method: 'POST',
+        //body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(() => {
+        let fieldQuantity = 'quantitySku=' + sku;
+        fieldQuantityItem = parseInt(document.getElementById(fieldQuantity).innerHTML);
+        switch(operation){
+            case 'create':
+                document.getElementById(fieldQuantity).innerHTML = 1;
+                break;
+            case 'add':
+                document.getElementById(fieldQuantity).innerHTML = fieldQuantityItem + 1;
+                break;
+            case 'subtract':
+                if (fieldQuantityItem == 0){
+                    document.getElementById(fieldQuantity).innerHTML = 0
+                } else{
+                document.getElementById(fieldQuantity).innerHTML = parseInt(fieldQuantityItem) - 1;
+                }
+                break;
+            case 'remove':
+                document.getElementById(fieldQuantity).innerHTML = 0;
+                break;
+        }
+    })
+    .then( () => amountElementsCartRefresher());
 }

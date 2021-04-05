@@ -7,15 +7,12 @@ const fetch = require('node-fetch');
 
 module.exports = {
     index : async(req,res) => {
-        fetch('http://localhost:3000/api/category/all')
+        let categories = fetch('http://localhost:3000/api/category/all')
         .then(response => response.json())
         .then(categoriesData=>{
-            let categories = categoriesData.data
-            console.log(categories);
-            console.log(categories[7].products); 
-            res.render('index', {categories})
-        })
-
+            let categories = categoriesData.data;
+            res.render('index', {categories});
+        });
     },
 
     miCart:(req,res) => {

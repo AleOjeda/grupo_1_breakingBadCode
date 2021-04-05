@@ -35,7 +35,6 @@ module.exports = {
     subCategoryProducts: (req,res) => {
         let pathCategoryRequested= req.params.id;
         let pathSubCategoryRequested = req.params.sub_id;
-        console.log(pathSubCategoryRequested);
          if (req.params.sub_id == "ver-todo"){
             db.Products
             .findAll({
@@ -44,7 +43,6 @@ module.exports = {
                     {association: "sub_category"}],
             })
             .then(productsCategory =>{
-                //console.log(productsCategory);
                 let products = productsCategory;
                     //Formateo a peso chileno
                     products.forEach(product=>{

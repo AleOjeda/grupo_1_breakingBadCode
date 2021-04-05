@@ -5,7 +5,6 @@ const controller = require('../../controllers/API/myCartController');
 
 
 router.get('/', controller.show);
-router.post('/:item/:operation', controller.addSubtractQuantity);
-router.delete('/:id/:item', controller.removeItem);
+router.post('/:item/:operation', controller.addSubtractRemoveQuantity);
 
 module.exports = router;
