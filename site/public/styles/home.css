@@ -262,9 +262,12 @@ header {
     font-size: var(--font-size-title);
     margin-right: 0.2rem;
 }
-.producto-favorito :hover {
+/* .producto-favorito :hover {
     transition-duration: 250ms;
     color: #FF0000;
+} */
+.producto-favorito-activo {
+    color: red;
 }
 .producto-imagen{
     width:150px;
