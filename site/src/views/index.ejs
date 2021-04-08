@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="producto-precios">
                                     <span class="precio-nuestro"> <%= product.price%>
-                                    <span class="precio-competencia"> <%= product.price%> </span><!-- Cambiar a descuento -->
+                                    <span class="precio-competencia"> <%= product.oldPrice%> </span><!-- Cambiar a descuento -->
                                     </span>
                                 </div>
                                 <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'subtract')" class="boton-sumarrestar">-</button >
