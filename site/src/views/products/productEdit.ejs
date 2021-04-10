@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <body>
-<form style="max-width: 500px;" action="/productos/editar" method="POST"  enctype="multipart/form-data"> 
+<form style="max-width: 500px;" action="/productos/editar/<%= product.id %>" method="POST"  enctype="multipart/form-data"> 
     <div>
-        <label for="id"> ID a editar</label>
-        <input type="text" name="id" value="">
+        <label for="id"> ID a editar: <%= product.id %></label>
+        <input type="text" name="id" value="<%= product.id %>" style="display:none">
     </div>
     <div>
         <div>
-            <label for="name"> Nombre Nuevo</label>
-            <input type="text" name="name" value="">
+            <label for="name"> Marca Nuevo</label>
+            <input type="text" name="brand" value="" placeholder="<%= product.brand %>" >
         </div>
         <div>
             <label for="description">Descripción Nueva</label>
-            <input type="text" name="description" value="">
+            <input type="text" name="description" value="" placeholder="<%= product.description %>">
         </div>
         <div>
             <label for="display">Presentación Nueva</label>
-            <input type="text" name="display" value="">
+            <input type="text" name="display" value="" placeholder="<%= product.display %>">
         </div>
         <div>
             <label for="imageProduct">Imagen Nueva</label>
-            <input type="file" name="imageProduct" value="">
+            <input type="file" name="image" value="" placeholder="">
         </div>
         <div>
             <label for="price">Precio Nueva</label>
-            <input type="number" name="price">
+            <input type="number" name="price" placeholder="<%= product.price %>">
         </div>
         <div>
             <label for="discount">Descuento Nuevo</label>
-            <input type="number" name="discount">
-        </div>
-        <div>
-            <label for="competitorPrice">Precio Competencia  Nuevo</label>
-            <input type="number" name="competitorPrice">
+            <input type="number" name="discount" placeholder="<%= product.discount %>">%
         </div>
         <div>
             <label for="category">Categoría nueva</label>
-            <input type="text" name="category" value="">
+            <input type="text" name="category_id" value="" placeholder="<%= product.category_id %>">
+        <div>
+            <label for="competitorPrice">Subcategoria Nueva</label>
+            <input type="number" name="sub_category_id" placeholder="<%= product.sub_category_id %>">
+        </div>
+
         </div>    <button type="submit">Editar producto</button>
 
 

@@ -1,9 +1,7 @@
 //let host =  "http://192.168.0.5:3000";
-<<<<<<< HEAD
-let host = "http://localhost:3000"
-=======
+
 let host = "http://localhost:3000";
->>>>>>> 418687bc1be611bf547bfddd211e8825e1a817b6
+
 
 function quantityProductsRefresher() {
     //Actualiza las cantidades

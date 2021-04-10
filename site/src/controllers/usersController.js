@@ -66,6 +66,7 @@ module.exports = {
 
     logout: (req,res) => {
             res.clearCookie('userEmail');
+            res.clearCookie('userId');
             req.session.destroy();
             return res.redirect('/');
         },

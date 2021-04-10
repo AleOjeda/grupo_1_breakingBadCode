@@ -7,16 +7,16 @@
         <div id="header-DetalleProducto">
             <div class="producto-favorito">&#9829</div>
             <div class="producto-imagen">
-                <img src= "../img/productos/<%= requestedProduct.image%>" >
+                <img src= "<%= product.image%>" >
             </div>
             <div class="producto-footer">
-                <p class="producto-detalle"> <%= requestedProduct.description%> &nbsp; &nbsp; <p class="producto-presentacion"> x <%= requestedProduct.display%></p> </p>
+                <p class="producto-detalle"> <%= product.description%> &nbsp; &nbsp; <p class="producto-presentacion"> x <%= product.display%></p> </p>
             </div>
             
             <div class="producto-precios">
-                <div class="precio-competencia"> <%= requestedProduct.competitorPrice%> </div>
-                <div class="precio-nuestro"> <%= requestedProduct.price%> </div>
-                <div class="producto-agregar">Agregar</div>
+                <div class="precio-competencia"> <%= product.competitorPrice%> </div>
+                <div class="precio-nuestro"> <%= product.price%> </div>
+                <!-- <div class="producto-agregar">Agregar</div> -->
             </div>
         </div>
     </div>
