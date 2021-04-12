@@ -15,6 +15,7 @@ module.exports = {
                 let totalAmount = 0;
                 products.forEach(item => {
                     item.dataValues.subtotal = item.dataValues.quantity * item.dataValues.product.price;
+                    totalAmount = totalAmount + item.dataValues.subtotal;
                     //Formateo total $$
                     item.dataValues.subtotal = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(item.dataValues.subtotal);
                     item.dataValues.subtotal = item.dataValues.subtotal.replace("CLP","$");
@@ -22,7 +23,6 @@ module.exports = {
                     //Le quito el espacio... se trata de un "no breaking space, por eso se usa \u00a0 y no " " 
                     item.dataValues.subtotal = item.dataValues.subtotal.replace("\u00a0","");
                     //Calculo Total
-                    totalAmount = totalAmount + item.dataValues.subtotal;
                 });
                 
                 //Formateo total $$

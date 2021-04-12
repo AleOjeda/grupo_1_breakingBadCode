@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     background: rgb(221, 221, 221) ;
-    border-bottom: ;
+/*     border-bottom: ; */
     height: 45px;
     margin: auto;
 }
@@ -100,16 +100,6 @@
 
 /* Version Mobil Landscapet */
 @media (min-width: 577px) {
-    
-}
-
-/* Version Tablet Landscapet */
-@media (min-width: 769px) {
-   
-}
-
-/* Version Desktop Landscapet */
-@media (min-width: 1200px) {
     body {
         margin:auto;
     }
@@ -120,5 +110,15 @@
     .container {
         margin:auto;
         width: 1440px;
-    }
-};
+    } 
+}
+
+/* Version Tablet Landscapet */
+@media (min-width: 769px) {
+
+}
+
+/* Version Desktop Landscapet */
+@media (min-width: 1200px) {
+
+}

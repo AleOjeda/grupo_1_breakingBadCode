@@ -77,9 +77,9 @@ header {
 }
 
 
-#header-top{
+/* #header-top{
     
-}
+} */
 #header-top > a {
     text-decoration: none;
 }
@@ -547,7 +547,7 @@ header {
     flex-direction:row;
     flex-wrap: wrap;
 }
-.subcategoria-container > div {
+/* .subcategoria-container > div {
     max-width: 0.5vw;
-
-}
+    
+} */

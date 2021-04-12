@@ -14,9 +14,9 @@
 }
 
 
-.producto-contenedor{
-    /* min-width: 50%; */
-}
+/* .producto-contenedor{
+     min-width: 50%; 
+} */
 
 #categorias{
     margin: auto;
@@ -27,4 +27,13 @@
 .categorias{
     overflow: auto;
     margin-top:0;
+}
+
+/* .max-width100{
+    max-width: 100%;
+} */
+@media (min-width: 577px) {
+    .subcategoria-container > div {
+        max-width: 100%;
+    }
 }

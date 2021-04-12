@@ -7,27 +7,11 @@
         <%- include('../partials/categoriesCarousel') %>
         <%- include('../partials/searcher') %>
     </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="titulo-subcategoria"><%- categoryName %> / <%- subCategoryName %></div>
     <div class="subcategoria-container">
         <% products.forEach(product => { %>
 
-            <div class="producto-contenedor">
+            <div class="producto-contenedor margen-derecho max-width100">
                 <div class="producto-contenedor-secundario">
                     <div class="producto-header">
                         <div class="producto-descuento"><%= product.discount%>
@@ -36,7 +20,7 @@
                         </div>
                     </div>
                     <div class="producto-imagen">
-                        <img src= "<%= product.image%>.png" >
+                        <img src= "<%= product.image%>" >
                     </div>
                     <div class="producto-footer">
                         <div class="producto-titulo">
