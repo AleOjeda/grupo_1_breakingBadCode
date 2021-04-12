@@ -1,0 +1,23 @@
+Chicos, algunas de las rutas no se pueden acceder todavia desde el front,
+son:
+
+
+/usuario/registro
+/usuario/login
+/usuario/logout
+
+/productos/:id  (detalle producto)
+/productos/crear
+/productos/remove/:Id
+/productos/editar/:id
+
+Para ver las apis
+Funcionan con un usuario logueado, si no queres crear uno puede ser:
+ale@marketfy.com
+Pass: 1234
+
+La secuencia para agregar productos al carrito es
+Botón agregar y ahí con + y - modificas la cantidad.
+Si llega a 1 y le restas una unidad se borra de la bbdd 
+y hay que colocar agregar nuevamente.
+La idea es q con css luego el botón agregar aparezca cuando no hay cantidad

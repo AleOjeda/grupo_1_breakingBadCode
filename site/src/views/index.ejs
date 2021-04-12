@@ -25,7 +25,7 @@
                                 <div class="producto-favorito"><i class="fas fa-heart"></i><!-- <i class="far fa-heart"></i> --></div>
                             </div>
                             <div class="producto-imagen">
-                                <img src= <%= product.image%>.png >
+                                <img src= <%= product.image%>>
                             </div>
                             <div class="producto-footer">
                                 <div class="producto-titulo">
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="producto-precios">
                                     <span class="precio-nuestro"> <%= product.price%>
-                                    <span class="precio-competencia"> <%= product.price%> </span><!-- Cambiar a descuento -->
+                                    <span class="precio-competencia"> <%= product.oldPrice%> </span><!-- Cambiar a descuento -->
                                     </span>
                                 </div>
                                 <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'subtract')" class="boton-sumarrestar">-</button >

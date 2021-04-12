@@ -12,8 +12,8 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname,'../../public/img/productos'));
     },
     filename: (req, file, cb) => {
-        console.log(file);
-        const newFilename = 'product-'+ Date.now() + path.extname(file.originalname);
+        //console.log(file);
+        const newFilename = 'product-'+ Date.now() + path.extname(file.originalname) ;
         cb(null, newFilename);
     }
 });
@@ -26,10 +26,10 @@ router.get('/', (req,res) => {
 
 
 router.get('/crear', controller.create); //Muestra formulario de creación
-router.get('/editar',controller.edit); // Muestra formulario para editar
+router.get('/editar/:id',controller.edit); // Muestra formulario para editar
 router.get('/:id', controller.productDetail);
-
+router.get('/remove/:id', controller.remove);
 router.post('/crear', upload.single('image'), controller.store);
 
-router.post('/editar',upload.single('image'),controller.update); //Procesa el formulario de creación (agregar multer para los archivos)
+router.post('/editar/:id',upload.single('image'),controller.update); //Procesa el formulario de creación (agregar multer para los archivos)
 module.exports = router;
