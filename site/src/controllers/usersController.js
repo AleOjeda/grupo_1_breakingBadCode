@@ -2,6 +2,7 @@ const products = require('../database/products');
 const categories = require('../database/categories');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
+const {validationResult} = require('express-validator');
 
 const jsonTable = require('../database/jsonTable');
 const usersTable = jsonTable('users');
@@ -15,24 +16,31 @@ module.exports = {
     },
     //integrando base de datos
     processRegister:(req,res) => {
-        db.Users.findAll({
-            where: {
-                email: req.body.email
-            }
-        })
-        .then (userInDB =>{
-            if(userInDB.length!=0) {
-                return res.send ('Este email ya esta registrado')
-            } else { 
+        let errors = validationResult(req);
+        db.Users.findOne({ where: { email: req.body.email }})
+            .then (userInDb =>{
+                if(userInDb) {
+                    return res.render ('users/registro', {errors:{email: { msg:'Este email ya esta registrado'}},
+                                                            categories})
+                }
+                // Pregunto si hay errores, si los hay, los devuelvo.
+                if (!errors.isEmpty()){
+                    console.log(req.body);
+                    return res.render('users/registro', {
+                        errors: errors.mapped(),
+                        old: req.body,
+                        categories
+                    })
+                }
                 db.Users.create({
                     name: req.body.fullName,
                     email: req.body.email,
                     password: bcryptjs.hashSync(req.body.password,10)
-                }),
-                res.redirect('./login')
-             } 
-        })
+                })
+                .then (() => res.redirect('login'))
+            })
     },
+
     login: (req,res) => {
         res.render('users/login', {categories});
     },
