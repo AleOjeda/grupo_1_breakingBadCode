@@ -59,9 +59,16 @@ module.exports = {
                     product_id: sku,
                     quantity: 1
                 })
+                .then ( () => {
+                    res.status(200).json({
+                        data: 'item Ok',
+                        status:200,
+                    })
+                })
                 .catch();
                 break;
             case 'add':
+                
                 db.Shopping_cart_items
                 .findOne({
                     where:{ user_id: user, product_id: sku},
@@ -74,6 +81,12 @@ module.exports = {
                         where:{
                             user_id: user, product_id: sku
                         }
+                    })
+                })
+                .then ( () => {
+                    res.status(200).json({
+                        data: 'item Ok',
+                        status:200,
                     })
                 })
                 .catch()
@@ -93,15 +106,32 @@ module.exports = {
                                 user_id: user, product_id: sku
                             }
                         })
+                        .then ( () => {
+                            res.status(200).json({
+                                data: 'item Ok',
+                                status:200,
+                            })
+                        })
                         .catch();
-                    } else {
+                    } else if(response.quantity=1){
                         db.Shopping_cart_items
                         .destroy({
                              where:{
                                 user_id: user, product_id: sku
                             }
                         })
+                        .then ( () => {
+                            res.status(200).json({
+                                data: 'item Ok',
+                                status:200,
+                            })
+                        })
                         .catch();
+                    } else {
+                        res.status(200).json({
+                            data: 'item Ok',
+                            status:200,
+                        })
                     }
                 });
                 break;
@@ -112,13 +142,19 @@ module.exports = {
                         user_id: user, product_id: sku
                     }
                 })
+                .then ( () => {
+                    res.status(200).json({
+                        data: 'item Ok',
+                        status:200,
+                    })
+                })
                 .catch();
                 break;
         }
-        return res.status(200).json({
+/*         return res.status(200).json({
                         data: 'item Ok',
                         status:200,
-            });
+            }); */
     },
 
 };
