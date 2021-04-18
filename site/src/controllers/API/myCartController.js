@@ -31,14 +31,20 @@ module.exports = {
                 totalAmount = totalAmount.replace(",",".");
                 //Le quito el espacio... se trata de un "no breaking space, por eso se usa \u00a0 y no " " 
                 totalAmount = totalAmount.replace("\u00a0","");
-
+                
+                let data = {};
+                data.products = products;
+                data.totalAmount = totalAmount;
+                return data
+            })
+            .then((data)=>{
                 res.status(200).json({
-                    "totalSku": products.length,
+                    "totalSku": data.products.length,
                     "usuario": req.body.user,
-                    "totalAmountCart": totalAmount,
-                    "data": products,
+                    "totalAmountCart": data.totalAmount,
+                    "data": data.products,
                     "status": 200
-                });
+                })
             })
             .catch(err => console.log(err));
     },
@@ -89,7 +95,11 @@ module.exports = {
                         status:200,
                     })
                 })
-                .catch()
+                .catch( () =>
+                   res.status(400).json({
+                      data: 'item No Ok',
+                      status:400,
+                }))
                 break;
             case 'subtract':
                 db.Shopping_cart_items
