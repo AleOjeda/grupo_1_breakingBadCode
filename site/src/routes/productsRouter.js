@@ -17,7 +17,15 @@ const storage = multer.diskStorage({
         cb(null, newFilename);
     }
 });
-const upload = multer({ storage });
+//filtro para tipo de imagen, detiene el guardado.
+const fileFilter= function (req, file, cb) {
+    if (path.extname(file.originalname) == '.png' || path.extname(file.originalname) == '.jpg' || path.extname(file.originalname) == '.jpeg'|| path.extname(file.originalname) == '.gif') {
+                return cb(null, true)
+    }
+    cb(null, false)
+}
+
+const upload = multer({ storage, fileFilter });
 
 
 //Validaciones
