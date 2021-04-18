@@ -1,11 +1,9 @@
 //formularios
-const formRegister = document.querySelector('#form-register');
+const formRegister = document.querySelector('#form-login');
 const email = document.querySelector("#email");
-const fullName = document.querySelector("#fullName");
 const password = document.querySelector("#password");
 
 const errorEmail = document.querySelector(".error-email");
-const errorFullName = document.querySelector(".error-fullName");
 const errorPassword = document.querySelector(".error-password");
 const errorMessages = document.querySelectorAll(".error-message");
 
@@ -18,7 +16,6 @@ const errorMessages = document.querySelectorAll(".error-message");
 }
 
 email.addEventListener("focus",resetFormErrors);
-fullName.addEventListener("focus",resetFormErrors);
 password.addEventListener("focus",resetFormErrors);
 
 
@@ -28,14 +25,6 @@ formRegister.addEventListener("submit", function (e){
     //llamamos a la función que oculta los mensajes de error
      resetFormErrors();
  
-    //validamos FullName
-
-    if(fullName.value.length < 2) {
-        //mostrar mensaje del error
-        errorFullName.innerHTML = "Por favor, complete su nombre";
-        errorFullName.style.display = "block";
-        errors = true
-    }
 
     function validateEmail(email) {
         var re = /\S+@\S+\.\S+/;
@@ -48,24 +37,14 @@ formRegister.addEventListener("submit", function (e){
         errorEmail.style.display = "block";
         errors = true
     }
-    /* e.preventDefault(); */
-    
-    if(password.value.length < 8) {
+
+    if(password.value.length == 0) {
         //mostrar mensaje del error
-        errorPassword.innerHTML = "Por favor, la contraseña debe tener mínimo 8 caracteres";
+        errorPassword.innerHTML = "Por favor, complete su contraseña";
         errorPassword.style.display = "block";
         errors = true
     }
 
-    fetch(`${host}/api/user/${email.value}`)
-    .then (response => response.json())
-    .then((userDetails) => {
-        if (userDetails.data !== null){
-            errorEmail.innerHTML = "Por favor, utilice un email no registrado";
-            errorEmail.style.display = "block";
-            errors = true
-        }
-    })
     if (errors) {
         e.preventDefault()
     }

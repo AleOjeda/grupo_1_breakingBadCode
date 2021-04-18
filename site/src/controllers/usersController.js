@@ -25,7 +25,6 @@ module.exports = {
                 }
                 // Pregunto si hay errores, si los hay, los devuelvo.
                 if (!errors.isEmpty()){
-                    console.log(req.body);
                     return res.render('users/registro', {
                         errors: errors.mapped(),
                         old: req.body,
@@ -45,12 +44,23 @@ module.exports = {
         res.render('users/login', {categories});
     },
     processLogin: (req,res) =>{
+        let errors = validationResult(req);
+
         db.Users.findOne({
             where: {
                 email: req.body.email
             }
         })
-        .then (userInDB =>{
+        .then (userInDB => {
+
+            if(userInDB == null) {
+                // la variable que viene de validationResult es un objeto que tiene una key errors, donde ahí se muestran los errores
+                errors.errors.push({
+                    value: req.body.email,
+                    msg: "La cuenta o la contraseña es incorrecta.",
+                    param: 'email',
+                    location: 'body'
+                })}
             // pregunto si es distinto de null (tabla vacia) o si lo que devuelve es un array vacio (no encontró el usuario)
             if(userInDB !== null) {
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userInDB.password);
@@ -65,10 +75,21 @@ module.exports = {
                     };
                     return res.redirect('/');    
                 }
-                return res.render('users/login', {categories});
+                errors.errors.push({
+                    value: req.body.password,
+                    msg: "La cuenta o la contraseña es incorrecta.",
+                    param: 'password',
+                    location: 'body'
+                })
+                //return res.render('users/login', {categories});
             }
-            //Si es nulo, base de datos vacia. Envia un error (hacer pantalla 404.)
-            return res.render('users/login', {categories});
+            if (!errors.isEmpty()){
+                return res.render('users/login', {
+                    errors: errors.mapped(),
+                    old: req.body,
+                    categories
+                })
+            }
         })
     },
 
@@ -95,12 +116,7 @@ module.exports = {
                     user_id : userID
                 }
             })
-/*         .then((ordenes)=>{
-                console.log(ordenes[0].brand);
-        }) */
         .then ((orders) =>{
-            //console.log(resultados);
-            console.log(orders);
             return res.render('orders/myOrders', {orders, categories});;
         })
 

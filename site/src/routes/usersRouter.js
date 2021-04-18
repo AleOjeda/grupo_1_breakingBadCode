@@ -10,7 +10,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware')
 const controller = require('../controllers/usersController')
 
 //Validaciones
-const registerValidations =[
+const registerValidations = [
     check('fullName')
         .notEmpty().withMessage('Debes completar tu nombre').bail()
         .isLength({min:2}).withMessage('Debe ser un nombre válido'),
@@ -20,6 +20,14 @@ const registerValidations =[
     check('password')
         .notEmpty().withMessage('Debes colocar una contraseña').bail()
         .isLength({min:8}).withMessage('Debe tener al menos 8 caracteres'),
+]
+
+const loginValidations = [
+    check('email')
+        .notEmpty().withMessage('Debes completar tu email').bail()
+        .isEmail().withMessage('Debe ser un email válido'),
+    check('password')
+        .notEmpty().withMessage('Debes completar tu contraseña')
 ]
 
 //Home para el usuario. A definir: Mis compras, mis datos.. etc...
@@ -35,7 +43,7 @@ router.post('/registro', registerValidations, controller.processRegister);
 router.get('/login', guestMiddleware, controller.login);
 
 //Procesar Login
-router.post('/login', controller.processLogin);
+router.post('/login', loginValidations, controller.processLogin);
 
 //Mis pedidos
 router.get('/mis-pedidos', authMiddleware, controller.myOrders);

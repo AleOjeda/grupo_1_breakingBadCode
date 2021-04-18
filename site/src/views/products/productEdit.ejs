@@ -6,21 +6,42 @@
         <input type="text" name="id" value="<%= product.id %>" style="display:none">
     </div>
     <div>
+        <!-- Error lanzado por backend -->
+            <% if (locals.errors && locals.errors.brand) { %>
+                <div class="text-danger"> 
+                    <%= errors.brand.msg  %> 
+                </div> 
+            <% } %> 
+        <!-- FIN. Error lanzado por backend --> 
         <div>
             <label for="name"> Marca Nuevo</label>
-            <input type="text" name="brand" value="" placeholder="<%= product.brand %>" >
+            <input type="text" name="brand" placeholder="<%= product.brand %>" >
         </div>
+        <!-- Error lanzado por backend -->
+            <% if (locals.errors && locals.errors.description) { %>
+                <div class="text-danger"> 
+                    <%= errors.description.msg  %> 
+                </div> 
+            <% } %> 
+        <!-- FIN. Error lanzado por backend --> 
         <div>
             <label for="description">Descripción Nueva</label>
-            <input type="text" name="description" value="" placeholder="<%= product.description %>">
+            <input type="text" name="description" placeholder="<%= product.description %>">
         </div>
         <div>
             <label for="display">Presentación Nueva</label>
-            <input type="text" name="display" value="" placeholder="<%= product.display %>">
+            <input type="text" name="display" placeholder="<%= product.display %>">
         </div>
+        <!-- Error lanzado por backend -->
+            <% if (locals.errors && locals.errors.image) { %>
+                <div class="text-danger"> 
+                    <%= errors.image.msg  %> 
+                </div> 
+            <% } %> 
+        <!-- FIN. Error lanzado por backend --> 
         <div>
             <label for="imageProduct">Imagen Nueva</label>
-            <input type="file" name="image" value="" placeholder="">
+            <input type="file" name="image" placeholder="">
         </div>
         <div>
             <label for="price">Precio Nueva</label>
@@ -32,7 +53,7 @@
         </div>
         <div>
             <label for="category">Categoría nueva</label>
-            <input type="text" name="category_id" value="" placeholder="<%= product.category_id %>">
+            <input type="text" name="category_id" placeholder="<%= product.category_id %>">
         <div>
             <label for="competitorPrice">Subcategoria Nueva</label>
             <input type="number" name="sub_category_id" placeholder="<%= product.sub_category_id %>">

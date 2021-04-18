@@ -11,15 +11,53 @@
     <div class="contenedor">
       
         <div>
-          <form action="login" method="POST">
+          <form action="login" method="POST" id="form-login">
+            <!-- Error lanzado por backend -->
+            <% if (locals.errors && locals.errors.email && (errors.email.value !== '')) { %>
+              <div class="text-danger"> 
+                <%= errors.email.msg  %> 
+              </div> 
+            <% } %> 
+            <% if (locals.errors && locals.errors.password && (errors.password.value !== '')) { %>
+              <div class="text-danger"> 
+                <%= errors.password.msg  %> 
+              </div> 
+            <% } %> 
+            <!-- FIN. Error lanzado por backend -->
+            
+              <!-- Error lanzado por frontend -->
+              <div class="error-email error-message text-danger"> 
+              </div>
+            <!-- FIN. Error lanzado por frontend -->
+
               <div class="">
                 <label for="email">Email</label>
-                <input class="" type="text" name="email" id="email" placeholder="Correo electrónico">
+                <input class="" type="text" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && old.email ? old.email :''%>">
               </div>
+              <!-- Error lanzado por backend -->
+              <% if (locals.errors && locals.errors.email && (errors.email.value == '')) { %>
+                <div class="text-danger"> 
+                  <%= errors.email.msg  %> 
+                </div> 
+              <% } %>
+              <!-- FIN. Error lanzado por backend --> 
+
+              
               <div class="">
                 <label for="password">Contraseña</label>
                 <input class="" type="password" name="password" id="password" placeholder="Contraseña">
               </div>
+              <!-- Error lanzado por backend -->
+              <% if (locals.errors && locals.errors.password && (errors.password.value == '')) { %>
+                <div class="text-danger"> 
+                  <%= errors.password.msg  %> 
+                </div> 
+                <% } %> 
+                <!-- FIN. Error lanzado por backend -->
+                <!-- Error lanzado por frontend -->
+                <div class="error-password error-message text-danger"> 
+                </div> 
+                <!-- FIN. Error lanzado por frontend -->
               <div class="">
                 <label for="remember_user">
                   <input class="" type="checkbox" name="remember_user" id="remember_user">Recordar mi usuario
@@ -31,5 +69,6 @@
           </form>
         </div>
       </div>
+      <script type="text/javascript" src="/js/formsValidatorsLogin.js"></script>
   </body>
 </html>

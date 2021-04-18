@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <body>
 <form style="max-width: 500px;" action="/productos/crear" method="POST"  enctype="multipart/form-data"> 
+    <!-- Error lanzado por backend -->
+    <% if (locals.errors && locals.errors.brand) { %>
+        <div class="text-danger"> 
+          <%= errors.brand.msg  %> 
+        </div> 
+        <% } %> 
+        <!-- FIN. Error lanzado por backend -->
     <div>
         <label for="brand"> Marca</label>
-        <input type="text" name="brand" value="">
+        <input type="text" name='brand' value='a'>
     </div>
+        <!-- Error lanzado por backend -->
+        <% if (locals.errors && locals.errors.description) { %>
+            <div class="text-danger"> 
+              <%= errors.description.msg  %> 
+            </div> 
+            <% } %> 
+            <!-- FIN. Error lanzado por backend -->
     <div>
         <label for="description">Descripción</label>
-        <input type="text" name="description" value="">
+        <input type="text" name="description">
     </div>
     <div>
         <label for="display">Presentación</label>
-        <input type="text" name="display" value="">
+        <input type="text" name="display">
     </div>
+    <!-- Error lanzado por backend -->
+    <% if (locals.errors && locals.errors.image) { %>
+        <div class="text-danger"> 
+            <%= errors.image.msg  %> 
+        </div> 
+        <% } %> 
+    <!-- FIN. Error lanzado por backend -->
     <div>
         <label for="image">Imagen</label>
-        <input type="file" name="image" value="">
+        <input type="file" name="image">
     </div>
     <div>
         <label for="price">Precio</label>
@@ -31,11 +52,11 @@
     </div>
     <div>
         <label for="category_id">Categoría</label>
-        <input type="text" name="category_id" value="">
+        <input type="text" name="category_id">
     </div>
     <div>
         <label for="sub_category_id">Subcategoría</label>
-        <input type="text" name="sub_category_id" value="">
+        <input type="text" name="sub_category_id">
     </div>
     
     

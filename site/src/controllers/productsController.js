@@ -10,6 +10,7 @@ const db = require('../database/models');
 
 const jsonTable = require('../database/jsonTable');
 const productsTable = jsonTable('products');
+const { validationResult } = require('express-validator');
 
 module.exports = {
     productDetail:(req,res) => {
@@ -27,41 +28,46 @@ module.exports = {
     },
     
     store: (req,res) =>{ 
-        //store para procesar el formulario.
-       let product = req.body;
-        if(req.file){
-            product.image = req.file.filename;
-        } else {
-            res.send('Falta la imagen');
+        let errors = validationResult(req);
+        if (!errors.isEmpty()){
+            return res.render('products/productCreate', {
+                errors: errors.mapped(),
+                old: req.body,
+                categories
+            })
         }
-        //Agrego $ a los precios
-        product.discount= product.discount/100;
-        product.discount = Intl.NumberFormat("de-DE", {style: "percent"}).format(product.discount);
-        //product.price = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(product.price);
-//        product.competitorPrice = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(product.competitorPrice);
-//        product.competitorPrice = product.competitorPrice.replace("CLP","$");
-        //product.price = product.price.replace("CLP","$");
-        
-        const { brand, description, display, image, price, discount, other_details, category_id, sub_category_id } = product;
-        
-        db.Products.create({
-            brand: brand,
-            description: description,
-            display: display,
-            image: ("/img/productos/"+image),
-            price: price,
-            discount: discount,
-            other_details: other_details,
-            category_id: category_id ,
-            sub_category_id: sub_category_id
-        }).then((created) =>{
-            console.log(created);
-            res.redirect('/');
-        })
-        .catch(error =>{
-            console.log(error);
-        });
-        
+        else{
+            let product = req.body;
+            if(req.file){
+                product.image = req.file.filename;
+            } else {
+                res.send('Falta la imagen');
+            }
+            //Agrego $ a los precios
+            product.discount= product.discount/100;
+            product.discount = Intl.NumberFormat("de-DE", {style: "percent"}).format(product.discount);
+
+            
+            const { brand, description, display, image, price, discount, other_details, category_id, sub_category_id } = product;
+            
+            db.Products.create({
+                brand: brand,
+                description: description,
+                display: display,
+                image: ("/img/productos/"+image),
+                price: price,
+                discount: discount,
+                other_details: other_details,
+                category_id: category_id ,
+                sub_category_id: sub_category_id
+            }).then((created) =>{
+                console.log(created);
+                res.redirect('/');
+            })
+            .catch(error =>{
+                console.log(error);
+            });
+        }
     },
 
     edit: (req,res) => {
@@ -69,14 +75,27 @@ module.exports = {
             where: {id:req.params.id}
         })
         .then((product) => {
-            console.log(product);
             res.render('products/productEdit',{product});
         })
     },
 
     update: (req,res) => {
-
-        db.Products.update({
+        let errors = validationResult(req);
+        if (!errors.isEmpty()){
+            db.Products.findOne({
+                where: {id:req.params.id}
+            })
+            .then((product) => {
+            //  return res.redirect(req.params.id,'back', {
+            return res.render('products/productEdit', {
+                errors: errors.mapped(),
+                old: req.body,
+                categories,
+                product
+            })
+            })
+        }
+ /*        db.Products.update({
             brand: req.body.brand,
             description: req.body.description,
             display: req.body.display,
@@ -89,7 +108,7 @@ module.exports = {
         },
         {
             where: {id: req.body.id}
-        }).then(()=> res.redirect('/'))
+        }).then(()=> res.redirect('/')) */
     },
     remove :(req,res) => {
         db.Products.destroy({
