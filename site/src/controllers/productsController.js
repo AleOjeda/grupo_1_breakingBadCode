@@ -95,7 +95,9 @@ module.exports = {
             })
             })
         }
- /*        db.Products.update({
+        else{
+            console.log(req.body);
+            db.Products.update({
             brand: req.body.brand,
             description: req.body.description,
             display: req.body.display,
@@ -108,7 +110,9 @@ module.exports = {
         },
         {
             where: {id: req.body.id}
-        }).then(()=> res.redirect('/')) */
+        }).then(()=> res.redirect('/'))
+        .catch( ()=> console.log('aca surgio error'))
+        }
     },
     remove :(req,res) => {
         db.Products.destroy({

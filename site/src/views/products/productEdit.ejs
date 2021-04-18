@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <body>
-<form style="max-width: 500px;" action="/productos/editar/<%= product.id %>" method="POST"  enctype="multipart/form-data"> 
+<form style="max-width: 500px;" action="/productos/editar/<%= product.id %>" method="POST"  id='form-product' enctype="multipart/form-data"> 
     <div>
         <label for="id"> ID a editar: <%= product.id %></label>
         <input type="text" name="id" value="<%= product.id %>" style="display:none">
     </div>
     <div>
+        <!-- Error lanzado por frontend -->
+            <div class="error-brand error-message text-danger"> 
+            </div>
+        <!-- FIN. Error lanzado por frontend -->
         <!-- Error lanzado por backend -->
             <% if (locals.errors && locals.errors.brand) { %>
                 <div class="text-danger"> 
@@ -15,8 +19,12 @@
         <!-- FIN. Error lanzado por backend --> 
         <div>
             <label for="name"> Marca Nuevo</label>
-            <input type="text" name="brand" placeholder="<%= product.brand %>" >
+            <input type="text" name="brand" placeholder="<%= product.brand %>" id='brand' value="<%= product.brand %>" >
         </div>
+        <!-- Error lanzado por frontend -->
+            <div class="error-description error-message text-danger"> 
+            </div>
+        <!-- FIN. Error lanzado por frontend -->
         <!-- Error lanzado por backend -->
             <% if (locals.errors && locals.errors.description) { %>
                 <div class="text-danger"> 
@@ -26,12 +34,16 @@
         <!-- FIN. Error lanzado por backend --> 
         <div>
             <label for="description">Descripción Nueva</label>
-            <input type="text" name="description" placeholder="<%= product.description %>">
+            <input type="text" name="description" placeholder="<%= product.description %>" id='description' value="<%= product.description %>">
         </div>
         <div>
             <label for="display">Presentación Nueva</label>
-            <input type="text" name="display" placeholder="<%= product.display %>">
+            <input type="text" name="display" placeholder="<%= product.display %>" value="<%= product.display %>">
         </div>
+        <!-- Error lanzado por frontend -->
+        <div class="error-image error-message text-danger"> 
+        </div>
+        <!-- FIN. Error lanzado por frontend -->
         <!-- Error lanzado por backend -->
             <% if (locals.errors && locals.errors.image) { %>
                 <div class="text-danger"> 
@@ -41,22 +53,22 @@
         <!-- FIN. Error lanzado por backend --> 
         <div>
             <label for="imageProduct">Imagen Nueva</label>
-            <input type="file" name="image" placeholder="">
+            <input type="file" name="image" placeholder="" id='image' accept=".jpg,.png,.jpeg,.gif">
         </div>
         <div>
             <label for="price">Precio Nueva</label>
-            <input type="number" name="price" placeholder="<%= product.price %>">
+            <input type="number" name="price" placeholder="<%= product.price %>" value="<%= product.price %>">
         </div>
         <div>
             <label for="discount">Descuento Nuevo</label>
-            <input type="number" name="discount" placeholder="<%= product.discount %>">%
+            <input type="number" name="discount" placeholder="<%= product.discount %>" value="<%= product.discount %>">%
         </div>
         <div>
             <label for="category">Categoría nueva</label>
-            <input type="text" name="category_id" placeholder="<%= product.category_id %>">
+            <input type="text" name="category_id" placeholder="<%= product.category_id %>" value="<%= product.category_id %>">
         <div>
             <label for="competitorPrice">Subcategoria Nueva</label>
-            <input type="number" name="sub_category_id" placeholder="<%= product.sub_category_id %>">
+            <input type="number" name="sub_category_id" placeholder="<%= product.sub_category_id %>" value="<%= product.sub_category_id %>">
         </div>
 
         </div>    <button type="submit">Editar producto</button>
@@ -74,5 +86,6 @@
 "precioCompetencia": "$1.153,55",
 "categoria":"almacen",
 }, -->
+<script type="text/javascript" src="/js/formsValidatorsProducts.js"></script>
 </body>
 </html>
