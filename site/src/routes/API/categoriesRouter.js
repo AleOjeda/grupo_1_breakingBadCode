@@ -16,7 +16,6 @@ router.get('/:category', controller.categoryProducts);
 //Listar productos por subcategoria //api/category/:category/:subcategory
 router.get('/:subCategory', controller.subcategoryProducts);
 
-
 //Listar subcategorias //api/category/:category/all
 router.get('/:category/all', controller.subcategories);
 

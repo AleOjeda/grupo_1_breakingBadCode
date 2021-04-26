@@ -1,12 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-/* const controller = require('../../controllers/API/myCartController');
- *///id es el usuario.
-/* router.get('/', controller.show);
-
-router.post('/:item/:operation', controller.addSubtractRemoveQuantity);
- */
+const controller = require('../../controllers/API/productsController');
+router.get('/', controller.showAll);
+router.get('/:id', controller.showOne);
 
 
 //Listar detalle producto /api/product/:id
