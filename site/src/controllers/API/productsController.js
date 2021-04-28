@@ -22,7 +22,8 @@ module.exports = {
                 newElement.name = element.dataValues.brand;
                 newElement.description = element.dataValues.description;
                 newElement.categories = new Array(element.dataValues.category);
-                newElement.detail = "http://localhost:300/api/product/"+element.dataValues.id;
+                newElement.detail = "http://localhost:3000/api/product/"+element.dataValues.id;
+                newElement.image = "http://localhost:3000"+element.dataValues.image;
                 newArray.push(newElement);
             })
             res.status(200).json({
