@@ -5,6 +5,7 @@
 .categoria_desktop {
     max-width: var(--default-width);
     margin: auto;
+    display:none;
 }
 
 .menu-main{
@@ -115,10 +116,15 @@
 
 /* Version Tablet Landscapet */
 @media (min-width: 769px) {
-
 }
 
 /* Version Desktop Landscapet */
 @media (min-width: 1200px) {
+    .categoria_desktop {
+        display: block;
+    }
+    .categoria{
+        display:none;
+    }
 
 }

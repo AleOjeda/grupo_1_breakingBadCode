@@ -32,15 +32,16 @@
 /* .max-width100{
     max-width: 100%;
 } */
-.categoria_desktop{
+/* .categoria_desktop{
 display: flex;
     flex-wrap: auto;
     overflow: auto;
-}
+} */
 @media (min-width: 577px) {
     .subcategoria-container > div {
         max-width: 100%;
     }
+    
 }
 
 .text-danger{
