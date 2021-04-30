@@ -7,7 +7,6 @@ module.exports = {
                 .then ( (userDetails) => {
                     if(userDetails) {
                         delete userDetails.dataValues.password;
-                        console.log(userDetails);
                         res.status(200).json({
                             data: userDetails,
                             status:200,

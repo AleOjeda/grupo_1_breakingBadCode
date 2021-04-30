@@ -6,5 +6,4 @@ function categories (req, res,next) {
     next();
 }
 
-
 module.exports = categories;

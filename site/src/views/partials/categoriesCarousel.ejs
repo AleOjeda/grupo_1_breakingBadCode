@@ -22,12 +22,12 @@
         </div>
         <% locals.categories.forEach(category => { %>
             <div class="categoria">
-                <a href="/categorias/<%=category.ruta%>">
+                <a href="/categorias/<%=category.path%>">
                     <div class="imagen-categoria">
-                        <img src= <%= category.iconoCategoria%> >
+                        <img src= "<%= category.icon%>" >
                     </div>
                     <div class="nombre-categoria">
-                        <span id="categoria1"><%= category.nombreCategoria%></span>
+                        <span id="categoria1"><%= category.category%></span>
                     </div>
                 </a>    
             </div>

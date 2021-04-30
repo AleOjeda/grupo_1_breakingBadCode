@@ -14,7 +14,6 @@ const { validationResult } = require('express-validator');
 
 module.exports = {
     productDetail:(req,res) => {
-        //console.log(req.params.id);
         db.Products.findOne({
             where: {id:req.params.id}
         })
@@ -61,7 +60,6 @@ module.exports = {
                 category_id: category_id ,
                 sub_category_id: sub_category_id
             }).then((created) =>{
-                console.log(created);
                 res.redirect('/');
             })
             .catch(error =>{
@@ -96,7 +94,6 @@ module.exports = {
             })
         }
         else{
-            console.log(req.body);
             db.Products.update({
             brand: req.body.brand,
             description: req.body.description,

@@ -1,4 +1,4 @@
-const categories = require('../database/categories');
+//const categories = require('../database/categories');
 const products = require('../database/products');
 const db = require('../database/models');
 const fetch = require('node-fetch');

@@ -45,7 +45,6 @@ module.exports = {
         }
         )
         .then (product => {
-            console.log(product);
             product.dataValues.image = "http://localhost:3000"+product.dataValues.image;
             res.status(200).json({
                 status:200,

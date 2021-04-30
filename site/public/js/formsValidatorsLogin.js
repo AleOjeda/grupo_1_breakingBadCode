@@ -13,6 +13,7 @@ const errorMessages = document.querySelectorAll(".error-message");
     errorMessages.forEach(errorMessage => {
         errorMessage.style.display = "none"
     })
+    
 }
 
 email.addEventListener("focus",resetFormErrors);
