@@ -39,10 +39,10 @@ function amountElementsCartRefresher () {
     })
     .catch( (err)=> {
         console.log(err);
-        cartElements = document.getElementById("cart-elements");
+       /*  cartElements = document.getElementById("cart-elements");
         cartElements.innerHTML = err;
         cartAmount = document.getElementById("cart-amount");
-        cartAmount.innerHTML = err;
+        cartAmount.innerHTML = err; */
     })
 };
 
@@ -62,8 +62,21 @@ function addSubtractRemoveQuantity(sku, operation){
             'Content-Type': 'application/json'
         }
     })
+    .then( () => amountElementsCartRefresher())
     .then(() => {
         let fieldQuantity = 'quantitySku=' + sku;
+        ///////////////////////////
+        /* fieldAddOneSku = 'addOneSku=' + item.product_id;
+        fieldSubtractOneSku = 'subtractOneSku=' + item.product_id;
+        fieldAddCartSku = 'addCartSku=' + item.product_id;
+        if(item.quantity = 0){
+            
+        } */
+
+
+        ////////////////////////
+
+
         fieldQuantityItem = parseInt(document.getElementById(fieldQuantity).innerHTML);
         switch(operation){
             case 'create':
@@ -84,6 +97,6 @@ function addSubtractRemoveQuantity(sku, operation){
                 break;
         }
     })
-    .then( () => amountElementsCartRefresher());
+    
 }
 

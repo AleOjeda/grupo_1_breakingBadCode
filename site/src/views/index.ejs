@@ -39,10 +39,12 @@
                                     <span class="precio-competencia"> <%= product.oldPrice%> </span><!-- Cambiar a descuento -->
                                     </span>
                                 </div>
-                                <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'subtract')" class="boton-sumarrestar">-</button >
-                                <span id="quantitySku=<%= product.id%>">0</span>
-                                <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'add')" class="boton-sumarrestar">+</button >
-                                <div onclick="addSubtractRemoveQuantity(<%= product.id%>,'create')" class="boton-agregar">Agregar</div >
+                                <div id="botonera">
+                                    <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'subtract')" id="subtractOneSku=<%= product.id%>" class="boton-sumarrestar">-</button >
+                                    <span id="quantitySku=<%= product.id%>">0</span>
+                                    <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'add')" id="addOneSku=<%= product.id%>" class="boton-sumarrestar">+</button >
+                                    <div onclick="addSubtractRemoveQuantity(<%= product.id%>,'create')" id="addCartSku=<%= product.id%>" class="boton-agregar">Agregar</div >
+                                </div>
                             </div>
                         </div>
                     </div>

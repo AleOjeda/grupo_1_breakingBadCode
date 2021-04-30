@@ -342,6 +342,9 @@ header {
     height: 2rem;
     align-items: center;*/
 }
+#botonera {
+    text-align: center;
+}
 .boton-agregar{
     display: flex;
     width: 8rem;
@@ -358,6 +361,12 @@ header {
     height: 2rem;
     flex-grow: 3;*/
     margin: 0.9rem auto 0;
+}
+.boton-sumarrestar{
+    display:inline-block;
+}
+.ocultar{
+    display:none;
 }
 /*.producto-agregar{
     display: flex;
