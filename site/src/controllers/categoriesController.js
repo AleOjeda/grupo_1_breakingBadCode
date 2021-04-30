@@ -1,4 +1,4 @@
-const categories = require('./../database/categories');
+const categories = require('../database/categories');
 const products = require('./../database/products');
 
 const jsonTable = require('../database/jsonTable');
@@ -26,6 +26,7 @@ module.exports = {
                 return (parametros); 
             })
              .then((parametros) =>{
+                 console.log(parametros)
                  subcategories = parametros[0];
                 let categoryName = parametros[1];
                 let categoryPath = parametros[2]
