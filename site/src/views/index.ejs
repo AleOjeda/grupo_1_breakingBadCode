@@ -40,11 +40,15 @@
                                     </span>
                                 </div>
                                 <div id="botonera">
-                                    <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'subtract')" id="subtractOneSku=<%= product.id%>" class="boton-sumarrestar">-</button >
-                                    <span id="quantitySku=<%= product.id%>">0</span>
-                                    <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'add')" id="addOneSku=<%= product.id%>" class="boton-sumarrestar">+</button >
-                                    <div onclick="addSubtractRemoveQuantity(<%= product.id%>,'create')" id="addCartSku=<%= product.id%>" class="boton-agregar">Agregar</div >
-                                </div>
+                                    <div id="botones-superiorSKU=<%= product.id%>" class="ocultar">
+                                        <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'subtract')" id="subtractOneSku=<%= product.id%>" class="boton-sumarrestar ">-</button >
+                                        <span id="quantitySku=<%= product.id%>" class="quantityProduct">0</span>
+                                        <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'add')" id="addOneSku=<%= product.id%>" class="boton-sumarrestar ">+</button >
+                                    </div>
+                                    <div id="botones-inferiorSKU=<%= product.id%>" class="mostrar" >
+                                        <div onclick="addSubtractRemoveQuantity(<%= product.id%>,'create')" id="addCartSku=<%= product.id%>" class="boton-agregar">Agregar</div >
+                                    </div>
+                                    </div>
                             </div>
                         </div>
                     </div>

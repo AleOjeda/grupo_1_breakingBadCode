@@ -2,6 +2,44 @@
 
 let host = "http://localhost:3000";
 
+function showNotShowButtons(sku){
+    //Botones
+    ///////// - Cantidad + //
+    fieldAddOneSku = 'addOneSku=' + sku;
+    fieldAddOneSku = document.getElementById(fieldAddOneSku);
+    fieldSubtractOneSku = 'subtractOneSku=' + sku;
+    fieldSubtractOneSku = document.getElementById(fieldSubtractOneSku);
+    fieldQuantity = 'quantitySku=' + sku;
+    fieldQuantity = document.getElementById(fieldQuantity);
+    fieldBotonesSUP = 'botones-superiorSKU=' + sku;
+    fieldBotonesSUP = document.getElementById(fieldBotonesSUP);
+    fieldBotonesINF = 'botones-inferiorSKU=' + sku;
+    fieldBotonesINF = document.getElementById(fieldBotonesINF);
+    
+    itemQuantity = fieldQuantity.innerHTML;
+    ///////// Agregar //
+    fieldAddCartSku = 'addCartSku=' + sku;
+    fieldAddCartSku = document.getElementById(fieldAddCartSku);
+
+    if(itemQuantity > 0){
+        fieldBotonesSUP.classList.add("mostrar");
+/*         fieldAddOneSku.classList.add("mostrar");
+        fieldSubtractOneSku.classList.add("mostrar");
+        fieldQuantity.classList.add("mostrar"); */
+
+        fieldBotonesINF.classList.remove("mostrar");
+        fieldBotonesINF.classList.add("ocultar");
+    } else{
+        fieldBotonesSUP.classList.remove("mostrar");
+/*         fieldAddOneSku.classList.remove("mostrar");
+        fieldSubtractOneSku.classList.remove("mostrar");
+        fieldQuantity.classList.remove("mostrar"); */
+
+        fieldBotonesINF.classList.remove("ocultar");
+    }
+    //$('.rojo').removeClass("rojo").addClass("verde");
+    ////////////////////////
+}
 
 function quantityProductsRefresher() {
     //Actualiza las cantidades
@@ -18,6 +56,7 @@ function quantityProductsRefresher() {
             fieldQuantity = 'quantitySku=' + item.product_id;
             fieldQuantityItem = document.getElementById(fieldQuantity);
             fieldQuantityItem.innerHTML = item.quantity;
+            showNotShowButtons(item.product_id);
         })
     })
     .catch( (err) =>{
@@ -65,18 +104,6 @@ function addSubtractRemoveQuantity(sku, operation){
     .then( () => amountElementsCartRefresher())
     .then(() => {
         let fieldQuantity = 'quantitySku=' + sku;
-        ///////////////////////////
-        /* fieldAddOneSku = 'addOneSku=' + item.product_id;
-        fieldSubtractOneSku = 'subtractOneSku=' + item.product_id;
-        fieldAddCartSku = 'addCartSku=' + item.product_id;
-        if(item.quantity = 0){
-            
-        } */
-
-
-        ////////////////////////
-
-
         fieldQuantityItem = parseInt(document.getElementById(fieldQuantity).innerHTML);
         switch(operation){
             case 'create':
@@ -96,6 +123,8 @@ function addSubtractRemoveQuantity(sku, operation){
                 document.getElementById(fieldQuantity).innerHTML = 0;
                 break;
         }
+        showNotShowButtons(sku)
+        
     })
     
 }

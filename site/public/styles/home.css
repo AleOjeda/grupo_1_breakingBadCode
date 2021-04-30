@@ -346,9 +346,9 @@ header {
     text-align: center;
 }
 .boton-agregar{
-    display: flex;
+    /* display: flex; */
     width: 8rem;
-    justify-content: center;
+    /* justify-content: center; */
     /*align-items: center;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -360,13 +360,30 @@ header {
     /*overflow: hidden;
     height: 2rem;
     flex-grow: 3;*/
-    margin: 0.9rem auto 0;
+    /* margin: 0.9rem auto 0; */
 }
 .boton-sumarrestar{
-    display:inline-block;
+    border-radius: 50%;
+    border-color: var(--default-primary-color);
+    font-size: 1rem;
+    background-color: var(--default-primary-color);
+    color: white;
+    font-weight: 900;
+    width: 2rem;
+    height: 2rem;
+    
+}
+.quantityProduct{
+    font-size: 1rem;
+    font-weight: 800;
 }
 .ocultar{
-    display:none;
+    height: 0;
+    visibility: hidden;
+}
+.mostrar{
+    display:inline-block;
+    visibility: visible;
 }
 /*.producto-agregar{
     display: flex;
