@@ -1,6 +1,7 @@
 //let host =  "http://192.168.0.5:3000";
 
 let host = "http://localhost:3000";
+//let host = "http://192.168.0.8:3000";
 
 function showNotShowButtons(sku){
     //Botones
@@ -23,22 +24,12 @@ function showNotShowButtons(sku){
 
     if(itemQuantity > 0){
         fieldBotonesSUP.classList.add("mostrar");
-/*         fieldAddOneSku.classList.add("mostrar");
-        fieldSubtractOneSku.classList.add("mostrar");
-        fieldQuantity.classList.add("mostrar"); */
-
         fieldBotonesINF.classList.remove("mostrar");
         fieldBotonesINF.classList.add("ocultar");
     } else{
         fieldBotonesSUP.classList.remove("mostrar");
-/*         fieldAddOneSku.classList.remove("mostrar");
-        fieldSubtractOneSku.classList.remove("mostrar");
-        fieldQuantity.classList.remove("mostrar"); */
-
         fieldBotonesINF.classList.remove("ocultar");
     }
-    //$('.rojo').removeClass("rojo").addClass("verde");
-    ////////////////////////
 }
 
 function quantityProductsRefresher() {
@@ -78,16 +69,10 @@ function amountElementsCartRefresher () {
     })
     .catch( (err)=> {
         console.log(err);
-       /*  cartElements = document.getElementById("cart-elements");
-        cartElements.innerHTML = err;
-        cartAmount = document.getElementById("cart-amount");
-        cartAmount.innerHTML = err; */
     })
 };
 
 window.addEventListener('load', (event) => {
-/*     init();
-doSomethingElse(); */
     amountElementsCartRefresher();
     quantityProductsRefresher();
 })
@@ -96,7 +81,6 @@ doSomethingElse(); */
 function addSubtractRemoveQuantity(sku, operation){
     fetch(`${host}/api/cart/${sku}/${operation}` ,{
         method: 'POST',
-        //body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
         }
