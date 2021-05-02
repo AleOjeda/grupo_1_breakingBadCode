@@ -47,7 +47,12 @@ module.exports = {
                 let products = productsCategory;
                     //Formateo a peso chileno
                     products.forEach(product=>{
-                        product.competitorPrice = Math.trunc(product.price * 100 / (100-product.discount)); 
+                        //calculo precio competencia
+                        product.oldPrice = Math.trunc(product.price * 100 / (100-product.discount)); 
+                         //descuento formateo
+                        product.discount = product.discount /100;
+                        //formateo precio competencia
+                        product.discount = Intl.NumberFormat("de-DE", {style: "percent"}).format(product.discount);
                         var formatter = new Intl.NumberFormat('en-US', {
                             style: 'decimal',
                             currency: 'CLP',
@@ -56,11 +61,11 @@ module.exports = {
                             minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
                             //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
                           });
-                    product.competitorPrice= "$".concat(formatter.format(product.competitorPrice));
+                    product.oldPrice= "$".concat(formatter.format(product.oldPrice));
                     product.price= "$".concat(formatter.format(product.price));
                     })
-                let categoryName = productsCategory[0].category.category;
-                let subCategoryName = "Ver Todo";
+                    let categoryName = productsCategory[0].category.category;
+                    let subCategoryName = "Ver Todo";
                 res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
             })
             .catch((error) =>{console.log(error)})
@@ -75,7 +80,11 @@ module.exports = {
                     let products = productsCategory;
                     //Formateo a peso chileno
                     products.forEach(product=>{
-                        product.competitorPrice = Math.trunc(product.price * 100 / (100-product.discount)); 
+                        //calculo precio competencia
+                        product.oldPrice = Math.trunc(product.price * 100 / (100-product.discount)); 
+                        //descuento formateo
+                        product.discount = product.discount /100;
+                        product.discount = Intl.NumberFormat("de-DE", {style: "percent"}).format(product.discount);
                         var formatter = new Intl.NumberFormat('en-US', {
                             style: 'decimal',
                             currency: 'CLP',
@@ -84,7 +93,7 @@ module.exports = {
                             minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
                             //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
                           });
-                    product.competitorPrice= "$".concat(formatter.format(product.competitorPrice));
+                    product.oldPrice= "$".concat(formatter.format(product.oldPrice));
                     product.price= "$".concat(formatter.format(product.price));
                     })
                     let categoryName = productsCategory[0].category.category;
@@ -92,6 +101,9 @@ module.exports = {
                     res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
                 })
                 .catch((error) =>{console.log(error)})
+                console.log("productasdasdasdasds");
+                console.log("productasdasdasdasds");
+                console.log("productasdasdasdasds");
         }
     }
 };

@@ -18,6 +18,26 @@ module.exports = {
             where: {id:req.params.id}
         })
         .then((product) => {
+                //item.price= '$' + item.price;
+                //Formateo de precio y oldPrice
+                product.oldPrice = 100 * product.price / (100-(product.discount));
+                product.price = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(product.price);
+                product.price = product.price.replace("CLP","$");
+                product.price = product.price.replace(",",".");
+                //Le quito el espacio... se trata de un "no breaking space, por eso se usa \u00a0 y no " " 
+                product.price = product.price.replace("\u00a0","");
+
+                //formateo oldPrice
+                product.oldPrice = Intl.NumberFormat("de-DE", {style: "currency", currency: "CLP"}).format(product.oldPrice);
+                product.oldPrice = product.oldPrice.replace("CLP","$");
+                product.oldPrice = product.oldPrice.replace(",",".");
+                //Le quito el espacio... se trata de un "no breaking space, por eso se usa \u00a0 y no " " 
+                product.oldPrice = product.oldPrice.replace("\u00a0","");
+                
+                //Formateo de %
+                product.discount = product.discount /100;
+                product.discount = Intl.NumberFormat("de-DE", {style: "percent"}).format(product.discount);
+
             res.render('products/productDetail',{categories, product});
         })
     },

@@ -6,7 +6,8 @@
 
 .subcategoria-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(193px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     column-gap: 2%;
     row-gap: 20px;
     margin: 1%;
@@ -37,12 +38,7 @@ display: flex;
     flex-wrap: auto;
     overflow: auto;
 } */
-@media (min-width: 577px) {
-    .subcategoria-container > div {
-        max-width: 100%;
-    }
-    
-}
+
 
 .text-danger{
     color:red;

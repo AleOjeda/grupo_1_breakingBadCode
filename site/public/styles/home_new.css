@@ -91,40 +91,68 @@
 #search {
     margin: auto;
     width: auto;
+    display:none;
 }
 /*Fin Estilo para el buscador*/
 
 /* Version Mobil Portrait */
-@media (max-width: 500px) and (orientation: portrait) {
+/* @media (max-width: 500px) and (orientation: portrait) {
     
-};
+}; */
 
 /* Version Mobil Landscapet */
-@media (min-width: 577px) {
+@media (min-width: 320px) {
     body {
         margin:auto;
     }
     .producto-contenedor{
-        min-width: 200px;
+        /* min-width: 200px; */
+        min-width: 170px;
         margin-right:10px;
+        max-width: 30%;
     }
-    .container {
-        margin:auto;
-        width: 1440px;
-    } 
 }
 
 /* Version Tablet Landscapet */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+    #search{
+        display: inline-block;
+    }
 }
 
 /* Version Desktop Landscapet */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     .categoria_desktop {
         display: block;
     }
     .categoria{
         display:none;
     }
-
+    .container {
+        margin:auto;
+        width: 1024px;
+    } 
+    .header-top-contenedor{
+        margin:auto;
+        width: 1024px;
+    }
+    .categoria_desktop{
+        margin:auto;
+        width: 1024px;
+    }
+    #contenedor-subcategoria{
+        margin:auto;
+        width: 1024px;
+    }
+    .container-subcategorias{
+        margin:auto;
+        width: 1024px;
+    }
 }
+
+/* @media (min-width: 577px) {
+    .subcategoria-container > div {
+        max-width: 100%;
+    }
+    
+} */

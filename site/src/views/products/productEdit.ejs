@@ -1,5 +1,13 @@
 <!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
 <body>
+    <header>
+        <%- include('../partials/header') %>
+        
+    </header>
+    <br>
 <form style="max-width: 500px;" action="/productos/editar/<%= product.id %>" method="POST"  id='form-product' enctype="multipart/form-data"> 
     <div>
         <label for="id"> ID a editar: <%= product.id %></label>

@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./../partials/head') %>
+<%- include('../partials/head') %>
 
 <body>
-    <div id="contenedorDetalleProducto" class="contenedorDetalleProducto">
-        <div id="header-DetalleProducto">
-            <div class="producto-favorito">&#9829</div>
+    <header>
+        <%- include('../partials/header') %>
+        
+    </header>
+    <br>
+      <div class="producto-contenedor margen-derecho">
+        <div class="producto-contenedor-secundario">
+            <div class="producto-header">
+                <div class="producto-descuento <%= product.discount === '0%' ? 'ocultar' : '' %>"><%= product.discount%></div>
+                <div class="producto-favorito"><i class="fas fa-heart"></i><!-- <i class="far fa-heart"></i> --></div>
+            </div>
             <div class="producto-imagen">
-                <img src= "<%= product.image%>" >
+                <img src= <%= product.image%>>
             </div>
             <div class="producto-footer">
-                <p class="producto-detalle"> <%= product.description%> &nbsp; &nbsp; <p class="producto-presentacion"> x <%= product.display%></p> </p>
-            </div>
-            
-            <div class="producto-precios">
-                <div class="precio-competencia"> <%= product.competitorPrice%> </div>
-                <div class="precio-nuestro"> <%= product.price%> </div>
-                <!-- <div class="producto-agregar">Agregar</div> -->
+                <div class="producto-titulo">
+                    <p class="producto-detalle"> <%= product.description%>
+                    <span class="producto-presentacion"> x <%= product.display%></span>
+                    </p>
+                </div>
+                <div class="producto-precios">
+                    <span class="precio-nuestro"> <%= product.price%>
+                    <span class="precio-competencia <%= product.discount === '0%' ? 'ocultar' : '' %>"> <%= product.oldPrice%> </span><!-- Cambiar a descuento -->
+                    </span>
+                </div>
+                <div id="botonera">
+                    <div id="botones-superiorSKU=<%= product.id%>" class="ocultar">
+                        <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'subtract')" id="subtractOneSku=<%= product.id%>" class="boton-sumarrestar ">-</button >
+                        <span id="quantitySku=<%= product.id%>" class="quantityProduct">0</span>
+                        <button onclick="addSubtractRemoveQuantity(<%= product.id%>,'add')" id="addOneSku=<%= product.id%>" class="boton-sumarrestar ">+</button >
+                    </div>
+                    <div id="botones-inferiorSKU=<%= product.id%>" class="mostrar" >
+                        <div onclick="addSubtractRemoveQuantity(<%= product.id%>,'create')" id="addCartSku=<%= product.id%>" class="boton-agregar">Agregar</div >
+                    </div>
+                    </div>
             </div>
         </div>
     </div>

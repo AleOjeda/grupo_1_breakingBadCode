@@ -6,8 +6,8 @@
 <body>
     <header>
     <%- include('partials/header') %>
-    <%- include('partials/categoriesCarousel') %>
     <%- include('partials/categoriesCarouselDesktop') %>
+    <%- include('partials/categoriesCarousel') %>
     </header>
     <div class="container">
         <div id="home-catalogo">
@@ -22,7 +22,7 @@
                     <div class="producto-contenedor margen-derecho">
                         <div class="producto-contenedor-secundario">
                             <div class="producto-header">
-                                <div class="producto-descuento"><%= product.discount%></div>
+                                <div class="producto-descuento <%= product.discount === '0%' ? 'ocultar' : '' %>"><%= product.discount%></div>
                                 <div class="producto-favorito"><i class="fas fa-heart"></i><!-- <i class="far fa-heart"></i> --></div>
                             </div>
                             <div class="producto-imagen">
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="producto-precios">
                                     <span class="precio-nuestro"> <%= product.price%>
-                                    <span class="precio-competencia"> <%= product.oldPrice%> </span><!-- Cambiar a descuento -->
+                                    <span class="precio-competencia <%= product.discount === '0%' ? 'ocultar' : '' %>"> <%= product.oldPrice%> </span><!-- Cambiar a descuento -->
                                     </span>
                                 </div>
                                 <div id="botonera">

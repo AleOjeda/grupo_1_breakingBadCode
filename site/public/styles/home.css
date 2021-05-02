@@ -335,7 +335,8 @@ header {
     color:var(--darkGrey);
     font-weight: 500;
     text-decoration: line-through;
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    font-size: 0.8rem;
     /*display: flex;
     text-align: center;
     flex-grow: 1;
