@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
+<body>
+    <header>
+        <%- include('../partials/header') %>
+        
+    </header>
+    <br>
+<form style="max-width: 500px;" action="/usuario/editar/5" method="POST"  id='form-product'> 
+    <div>
+        <label for="id"> ID a editar: <%= user.id %></label>
+        <input type="text" name="id" value="<%= user.id %>" style="display:none">
+    </div>
+    <div>
+          <div>
+            <label for="name"> Nombre Nuevo</label>
+            <input type="text" name="name" placeholder="<%= user.name %>" id='name' value="<%= user.name %>" >
+        </div>
+        <div>
+            <label for="email">Email Nueva</label>
+            <input type="text" name="email" placeholder="<%= user.email %>" id='email' value="<%= user.email %>">
+        </div>
+        <!-- <div>
+            <label for="password">Password Nueva</label>
+            <input type="text" name="password" placeholder="" value="">
+        </div> -->
+        <div>
+            <label for="address">Dirección nueva</label>
+            <input type="text" name="address" placeholder="<%= user.address %>" id='address'>
+        </div>
+        <div>
+            <label for="phone">Teléfono Nuevo</label>
+            <input type="text" name="phone" placeholder="<%= user.phone %>" value="<%= user.phone %>">
+        </div>
+        <button type="submit">Editar usuario</button>
+    </div>
+
+</form>
+</body>
+</html>

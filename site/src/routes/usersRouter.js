@@ -51,5 +51,13 @@ router.get('/mis-pedidos', authMiddleware, controller.myOrders);
 //LogOut (hacer)
 router.get('/logout', controller.logout);
 
+//Editar usuario
+router.get(['/editar/:id',], controller.userEdit);
+router.post(['/editar/:id',], controller.update);
+//Crear
+router.get(['/crear',], controller.create);
+router.post(['/crear',], controller.createPost);
 
+//LogOut (hacer)
+router.get('/:id', controller.userDetails);
 module.exports = router;

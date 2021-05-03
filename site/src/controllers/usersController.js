@@ -120,5 +120,52 @@ module.exports = {
             return res.render('orders/myOrders', {orders, categories});;
         })
 
+    },
+    userEdit:(req,res)=>{
+        db.Users.findOne({
+            where: {id:req.params.id}
+        })
+        .then((user) => {
+            res.render('users/userEdit',{user});
+        })
+    },
+    update: (req,res) => {
+        db.Users.update({
+            name: req.body.name ,
+            email: req.body.email,
+            address: req.body.address,
+            phone: req.body.phone,
+        },
+        {
+            where: {id: req.params.id}
+        }).then(()=> res.redirect('/usuario/'+req.params.id))
+        .catch( (err)=> console.log(err))
+    },
+
+    create:(req,res)=>{
+        res.render('users/userCreate');
+    },
+    createPost: (req,res) => {
+        db.Users.create({
+            name: req.body.name ,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password,10),
+            address: req.body.address,
+            phone: req.body.phone,
+        },
+        {
+            where: {id: req.params.id}
+        }).then(()=> res.redirect('login'))
+        .catch( (err)=> console.log(err))
+    },
+
+
+    userDetails:(req,res)=>{
+        db.Users.findOne({
+            where: {id:req.params.id}
+        })
+        .then((user) => {
+            return res.render('users/userDetail', {user})
+        })
     }
 }

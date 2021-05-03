@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
+<body>
+    <header>
+        <%- include('../partials/header') %>
+        
+    </header>
+    <br>
+<form style="max-width: 500px;" action="/usuario/crear" method="POST"  id='form-product'> 
+
+    <div>
+          <div>
+            <label for="name"> Nombre</label>
+            <input type="text" name="name" placeholder="" id='name'>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="" id='email'>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="text" name="password" placeholder="" id='email'>
+        </div>
+        <div>
+            <label for="address">Dirección</label>
+            <input type="text" name="address" id='address' >
+        </div>
+        <div>
+            <label for="phone">Teléfono </label>
+            <input type="text" name="phone" >
+        </div>
+        <button type="submit">Crear</button>
+    </div>
+
+</form>
+</body>
+</html>
