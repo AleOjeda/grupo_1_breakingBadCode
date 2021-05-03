@@ -101,9 +101,6 @@ module.exports = {
                     res.render('categories/productsSubcategory',{categories, products, categoryName, subCategoryName});
                 })
                 .catch((error) =>{console.log(error)})
-                console.log("productasdasdasdasds");
-                console.log("productasdasdasdasds");
-                console.log("productasdasdasdasds");
         }
     }
 };
