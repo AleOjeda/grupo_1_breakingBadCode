@@ -47,3 +47,6 @@ Estética- Tipografía - Gama de colores.
 Metodología usada para agregar items al carrito de compras.
 * [Supermercado Disco Argentina](https://www.disco.com.ar/ "Supermercado Disco"):
 Barra lateral para categorías.
+
+## Tablero de trabajo:
+https://trello.com/b/Zid1QMAv/grupo-1-e-commerce
