@@ -117,7 +117,7 @@ module.exports = {
                 }
             })
         .then ((orders) =>{
-            return res.render('orders/myOrders', {orders, categories});;
+            return res.render('orders/myOrders', {orders, categories});
         })
 
     },
