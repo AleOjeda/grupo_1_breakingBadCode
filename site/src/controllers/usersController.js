@@ -158,8 +158,6 @@ module.exports = {
         }).then(()=> res.redirect('login'))
         .catch( (err)=> console.log(err))
     },
-
-
     userDetails:(req,res)=>{
         db.Users.findOne({
             where: {id:req.params.id}
