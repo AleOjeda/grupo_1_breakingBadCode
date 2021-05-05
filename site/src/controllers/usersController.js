@@ -165,5 +165,6 @@ module.exports = {
         .then((user) => {
             return res.render('users/userDetail', {user})
         })
-    }
+    },
+    probar: (req,res)=> res.render('registro')
 }

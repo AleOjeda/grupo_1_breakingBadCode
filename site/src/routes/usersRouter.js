@@ -57,7 +57,7 @@ router.post(['/editar/:id',], controller.update);
 //Crear
 router.get(['/crear',], controller.create);
 router.post(['/crear',], controller.createPost);
-
+router.get(['/probar',], controller.probar);
 //LogOut (hacer)
 router.get('/:id', controller.userDetails);
 module.exports = router;

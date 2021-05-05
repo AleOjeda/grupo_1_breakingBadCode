@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Markefy</title>
     <meta charset="UTF-8">
     <!-- Fuentes -->
@@ -15,7 +15,17 @@
     <link rel="stylesheet" type="text/css" href="/styles/icons.css">
     <link rel="stylesheet" type="text/css" href="/styles/home_new.css">
     <link rel="stylesheet" type="text/css" href="/styles/new_css_otros.css">
+    <link rel="stylesheet" type="text/css" href="/styles/RegistroLogin.css">
     <script type="text/javascript" src="/js/cart.js"></script>
     <script type="text/javascript" src="/js/icons.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
+    <script> document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+    });></script>
+    <script> document.addEventListener('touchmove', function(event) {
+        event = event.originalEvent || event;
+        if(event.scale > 1) {
+          event.preventDefault();
+        }
+      }, false);</script>
 </head>

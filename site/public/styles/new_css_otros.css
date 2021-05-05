@@ -1,3 +1,7 @@
+*{
+    touch-action: manipulation;
+}
+
 /* Agrego a css de otras clases */
 
 .producto-imagen{

@@ -4,8 +4,8 @@
 <body>
     <header>
         <%- include('../partials/header') %>
+        <%- include('../partials/categoriesCarouselDesktop') %>
         <%- include('../partials/categoriesCarousel') %>
-        <%- include('../partials/searcher') %>
     </header>
     <div id="carritoYcheckbox">
         <div id="carritoListaYtotal" class="carritoListaYtotal" >
@@ -17,18 +17,25 @@
                                 <img src= "<%= product.product.image%>">
                             </div>
                             <div class="carrito-detallesProducto">
-                                <p class="producto-detalle"> <%= product.product.brand%> </p>
+                                <!-- <p class="producto-detalle"> <%= product.product.brand%> </p> -->
                                 <p class="producto-detalle"> <%= product.product.description%> </p>
                                 <p class="producto-presentacion">  <%= product.product.display%></p>
                                 <p class="precio-nuestro">  <%= product.product.price%> </p>
                                 <!-- <p class="precio-competencia">  -->
                                 <!-- <p class="producto-presentacion">  </p> -->
-                                <div class="producto-agregar"> - <%= product.quantity%> +</div>                        
+                                <div id="botones-superiorSKU=<%= product.product.id%>" class="ocultar">
+                                    <button onclick="addSubtractRemoveQuantity(<%= product.product.id%>,'subtract')" id="subtractOneSku=<%= product.product.id%>" class="boton-sumarrestar ">-</button >
+                                    <span id="quantitySku=<%= product.product.id%>" class="quantityProduct">0</span>
+                                    <button onclick="addSubtractRemoveQuantity(<%= product.product.id%>,'add')" id="addOneSku=<%= product.product.id%>" class="boton-sumarrestar ">+</button >
+                                </div>
+                                <div id="botones-inferiorSKU=<%= product.product.id%>" class="mostrar" >
+                                    <div onclick="addSubtractRemoveQuantity(<%= product.product.id%>,'create')" id="addCartSku=<%= product.product.id%>" class="boton-agregar" style="text-align: center;">Agregar</div >
+                                </div>            
                             </div>
                         </div>
                         <div class="carrito-subtotalProducto">
                             <p>Subtotal:</p>
-                            <p class="precio-nuestro"> <%= product.product.price * product.quantity%> </p>
+                            <p id="subtotalSku=<%= product.product.id%>" class="precio-nuestro"> <%= product.product.price * product.quantity%> </p>
                         </div>
                     <% }) %>
                 </div>
@@ -41,16 +48,16 @@
                 <div class="subtotales">
                     <div class="subtotal">
                         <p>Subtotal</p>
-                        <p>$272,00</p>
+                        <p id="subtotalAabonar" class="subtotalAabonar">$272,00</p>
                     </div>
                     <div class="gastosEnvio">
                         <p>Cargos de envío</p>
-                        <p class="precio-nuestro">Gratis</p>
+                        <p class="precio-nuestro" >Gratis</p>
                     </div>    
                 </div>
                 <div class="total-a-abonar">
                     <p>Total a abonar</p>
-                    <p>$272,00</p>
+                    <p id="subtotalAabonar1" class="subtotalAabonar">$272,00</p>
                 </div>
                 <div class="ahorro-total">
                     <p>En esta compra ahorraste: <%= totalDiscount %></p>
@@ -58,7 +65,7 @@
             </div>
         </div>
     <div class="checkout">
-        <p>$272,00</p>
+        <p id="subtotalAabonar2" class="subtotalAabonar">$272,00</p>
         <div class="producto-agregar">Continuar</div> 
     </div></div>
     </div>
