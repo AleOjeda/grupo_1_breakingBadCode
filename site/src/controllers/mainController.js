@@ -9,10 +9,26 @@ const categories = require('../database/categories');
 module.exports = {
     index : async(req,res) => {
         fetch('http://localhost:3000/api/category/all')
+
         .then(response => response.json())
         .then(categoriesData=>{
             let categories = categoriesData.data;
-            res.render('index', {categories});
+            let productsWithDiscount = [];
+            categories.forEach(categorie => {
+                categorie.products.forEach( product => product.discount !== "0%" ? productsWithDiscount.push(product) : "")
+                //console.log(categorie.products)
+                // categorie.forEach(product => {
+                //     console.log(product)
+                // })
+            })
+           //products.forEach(product =>{ 
+            //    if (product.discount !== "0%") {
+             //       productsWithDiscount.push(product)
+              //  }
+            //}
+            //);
+            //console.log(productsWithDiscount); 
+            res.render('index', {categories,productsWithDiscount});
         });
     },
 
