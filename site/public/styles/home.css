@@ -386,20 +386,22 @@ header {
     display:inline-block;
     visibility: visible;
 }
-/*.producto-agregar{
+.producto-agregar{
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     background-color: var(--default-dark);
     color:white;
-    border-radius: 1rem;
+    border-radius: 6px;
     overflow: hidden;
     height: 2rem;
     flex-grow: 3;
     margin: 0 auto;
-}*/
+}
 /*Fin Estilo para el home-showroom */
+
+
 /*Inicio Estilo para el detalle de producto */
 .contenedorDetalleProducto{
     margin: var(--default-margin);
@@ -408,6 +410,9 @@ header {
 }
 
 /*Fin Estilo para el detalle de producto */
+
+
+
 /*Inicio Estilo para el carrito de compras */
 .carritoYcheckbox{
     display: flex;
@@ -416,6 +421,8 @@ header {
 .carritoListaYtotal{
     flex-grow: 1;
     margin-bottom: calc(var(--default-margin)* 5 + 50px);
+    max-width: 1440px;
+    margin: auto;
 }
 .productosEnCarrito{
     margin: var(--default-margin);
@@ -429,7 +436,7 @@ header {
     padding: var(--default-padding);
     background-color: var(--white);
     box-shadow: var(--default-box-shadow);
-    margin-bottom: var(--default-margin);
+    /* margin-bottom: var(--default-margin); */
 }
 .carrito-item-descripcion{
     display: flex;
@@ -464,25 +471,32 @@ header {
 .detalleTotal-contenedor{
     background-color:var(--white);
     margin-bottom: calc(var(--default-margin)*3);
-    border: var(--default-border);
+    /* border: var(--default-border); */
+    border-radius: 6px;
     padding: var(--default-padding);
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 700;
 }
 .detalleTotalTitulo p{
-    color: var(--red);
-    font-size:var(--font-size-title);
+    color: var(--darkGrey);
+    font-size:20px;
     font-weight: bold;
-    border-bottom: var(--default-border);
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    /* border-bottom: var(--default-border); */
     padding-bottom: var(--default-padding);
     margin: 0
 }
 .subtotales{
     padding: calc(var(--default-padding) * 2) 0;
-    border-bottom: var(--default-border);
+    /* border-bottom: var(--default-border); */
 }
 .subtotal{
     display: flex;
     justify-content: space-between;
     margin: 0 var(--default-margin) / 2;
+    margin-bottom: 30px;
 }
 .subtotal p{
     font-size: var(--font-size-primary-subtitle);
@@ -505,11 +519,12 @@ header {
     color: var(--default-dark);
     font-size:var(--font-size-title);
     font-weight: bold;
-    border-bottom: var(--default-border);
+    /* border-bottom: var(--default-border); */
 }
 
 .total-a-abonar p{
     margin:var(--default-margin);
+    margin-top: 50px;
 }
 .ahorro-total{
     color:var(--default-primary-color);
@@ -518,6 +533,8 @@ header {
 }
 .ahorro-total p{
     margin:0;
+    font-size: 16px;
+    margin-top: 20px;
 }
 .checkout{
     height: calc(var(--font-size-title)*2.5);
@@ -534,9 +551,9 @@ header {
     font-weight: bold;
     padding: calc(var(--default-padding) * 3);
 }
-.checkout .producto-agregar{
+.producto-agregar{
     background-color: var(--default-primary-color);
-    width: 40%;
+    width: 100%;
     margin:0;
     height: calc(var(--font-size-title)*2);
 }

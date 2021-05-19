@@ -2,10 +2,15 @@
 
 /* NavBar */
 
+.categoria_desktop_fondo{
+    background: rgb(221, 221, 221);
+}
+
 .categoria_desktop {
     max-width: var(--default-width);
     margin: auto;
     display:none;
+    background: rgb(221, 221, 221);
 }
 
 .menu-main{
@@ -63,7 +68,7 @@
 /* Fin NavBar */
 
 #header-top{
-    background: linear-gradient(-70deg, #0DAA54, #08BC5A);
+    background-color: var(--default-primary-color); /* #08BC5A */
 }
 .header-top-contenedor {
     /* width: var(--default-width); */
@@ -90,10 +95,30 @@
 /*Inicio Estilo para el buscador */
 #search {
     margin: auto;
-    width: auto;
+    width: 500px;
     display:none;
 }
 /*Fin Estilo para el buscador*/
+
+.como-comprar {
+    max-width: 1440px;
+}
+
+.imagen-como-comprar {
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.bienvenida-home {
+    text-align: center;
+    color: rgb(68, 68, 68);
+    padding: 50px 0px;
+}
+
+.bienvenida-home h4 {
+    font-weight: 400;
+}
 
 /* Version Mobil Portrait */
 /* @media (max-width: 500px) and (orientation: portrait) {
@@ -118,10 +143,11 @@
     #search{
         display: inline-block;
     }
+    
 }
 
 /* Version Desktop Landscapet */
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
     .categoria_desktop {
         display: block;
     }
@@ -130,23 +156,23 @@
     }
     .container {
         margin:auto;
-        width: 1024px;
+        width: 1440px;
     } 
     .header-top-contenedor{
         margin:auto;
-        width: 1024px;
+        width: 1440px;
     }
     .categoria_desktop{
         margin:auto;
-        width: 1024px;
+        width: 1440px;
     }
     #contenedor-subcategoria{
         margin:auto;
-        width: 1024px;
+        width: 1440px;
     }
     .container-subcategorias{
         margin:auto;
-        width: 1024px;
+        width: 1440px;
     }
 }
 

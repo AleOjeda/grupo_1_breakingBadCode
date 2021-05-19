@@ -25,7 +25,7 @@
     padding: 30px;
     margin: auto;
     margin-top: 100px;
-    background: rgba(43, 224, 170, 0.3);
+    background: rgb(216, 216, 216);
     border-radius: 20px;
 }
 
@@ -41,7 +41,7 @@
     width: 450px;
     padding: 30px;
     margin-top: 100px;
-    background: rgba(43, 224, 170, 0.3);
+    background: rgb(216, 216, 216);
     /* padding-bottom: 20%; */
     margin-right: auto;
     margin-left: auto;
@@ -51,7 +51,7 @@
 
 /*--TITULO-----------------------*/
 .titulo{
-    color: #1d4169;
+    color: #178046;
     margin-bottom: 20px;
 }
 
@@ -70,7 +70,7 @@
 
 
 .cajas:hover, .cajas:focus{
-    border-left: 10px solid #1a4c7e;
+    border-left: 10px solid #178046;
 }
 
 /*--TERMINOS-Y-CONDICIONES-------*/
@@ -86,7 +86,7 @@
 }
 
 .termino2:hover{
-    color: #dbdbdb;
+    color: #074222;
 }
 
 /*--BOTON-DE-REGISTRARSE---------*/
@@ -97,14 +97,14 @@
     border: none;
     margin: 20px 0;
     font-size: 15px;
-    background: #225677;
+    background: #178046;
     color: white;
     cursor: pointer;
     transition: all .5s ease;
 }
 
 .btn:hover{
-    background: #133043;
+    background: #178046;
 }
 
 /*--YA-TENGO-CUENTA--------------*/
@@ -116,6 +116,6 @@
 }
 
 .tengo-cuenta:hover{
-    color: #dbdbdb;
+    color: #074222;
 }
 
