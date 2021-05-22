@@ -54,10 +54,15 @@ router.get('/logout', controller.logout);
 //Editar usuario
 router.get(['/editar/:id',], controller.userEdit);
 router.post(['/editar/:id',], controller.update);
+
 //Crear
 router.get(['/crear',], controller.create);
 router.post(['/crear',], controller.createPost);
 router.get(['/probar',], controller.probar);
-//LogOut (hacer)
+
+//detalles
 router.get('/:id', controller.userDetails);
+
+//Borrar
+router.get('/remove/:id', controller.remove);
 module.exports = router;

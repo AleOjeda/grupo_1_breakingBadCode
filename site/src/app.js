@@ -40,7 +40,7 @@ const orderRouter = require('./routes/orderRouter');
 
 app.use('/', mainRouter);
 app.use('/categorias',varsMiddleware , categoriesRouter);
-app.use('/productos', varsMiddleware, productsRouter);
+app.use('/productos', productsRouter);
 app.use('/usuario',varsMiddleware, usersRouter);
 app.use('/pedidos',varsMiddleware, orderRouter);
 

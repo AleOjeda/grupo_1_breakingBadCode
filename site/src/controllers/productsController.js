@@ -132,6 +132,7 @@ module.exports = {
         }
     },
     remove :(req,res) => {
+        console.log("hola");
         db.Products.destroy({
             where: {id:req.params.id}
         })

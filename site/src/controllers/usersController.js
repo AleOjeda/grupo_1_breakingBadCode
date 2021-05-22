@@ -166,5 +166,14 @@ module.exports = {
             return res.render('users/userDetail', {user})
         })
     },
-    probar: (req,res)=> res.render('registro')
+    probar: (req,res)=> res.render('registro'),
+    remove :(req,res) => {
+        db.Users.destroy({
+            where: {id:req.params.id}
+        })
+        .then(()=>{
+            console.info(`Usuario con id : ${req.params.id} eliminado`);
+            res.redirect('/');
+        })
+    }
 }

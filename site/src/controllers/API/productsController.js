@@ -3,7 +3,7 @@ module.exports = {
     //localhost/api/products/
     showAll: (req,res) =>{
         db.Products.findAll({
-            include: [{association: "category"}],
+            include: [{association: "category"}, {association: "sub_category"}],
         })
         .then (products =>{
             let categoriesProducts= {};
