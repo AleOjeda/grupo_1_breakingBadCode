@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT
         },
         price:{
-            type: dataTypes.TEXT
+            type: dataTypes.INTEGER
         },
         oldPrice:{
             type: dataTypes.TEXT

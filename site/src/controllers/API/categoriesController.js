@@ -19,7 +19,7 @@ module.exports = {
             include: [{association: "sub_category" , where: {path: req.params.subCategory} }],
         })
         .then (products =>{
-            products.forEach(item=>{
+/*             products.forEach(item=>{
                 //item.price= '$' + item.price;
                 //Formateo de precio y oldPrice
                 item.oldPrice = 100 * item.price / (100-(item.discount));
@@ -42,7 +42,7 @@ module.exports = {
                 //item.discount = item.discount.replace(",",".");
                 //Le quito el espacio... se trata de un "no breaking space, por eso se usa \u00a0 y no " " 
                 //item.discount = item.discount.replace("\u00a0","");
-            })
+            }) */
             res.status(200).json({
                 status:200,
                 totalData: products.length,
